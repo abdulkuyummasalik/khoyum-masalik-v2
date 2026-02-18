@@ -1,0 +1,12 @@
+export { default as Hero } from "../components/Hero";
+export { default as About } from "../components/About";
+export { default as Skills } from "../components/Skills";
+export { default as Projects } from "../components/Projects";
+export { default as Services } from "../components/Services";
+export { default as ExperienceEducation } from "../components/ExperienceEducation";
+export { default as Gallery } from "../components/Gallery";
+export { default as Resume } from "../components/Resume";
+export { default as Testimonials } from "../components/Testimonials";
+export { default as Blog } from "../components/Blog";
+export { default as CTA } from "../components/CTA";
+export { default as Contact } from "../components/Contact";
