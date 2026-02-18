@@ -171,8 +171,8 @@ const Blog = () => {
       </div>
 
       {/* Header */}
-      <div className="km-container mb-10 text-center relative z-10">
-        <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-white/80 mb-4">
+      <div className="km-container text-center relative z-10">
+        <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-white/80 mb-4 sm:mb-5">
           Blog & Articles
         </div>
         <SectionHeader

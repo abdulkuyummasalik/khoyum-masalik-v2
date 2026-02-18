@@ -1,5 +1,19 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import ElectricBorder from "./ElectricBorder";
+import ImageTrail from "./ImageTrail";
+
+const FOOTER_TRAIL_IMAGES = [
+  "https://picsum.photos/id/287/300/300",
+  "https://picsum.photos/id/1001/300/300",
+  "https://picsum.photos/id/1025/300/300",
+  "https://picsum.photos/id/1026/300/300",
+  "https://picsum.photos/id/1027/300/300",
+  "https://picsum.photos/id/1028/300/300",
+  "https://picsum.photos/id/1029/300/300",
+  "https://picsum.photos/id/1030/300/300",
+  "https://picsum.photos/id/1031/300/300",
+  "https://picsum.photos/id/1032/300/300",
+];
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -18,10 +32,17 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="w-full text-white relative overflow-hidden border-t border-white/10 bg-neutral-950">
-      <div className="km-container py-14">
+    <footer className="w-full text-white relative overflow-hidden border-t border-white/10 min-h-[420px]">
+      {/* Background: ImageTrail (layer belakang, tetap terlihat) */}
+      <div className="absolute inset-0 z-0 overflow-hidden" aria-hidden>
+        <ImageTrail items={FOOTER_TRAIL_IMAGES} variant={2} />
+      </div>
+      {/* Overlay tipis supaya teks terbaca, trail tetap kelihatan; pointer-events-none agar mouse ke trail */}
+      <div className="absolute inset-0 z-[1] bg-neutral-950/75 pointer-events-none" aria-hidden />
+      {/* Konten di atas; pointer-events-none, hanya link/tombol yang bisa diklik */}
+      <div className="km-container py-14 relative z-10 pointer-events-none">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
+          <div className="pointer-events-auto">
             <div className="text-xl font-semibold">Khoyum Masalik</div>
             <p className="mt-2 text-white/70">
               Web developer yang fokus pada UI modern, performa, dan pengalaman pengguna.
@@ -55,7 +76,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div>
+          <div className="pointer-events-auto">
             <div className="text-lg font-semibold mb-3">Navigasi</div>
             <ul className="grid grid-cols-2 gap-2 text-white/80">
               {nav.map((n) => (
@@ -68,7 +89,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          <div className="pointer-events-auto">
             <div className="text-lg font-semibold mb-3">Ayo Mulai</div>
             <ElectricBorder color="#7df9ff" speed={1} chaos={0.12} style={{ borderRadius: 12 }}>
               <a

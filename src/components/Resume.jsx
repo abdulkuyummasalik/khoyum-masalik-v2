@@ -7,7 +7,7 @@ const CV_URL = "/CV-ABDULKUYUMMASALIK.pdf";
 const Resume = () => {
   return (
     <section id="resume" className="w-full py-20 text-white relative overflow-hidden scroll-mt-28" aria-label="Resume">
-      <div className="km-container mb-10 text-center">
+      <div className="km-container text-center">
         <SectionHeader
           titlePrefix="Resume /"
           titleHighlight="CV"

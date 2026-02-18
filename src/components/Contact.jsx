@@ -26,7 +26,7 @@ const Contact = () => {
       className="w-full text-center py-20 text-white relative overflow-hidden scroll-mt-28"
       aria-label="Kontak"
     >
-      <div className="km-container mb-10 text-center">
+      <div className="km-container text-center">
         <SectionHeader
           titlePrefix="Hubungi"
           titleHighlight="Saya"

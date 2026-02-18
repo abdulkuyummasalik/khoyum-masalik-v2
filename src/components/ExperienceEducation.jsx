@@ -124,7 +124,7 @@ const ExperienceEducation = () => {
   return (
     <section ref={containerRef} className="w-full py-24 relative overflow-hidden" id="experience">
       <div className="km-container relative z-10">
-        <div className="mb-20">
+        <div>
           <SectionHeader
             titlePrefix="Jejak"
             titleHighlight="Perjalanan"

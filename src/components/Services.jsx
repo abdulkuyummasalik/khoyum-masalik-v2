@@ -249,8 +249,8 @@ const Services = () => {
       </div>
 
       {/* Header */}
-      <div className="relative z-10 mb-16 km-container text-center">
-        <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-white/80 mb-5">
+      <div className="relative z-10 km-container text-center">
+        <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-white/80 mb-4 sm:mb-5">
           Services
         </div>
         <SectionHeader

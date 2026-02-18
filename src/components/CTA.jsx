@@ -106,13 +106,14 @@ const CTA = () => {
               Available for new projects
             </div>
 
-            {/* Headline + Subtext standardized */}
-            <div className="mb-10">
+            {/* Headline + Subtext — margin override agar di dalam card tidak terlalu besar */}
+            <div>
               <SectionHeader
                 titlePrefix="Your story,"
                 titleHighlight="well designed."
                 highlightClassName="text-emerald-400"
                 description="Every brand has a story worth telling — let's design yours with intention and style."
+                className="mb-10"
               />
             </div>
 

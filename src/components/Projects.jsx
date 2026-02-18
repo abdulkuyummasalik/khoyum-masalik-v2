@@ -320,9 +320,9 @@ const Projects = () => {
       </div>
 
       {/* Header */}
-      <div className="relative z-10 mb-12">
+      <div className="relative z-10">
         <div className="km-container text-center">
-          <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-white/80 mb-5">
+          <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-white/80 mb-4 sm:mb-5">
             Proyek Unggulan
           </div>
           <SectionHeader
@@ -341,7 +341,7 @@ const Projects = () => {
 
       {/* Project List */}
       <div className="km-container relative z-10">
-        <div className="mb-8">
+        <div>
           <SectionHeader
             titlePrefix="Daftar"
             titleHighlight="Proyek"
