@@ -68,7 +68,7 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-4 left-0 right-0 z-[1000]">
-      <div className="km-container w-[96%]">
+      <div className="km-container">
         {/* ══ Main bar ══ */}
         <nav
         className="relative flex items-center justify-between gap-3 px-3 py-2.5"

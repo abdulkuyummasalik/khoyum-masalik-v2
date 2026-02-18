@@ -133,7 +133,7 @@ const ExperienceEducation = () => {
           />
         </div>
 
-        <div className="relative km-container">
+        <div className="relative">
           {/* Main Vertical Line (Background) */}
           <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-white/10 transform -translate-x-1/2"></div>
           

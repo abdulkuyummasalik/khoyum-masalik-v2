@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Mail, Code, Trophy, ChevronRight } from 'lucide-react';
-import BlurText from './BlurText';
 import ElectricBorder from './ElectricBorder';
 import AnimatedList from './AnimatedList';
 import SectionHeader from './SectionHeader';
@@ -78,7 +77,7 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" ref={sectionRef} className="relative w-full py-20 px-4 z-10 scroll-mt-28">
+    <section id="about" ref={sectionRef} className="relative w-full py-20 z-10 scroll-mt-28">
       <div className="km-container">
         <SectionHeader
           titlePrefix="Tentang"

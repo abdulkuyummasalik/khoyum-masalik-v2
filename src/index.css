@@ -134,3 +134,16 @@
     @apply max-w-3xl mx-auto;
   }
 }
+
+/* Page loader animations */
+@keyframes pageLoaderBar {
+  0%, 100% { transform: scaleY(0.5); opacity: 0.6; }
+  50% { transform: scaleY(1); opacity: 1; }
+}
+@keyframes pageLoaderSpin {
+  to { transform: rotate(360deg); }
+}
+@keyframes pageLoaderBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}

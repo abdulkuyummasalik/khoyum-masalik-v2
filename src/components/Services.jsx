@@ -249,21 +249,19 @@ const Services = () => {
       </div>
 
       {/* Header */}
-      <div className="relative z-10 mb-16">
-        <div className="max-w-5xl mx-auto text-center">
-          <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-white/80 mb-5">
-            Services
-          </div>
-          <SectionHeader
-            titlePrefix="What I Help You"
-            titleHighlight="With"
-            description="Solusi end-to-end: dari rancangan antarmuka, implementasi aplikasi, optimasi kinerja, hingga perawatan berkelanjutan."
-          />
+      <div className="relative z-10 mb-16 km-container text-center">
+        <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-white/80 mb-5">
+          Services
         </div>
+        <SectionHeader
+          titlePrefix="What I Help You"
+          titleHighlight="With"
+          description="Solusi end-to-end: dari rancangan antarmuka, implementasi aplikasi, optimasi kinerja, hingga perawatan berkelanjutan."
+        />
       </div>
 
       {/* ── Sticky stack ── */}
-      <div className="max-w-5xl mx-auto relative z-10">
+      <div className="km-container relative z-10">
         {services.map((s, i) => (
           <ServiceCard key={i} s={s} index={i} />
         ))}

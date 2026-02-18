@@ -6,9 +6,9 @@ import ElectricBorder from './ElectricBorder';
 
 const Hero = () => {
   return (
-    <div id="home" className="relative flex min-h-screen w-full flex-col items-center justify-center text-neutral-100 overflow-hidden px-4 md:px-0 scroll-mt-28">
+    <div id="home" className="relative flex min-h-screen w-full flex-col items-center justify-center text-neutral-100 overflow-hidden scroll-mt-28 pt-24 sm:pt-28 md:pt-32">
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-15 dark:opacity-25 select-none z-0 overflow-hidden">
-        <div className="w-full km-container scale-[1.3] md:scale-[1.8] transition-transform duration-700">
+        <div className="w-full max-w-5xl mx-auto px-4 md:px-6 scale-[1.3] md:scale-[1.8] transition-transform duration-700">
           <CurvedLoop
             marqueeText="Khoyum ✦ Masalik ✦ Web ✦ Developer ✦"
             speed={3}

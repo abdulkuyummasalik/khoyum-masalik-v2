@@ -17,7 +17,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SplashCursor from "./components/SplashCursor";
 import DotGrid from "./components/DotGrid";
-import "./App.css";
+import PageLoader from "./components/PageLoader";
 
 const Home = () => (
   <main className="relative z-10">
@@ -41,6 +41,7 @@ const Home = () => (
 function App() {
   return (
     <BrowserRouter>
+      <PageLoader />
       <div className="fixed inset-0 z-0 bg-neutral-950">
         <DotGrid
           dotSize={5}

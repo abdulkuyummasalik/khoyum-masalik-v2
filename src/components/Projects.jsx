@@ -1,7 +1,6 @@
 import { useMemo, useState, useEffect, useRef, useCallback } from "react";
 import { ArrowLeft, ArrowRight, ExternalLink, Github } from "lucide-react";
 import ElectricBorder from "./ElectricBorder";
-import GlareHover from "./GlareHover";
 import SectionHeader from "./SectionHeader";
 
 // ─── Featured Data ────────────────────────────────────────────────────────────

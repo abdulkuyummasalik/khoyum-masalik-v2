@@ -2,7 +2,6 @@ export { default as AnimatedList } from "../components/AnimatedList";
 export { default as BlurText } from "../components/BlurText";
 export { default as ElectricBorder } from "../components/ElectricBorder";
 export { default as CurvedLoop } from "../components/CurvedLoop";
-export { default as StarBorder } from "../components/StarBorder";
 export { default as Carousel } from "../components/Carousel";
 export { default as DotGrid } from "../components/DotGrid";
 export { default as SplashCursor } from "../components/SplashCursor";
