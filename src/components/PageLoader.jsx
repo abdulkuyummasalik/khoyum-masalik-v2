@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 
 const loaders = [
   () => (
@@ -40,11 +40,13 @@ const loaders = [
 
 export default function PageLoader() {
   const [phase, setPhase] = useState("visible"); // visible -> fading -> gone
-  const Loader = useMemo(() => loaders[Math.floor(Math.random() * loaders.length)], []);
+  const [loaderIndex, setLoaderIndex] = useState(0);
+  const Loader = loaders[loaderIndex];
 
   useEffect(() => {
     let hide;
     const start = requestAnimationFrame(() => {
+      setLoaderIndex(Math.floor(Math.random() * loaders.length));
       hide = setTimeout(() => setPhase("fading"), 700);
     });
     return () => {

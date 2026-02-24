@@ -53,7 +53,7 @@ const Hero = () => {
               showCursor={true}
               cursorCharacter="_"
               loop={false}
-              className="text-4xl font-bold"
+              className="text-4xl font-bold font-heading"
               variableSpeed={{ min: 30, max: 50 }}
             />
           </div>

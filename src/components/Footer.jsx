@@ -43,7 +43,7 @@ const Footer = () => {
       <div className="km-container py-14 relative z-10 pointer-events-none">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="pointer-events-auto">
-            <div className="text-xl font-semibold">Khoyum Masalik</div>
+            <div className="text-xl font-semibold font-heading">Khoyum Masalik</div>
             <p className="mt-2 text-white/70">
               Web developer yang fokus pada UI modern, performa, dan pengalaman pengguna.
             </p>
@@ -77,7 +77,7 @@ const Footer = () => {
           </div>
 
           <div className="pointer-events-auto">
-            <div className="text-lg font-semibold mb-3">Navigasi</div>
+            <div className="text-lg font-semibold mb-3 font-heading">Navigasi</div>
             <ul className="grid grid-cols-2 gap-2 text-white/80">
               {nav.map((n) => (
                 <li key={n.href}>
@@ -90,7 +90,7 @@ const Footer = () => {
           </div>
 
           <div className="pointer-events-auto">
-            <div className="text-lg font-semibold mb-3">Ayo Mulai</div>
+            <div className="text-lg font-semibold mb-3 font-heading">Ayo Mulai</div>
             <ElectricBorder color="#7df9ff" speed={1} chaos={0.12} style={{ borderRadius: 12 }}>
               <a
                 href="#contact"

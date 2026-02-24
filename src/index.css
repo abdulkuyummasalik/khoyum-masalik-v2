@@ -48,6 +48,10 @@
 :root {
   --km-accent: #60a5fa;
   --radius: 0.625rem;
+  /* Typography */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-heading: "Poppins", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --background: oklch(1 0 0);
   --foreground: oklch(0.141 0.005 285.823);
   --card: oklch(1 0 0);
@@ -123,6 +127,17 @@
   body {
     @apply bg-background text-foreground overflow-x-hidden;
     @apply bg-background text-foreground overflow-x-hidden;
+    font-family: var(--font-sans);
+    font-feature-settings: "liga" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.01em;
+  }
+  code, pre, kbd, samp {
+    font-family: var(--font-mono);
   }
 }
 
@@ -132,6 +147,15 @@
   }
   .km-text {
     @apply max-w-3xl mx-auto;
+  }
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+  .font-body {
+    font-family: var(--font-sans);
+  }
+  .font-code {
+    font-family: var(--font-mono);
   }
 }
 

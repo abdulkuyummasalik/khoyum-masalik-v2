@@ -18,7 +18,7 @@ const SectionHeader = ({
       threshold={0.1}
       className={`km-container ${alignment} mb-10 sm:mb-12 md:mb-14 ${className}`}
     >
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold pb-3 sm:pb-4 text-white">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold pb-3 sm:pb-4 text-white font-heading">
         {titlePrefix}
         {titleHighlight ? (
           <span className={`text-3xl sm:text-4xl md:text-5xl italic ${highlightClassName}`}> {titleHighlight}</span>
