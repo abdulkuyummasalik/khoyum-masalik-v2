@@ -18,18 +18,18 @@ import SectionHeader from './SectionHeader';
 
 const Skills = () => {
   const skills = [
-    { node: <SiReact className="text-sky-400" />, title: "React", href: "https://react.dev" },
-    { node: <SiVite className="text-sky-400" />, title: "Vite", href: "https://vitejs.dev" },
-    { node: <SiTailwindcss className="text-sky-400" />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
-    { node: <SiJavascript className="text-white/80" />, title: "JavaScript", href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
-    { node: <SiTypescript className="text-sky-400" />, title: "TypeScript", href: "https://www.typescriptlang.org" },
+    { node: <SiReact className="text-[#61DAFB]" />, title: "React", href: "https://react.dev" },
+    { node: <SiVite className="text-[#646CFF]" />, title: "Vite", href: "https://vitejs.dev" },
+    { node: <SiTailwindcss className="text-[#06B6D4]" />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
+    { node: <SiJavascript className="text-[#F7DF1E]" />, title: "JavaScript", href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+    { node: <SiTypescript className="text-[#3178C6]" />, title: "TypeScript", href: "https://www.typescriptlang.org" },
     { node: <SiNextdotjs className="text-white/90" />, title: "Next.js", href: "https://nextjs.org" },
-    { node: <SiHtml5 className="text-white/80" />, title: "HTML5", href: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
-    { node: <SiCss3 className="text-white/80" />, title: "CSS3", href: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
-    { node: <SiGit className="text-white/80" />, title: "Git", href: "https://git-scm.com" },
-    { node: <SiNodedotjs className="text-white/80" />, title: "Node.js", href: "https://nodejs.org" },
-    { node: <SiFigma className="text-white/80" />, title: "Figma", href: "https://www.figma.com" },
-    { node: <SiPostgresql className="text-white/80" />, title: "PostgreSQL", href: "https://www.postgresql.org" },
+    { node: <SiHtml5 className="text-[#E34F26]" />, title: "HTML5", href: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+    { node: <SiCss3 className="text-[#1572B6]" />, title: "CSS3", href: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+    { node: <SiGit className="text-[#F05032]" />, title: "Git", href: "https://git-scm.com" },
+    { node: <SiNodedotjs className="text-[#339933]" />, title: "Node.js", href: "https://nodejs.org" },
+    { node: <SiFigma className="text-[#F24E1E]" />, title: "Figma", href: "https://www.figma.com" },
+    { node: <SiPostgresql className="text-[#4169E1]" />, title: "PostgreSQL", href: "https://www.postgresql.org" },
   ];
 
   const skillGroups = [

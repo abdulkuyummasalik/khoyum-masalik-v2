@@ -22,9 +22,9 @@ const Resume = () => {
     >
       <div className="km-container text-center">
         <SectionHeader
-          titlePrefix="Resume /"
-          titleHighlight="CV"
-          description="Ringkasan pengalaman, keterampilan, dan proyek dalam satu dokumen."
+          titlePrefix="CV /"
+          titleHighlight="Resume"
+          description="Ringkasan singkat pengalaman, keterampilan, dan proyek dalam satu dokumen."
         />
       </div>
 
@@ -42,7 +42,7 @@ const Resume = () => {
               </div>
               <div>
                 <p className="text-sm font-medium text-white leading-none">
-                  CV-AbdulKuyumMasalik.pdf
+                  CV-Frontend-Developer.pdf
                 </p>
                 <p className="text-xs text-neutral-500 mt-0.5">
                   Google Drive · PDF

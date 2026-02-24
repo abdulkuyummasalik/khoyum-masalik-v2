@@ -173,13 +173,13 @@ const Blog = () => {
       {/* Header */}
       <div className="km-container text-center relative z-10">
         <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-white/80 mb-4 sm:mb-5">
-          Blog & Articles
+          Blog & Artikel
         </div>
         <SectionHeader
-          titlePrefix="Thoughts on"
-          titleHighlight="Design & Creativity"
+          titlePrefix="Catatan seputar"
+          titleHighlight="desain & pengembangan"
           highlightClassName="text-emerald-400"
-          description="Welcome to our blog, where we share perspectives on design, creativity, and meaningful ideas."
+          description="Kumpulan tulisan singkat seputar UI, UX, performa web, dan cara membangun produk digital yang lebih baik."
         />
       </div>
 
@@ -193,7 +193,7 @@ const Blog = () => {
               background:
                 "repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 24px), repeating-linear-gradient(90deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 24px)",
               maskImage:
-                "radial-gradient(600px 300px at 50% 0%, black, transparent 70%)",
+                            "radial-gradient(600px 300px at 50% 0%, black, transparent 70%)",
             }}
           />
 
@@ -273,7 +273,7 @@ const Blog = () => {
                       height: "6px",
                       background:
                         currentIndex === i
-                          ? "linear-gradient(90deg, #34d399, #60a5fa)"
+                            ? "linear-gradient(90deg, #34d399, #60a5fa)"
                           : "rgba(255,255,255,0.2)",
                     }}
                     aria-label={`Go to slide ${i + 1}`}
@@ -293,7 +293,7 @@ const Blog = () => {
                 href="#"
                 className="inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-sm font-medium whitespace-nowrap"
               >
-                See All Blog
+                Lihat semua tulisan
                 <ArrowRight className="w-4 h-4" />
               </a>
             </ElectricBorder>

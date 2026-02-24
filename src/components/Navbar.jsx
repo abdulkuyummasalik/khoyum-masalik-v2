@@ -3,11 +3,11 @@ import { Moon, Sun, Menu, X } from "lucide-react";
 import ElectricBorder from "./ElectricBorder";
 
 const NAV_ITEMS = [
-  { label: "Services", href: "#services" },
-  { label: "Work", href: "#projects" },
-  { label: "Experience", href: "#experience" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Testimonials", href: "#testimonials" },
+  { label: "Layanan", href: "#services" },
+  { label: "Proyek", href: "#projects" },
+  { label: "Pengalaman", href: "#experience" },
+  { label: "Galeri", href: "#gallery" },
+  { label: "Testimoni", href: "#testimonials" },
   { label: "Blog", href: "#blog" },
 ];
 
@@ -101,7 +101,7 @@ const Navbar = () => {
         >
           <img
             src={LOGO}
-            alt="Khoyum"
+            alt="Khoyum Masalik"
             className="w-full h-full object-cover"
             draggable={false}
           />
@@ -203,7 +203,7 @@ const Navbar = () => {
                 e.currentTarget.style.transform = "translateY(0)";
               }}
             >
-              Contact
+              Kontak
             </a>
           </ElectricBorder>
 

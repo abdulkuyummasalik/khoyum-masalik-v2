@@ -159,14 +159,14 @@ const About = () => {
           </h3>
         </div>
         <p className="text-neutral-400 text-sm leading-relaxed">
-          Sebagai siswa SMK Wikrama Bogor jurusan Pengembangan Perangkat Lunak
-          dan Game, saya telah mengembangkan berbagai sistem aplikasi yang
-          menyelesaikan masalah nyata di dunia pendidikan dan bisnis.
+          Sebagai pelajar rekayasa perangkat lunak, saya senang membangun
+          antarmuka web yang rapi dan mudah digunakan untuk berbagai kebutuhan
+          — dari dashboard internal hingga landing page produk.
         </p>
         <p className="mt-3 text-neutral-400 text-sm leading-relaxed">
-          Dari sistem manajemen apotek hingga perpustakaan digital, setiap
-          proyek adalah langkah menuju visi menjadi developer yang menghadirkan
-          teknologi terdepan.
+          Setiap proyek kecil yang saya kerjakan adalah kesempatan untuk
+          bereksperimen dengan teknologi baru, memperbaiki detail UI, dan
+          belajar memahami masalah pengguna dengan lebih dalam.
         </p>
       </div>
       <div className="mt-6 h-px w-full bg-gradient-to-r from-emerald-400/40 via-cyan-400/20 to-transparent" />

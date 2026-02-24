@@ -6,7 +6,7 @@ import SectionHeader from "./SectionHeader";
 const testimonials = [
   {
     id: 1,
-    name: "Rizky Pratama",
+    name: "Bima Pratama",
     role: "Product Manager",
     quote:
       "Kolaborasi yang solid, eksekusi cepat, dan perhatian pada detail UI/UX yang sangat baik.",
@@ -15,7 +15,7 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Siti Rahma",
+    name: "Sari Rahma",
     role: "CEO, EduTech",
     quote:
       "Aplikasi berjalan stabil, performa cepat, dan tim kami puas dengan hasil akhirnya.",
@@ -24,7 +24,7 @@ const testimonials = [
   },
   {
     id: 3,
-    name: "Andi Wijaya",
+    name: "Dimas Wijaya",
     role: "Lead Engineer",
     quote:
       "Kualitas kode rapi, scalable, dan dokumentasi jelas. Sangat direkomendasikan.",
@@ -33,7 +33,7 @@ const testimonials = [
   },
   {
     id: 4,
-    name: "Nadia F.",
+    name: "Alya N.",
     role: "Founder, Startup",
     quote:
       "Desain modern dan interaktif, peningkatan engagement pengguna terasa signifikan.",

@@ -1,12 +1,16 @@
-import { Mail } from 'lucide-react';
-import CurvedLoop from './CurvedLoop';
-import ProfileCard from './ProfileCard';
-import TextType from './TextType';
-import ElectricBorder from './ElectricBorder';
+import { Mail } from "lucide-react";
+import CurvedLoop from "./CurvedLoop";
+import ProfileCard from "./ProfileCard";
+import TextType from "./TextType";
+import ElectricBorder from "./ElectricBorder";
 
 const Hero = () => {
   return (
-    <div id="home" className="relative flex min-h-screen w-full flex-col items-center justify-center text-neutral-100 overflow-hidden scroll-mt-28 pt-24 sm:pt-28 md:pt-32">
+    <div
+      id="home"
+      className="relative flex min-h-screen w-full flex-col items-center justify-center text-neutral-100 overflow-hidden scroll-mt-28 pt-24 sm:pt-28 md:pt-32"
+    >
+      {/* ── Background marquee ─────────────────────────────────────────── */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-15 dark:opacity-25 select-none z-0 overflow-hidden">
         <div className="w-full max-w-5xl mx-auto px-4 md:px-6 scale-[1.3] md:scale-[1.8] transition-transform duration-700">
           <CurvedLoop
@@ -20,20 +24,21 @@ const Hero = () => {
         </div>
       </div>
 
+      {/* ── Main content ───────────────────────────────────────────────── */}
       <div className="relative flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 z-10 w-full km-container">
-        {/* Profile Card Container - Controlled width instead of scaling */}
+        {/* Profile Card */}
         <div className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] transition-all duration-300 flex items-center justify-center z-20">
           <ProfileCard
             name="Khoyum Masalik"
-            title="Web Developer"
+            title="Frontend Web Developer"
             handle="khoyum_28"
             status="Online"
-            contactText="Contact Me"
+            contactText="Hubungi Saya"
             avatarUrl="https://www.khoyummasalik.my.id/khoyum.jpg"
             showUserInfo
             enableTilt={true}
-            enableMobileTilt={true} // Enabled for better mobile experience
-            onContactClick={() => console.log("Contact clicked")}
+            enableMobileTilt={true}
+            onContactClick={() => console.log("Kontak diklik")}
             behindGlowColor="rgba(125, 190, 255, 0.67)"
             iconUrl="/assets/demo/iconpattern.png"
             behindGlowEnabled
@@ -41,38 +46,41 @@ const Hero = () => {
           />
         </div>
 
+        {/* Text content */}
         <div className="text-center md:text-left w-full max-w-[90%] md:w-[550px] flex flex-col justify-center relative z-10">
-          <div className="min-h-[160px] flex flex-col justify-center">
+          {/* ── Headline — cepat, sekali ketik, tidak loop ── */}
+          <div className="min-h-[120px] sm:min-h-[160px] flex flex-col justify-center">
             <TextType
-              text={
-                "I'm a Web Developer\nI build beautiful and functional websites.\nHappy coding!"
-              }
-              typingSpeed={40}
-              deletingSpeed={20}
-              pauseDuration={1000}
-              showCursor={true}
-              cursorCharacter="_"
-              loop={false}
-              className="text-4xl font-bold font-heading"
-              variableSpeed={{ min: 30, max: 50 }}
+              text="Saya seorang Frontend Web Developer yang membangun website cepat, rapi, dan mudah digunakan."
+              typingSpeed={18} // ← jauh lebih cepat dari 40
+              showCursor={false} // ← cursor disembunyikan supaya tidak ganggu
+              loop={false} // ← ketik sekali saja
+              initialDelay={200} // ← sedikit delay awal supaya tidak langsung pop
+              className="text-xl md:text-4xl font-bold font-heading"
+              // variableSpeed DIHAPUS — ini penyebab utama keterlambatan
             />
           </div>
 
-          <div className="min-h-[60px] mt-4">
+          {/* ── Subtitle — loop 2 kalimat, cepat ── */}
+          <div className="min-h-[40px] sm:min-h-[60px] mt-3 sm:mt-4">
             <TextType
               text={[
-                "Welcome to React Bits! Good to see you!",
-                "Build some amazing experiences!",
+                "Selamat datang di portofolio saya ✦",
+                "Gulir ke bawah untuk melihat proyek saya.",
               ]}
-              typingSpeed={40}
-              deletingSpeed={20}
-              pauseDuration={1000}
+              typingSpeed={22} // ← cukup cepat, masih terasa natural
+              deletingSpeed={10} // ← hapus lebih cepat supaya tidak membosankan
+              pauseDuration={1800} // ← jeda antar kalimat
+              initialDelay={1400} // ← muncul setelah headline selesai ~sebagian
               showCursor
               cursorCharacter="_"
-              className="text-xl font-mono"
-              variableSpeed={{ min: 30, max: 50 }}
+              loop
+              className="text-sm md:text-xl font-mono text-neutral-400"
+              // variableSpeed DIHAPUS
             />
           </div>
+
+          {/* ── CTA Button ── */}
           <ElectricBorder
             color="#3b82f6"
             speed={1}
@@ -83,9 +91,12 @@ const Hero = () => {
               marginBottom: "2rem",
             }}
           >
-            <button className="w-full px-6 py-3 bg-transparent text-white rounded-lg transition-colors cursor-pointer hover:bg-white/5">
+            <button
+              className="w-full px-6 py-3 bg-transparent text-white rounded-lg transition-colors cursor-pointer hover:bg-white/5"
+              onClick={() => window.open("mailto:khoyum28@gmail.com", "_blank")}
+            >
               <Mail className="inline-block mr-2" />
-              Get in Touch
+              Hubungi Saya
             </button>
           </ElectricBorder>
         </div>

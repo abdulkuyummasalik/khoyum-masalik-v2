@@ -467,10 +467,10 @@ const Projects = () => {
             Proyek Unggulan
           </div>
           <SectionHeader
-            titlePrefix="Things"
-            titleHighlight="I've Built."
+            titlePrefix="Proyek yang"
+            titleHighlight="saya kerjakan"
             highlightClassName="text-emerald-400"
-            description="Proyek-proyek yang mencerminkan kualitas, performa, dan perhatian penuh pada detail."
+            description="Beberapa proyek pilihan yang menunjukkan kualitas, performa, dan perhatian penuh pada detail."
           />
         </div>
       </div>

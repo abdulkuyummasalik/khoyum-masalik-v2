@@ -109,16 +109,16 @@ const CTA = () => {
             {/* Eyebrow */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-white/70 mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-              Available for new projects
+              Siap untuk proyek baru
             </div>
 
             {/* Headline + Subtext — margin override agar di dalam card tidak terlalu besar */}
             <div>
               <SectionHeader
-                titlePrefix="Your story,"
-                titleHighlight="well designed."
+                titlePrefix="Cerita brand Anda,"
+                titleHighlight="dirancang dengan tepat."
                 highlightClassName="text-emerald-400"
-                description="Every brand has a story worth telling — let's design yours with intention and style."
+                description="Setiap brand punya cerita unik — mari kita terjemahkan menjadi tampilan digital yang rapi, modern, dan mudah diingat."
                 className="mb-10"
               />
             </div>
@@ -148,7 +148,7 @@ const CTA = () => {
                   }}
                 >
                   <MessageCircle className="w-4 h-4" />
-                  Let's Collaborate
+                  Ayo kolaborasi
                 </a>
               </ElectricBorder>
 
@@ -172,7 +172,7 @@ const CTA = () => {
                     e.currentTarget.style.transform = "translateY(0)";
                   }}
                 >
-                  View Portfolio
+                  Lihat portofolio
                   <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
                 </a>
               </ElectricBorder>
@@ -180,7 +180,7 @@ const CTA = () => {
 
             {/* Footer note */}
             <p className="mt-8 text-xs text-white/25 tracking-wide">
-              Or reach me directly at{" "}
+              Atau hubungi langsung melalui{" "}
               <a
                 href={mail}
                 className="text-white/40 hover:text-white/70 transition-colors underline underline-offset-2"

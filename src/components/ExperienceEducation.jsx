@@ -9,29 +9,29 @@ const timelineData = [
     id: 1,
     type: 'experience',
     role: 'Frontend Developer',
-    company: 'Freelance',
+    company: 'Studio Mandiri Digital',
     period: '2024 - Sekarang',
-    description: 'Membangun antarmuka web modern dengan React, Tailwind CSS, dan animasi interaktif untuk klien global.',
+    description: 'Membangun antarmuka web modern dengan React, Tailwind CSS, dan animasi interaktif untuk klien kecil dan komunitas.',
     skills: ['React', 'Framer Motion', 'Tailwind'],
     link: '#'
   },
   {
     id: 2,
     type: 'education',
-    role: 'PPLG (Pengembangan Perangkat Lunak)',
-    company: 'SMK Wikrama Bogor',
+    role: 'Rekayasa Perangkat Lunak',
+    company: 'SMK Digital Nusantara',
     period: '2022 - Sekarang',
-    description: 'Fokus pada pengembangan web full-stack, basis data, dan manajemen proyek perangkat lunak.',
+    description: 'Mempelajari dasar pemrograman, pengembangan web full-stack, basis data, dan manajemen proyek perangkat lunak.',
     skills: ['HTML/CSS', 'PHP', 'Laravel'],
-    link: 'https://smkwikrama.sch.id'
+    link: '#'
   },
   {
     id: 3,
     type: 'experience',
     role: 'Web Developer Intern',
-    company: 'SMK Wikrama Project',
+    company: 'Lab Proyek Sekolah Digital',
     period: '2023 - 2024',
-    description: 'Berkontribusi dalam tim untuk membangun sistem informasi sekolah dan portal siswa berbasis web.',
+    description: 'Berkontribusi dalam tim kecil untuk membangun sistem informasi internal dan portal siswa berbasis web.',
     skills: ['Vue.js', 'MySQL', 'Git'],
     link: '#'
   },

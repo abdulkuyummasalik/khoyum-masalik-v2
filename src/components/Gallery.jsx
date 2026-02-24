@@ -60,12 +60,12 @@ const Gallery = () => {
       {/* Header */}
       <div className="km-container text-center relative z-10">
         <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-white/80 mb-4 sm:mb-5">
-          Our Projects
+          Galeri Proyek
         </div>
         <SectionHeader
-          titlePrefix="Innovation, and Excellence in"
-          titleHighlight="Every Project We Deliver."
-          description="Our work has been honored by some of the industry's most respected organizations — a testament to our passion for quality and forward-thinking design."
+          titlePrefix="Kreativitas dan"
+          titleHighlight="eksplorasi visual"
+          description="Kumpulan cuplikan antarmuka, eksperimen desain, dan proyek visual yang mewakili gaya dan pendekatan saya."
         />
       </div>
 
@@ -171,7 +171,7 @@ const Gallery = () => {
                   href="#projects"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-sky-600/80 hover:bg-sky-500/90 transition-colors text-sm font-semibold text-white"
                 >
-                  View All Projects
+                  Lihat semua proyek
                     <ArrowUpRight className="w-4 h-4 text-white" />
                 </a>
               </ElectricBorder>

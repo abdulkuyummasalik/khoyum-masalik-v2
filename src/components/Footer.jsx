@@ -45,7 +45,7 @@ const Footer = () => {
           <div className="pointer-events-auto">
             <div className="text-xl font-semibold font-heading">Khoyum Masalik</div>
             <p className="mt-2 text-white/70">
-              Web developer yang fokus pada UI modern, performa, dan pengalaman pengguna.
+              Frontend web developer yang fokus pada UI modern, performa, dan pengalaman pengguna yang halus.
             </p>
             <div className="mt-4 flex items-center gap-3">
                 <a

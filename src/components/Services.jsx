@@ -254,12 +254,12 @@ const Services = () => {
       {/* Header */}
       <div className="relative z-10 km-container text-center">
         <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-white/80 mb-4 sm:mb-5">
-          Services
+          Layanan
         </div>
         <SectionHeader
-          titlePrefix="What I Help You"
-          titleHighlight="With"
-          description="Solusi end-to-end: dari rancangan antarmuka, implementasi aplikasi, optimasi kinerja, hingga perawatan berkelanjutan."
+          titlePrefix="Apa yang bisa"
+          titleHighlight="saya bantu"
+          description="Mulai dari perancangan antarmuka, implementasi aplikasi, optimasi kinerja, hingga perawatan berkelanjutan."
         />
       </div>
 
