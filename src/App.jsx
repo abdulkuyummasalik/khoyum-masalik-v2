@@ -25,6 +25,7 @@ import GalleryPage from "./components/GalleryPage";
 import GalleryDetailPage from "./components/GalleryDetailPage";
 import BlogPage from "./components/BlogPage";
 import BlogDetailPage from "./components/BlogDetailPage";
+import Seo from "./components/Seo";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -54,6 +55,7 @@ const Home = () => {
   return (
     <main className="relative z-10">
       <Navbar />
+      <Seo pageKey="home" />
       <Hero />
       <About />
       <Skills />
@@ -106,12 +108,60 @@ const AppContent = () => {
       <SplashCursor />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/projects/:slug" element={<ProjectDetailPage />} />
-        <Route path="/gallery" element={<GalleryPage />} />
-        <Route path="/gallery/:slug" element={<GalleryDetailPage />} />
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/blog/:slug" element={<BlogDetailPage />} />
+        <Route
+          path="/projects"
+          element={
+            <>
+              <Seo pageKey="projects" />
+              <ProjectsPage />
+            </>
+          }
+        />
+        <Route
+          path="/projects/:slug"
+          element={
+            <>
+              <Seo pageKey="projects" />
+              <ProjectDetailPage />
+            </>
+          }
+        />
+        <Route
+          path="/gallery"
+          element={
+            <>
+              <Seo pageKey="gallery" />
+              <GalleryPage />
+            </>
+          }
+        />
+        <Route
+          path="/gallery/:slug"
+          element={
+            <>
+              <Seo pageKey="gallery" />
+              <GalleryDetailPage />
+            </>
+          }
+        />
+        <Route
+          path="/blog"
+          element={
+            <>
+              <Seo pageKey="blog" />
+              <BlogPage />
+            </>
+          }
+        />
+        <Route
+          path="/blog/:slug"
+          element={
+            <>
+              <Seo pageKey="blog" />
+              <BlogDetailPage />
+            </>
+          }
+        />
       </Routes>
     </>
   );

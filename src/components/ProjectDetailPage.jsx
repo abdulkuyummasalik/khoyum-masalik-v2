@@ -6,7 +6,8 @@ import Footer from "./Footer";
 import CardGlare from "./CardGlare";
 import ElectricBorder from "./ElectricBorder";
 import SectionHeader from "./SectionHeader";
-import { featuredProjects, allProjects, ProjectCard } from "./Projects";
+import { ProjectCard } from "./Projects";
+import { featuredProjects, allProjects } from "../datas/projects";
 
 const buildProjectData = () => {
   const map = new Map();
@@ -208,4 +209,3 @@ const ProjectDetailPage = () => {
 };
 
 export default ProjectDetailPage;
-

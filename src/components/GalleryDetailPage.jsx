@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import SectionHeader from "./SectionHeader";
 import CardGlare from "./CardGlare";
 import ElectricBorder from "./ElectricBorder";
-import { galleryProjects } from "./Gallery";
+import { galleryProjects } from "../datas/gallery";
 
 const GalleryDetailPage = () => {
   const { slug } = useParams();
@@ -180,4 +180,3 @@ const GalleryDetailPage = () => {
 };
 
 export default GalleryDetailPage;
-

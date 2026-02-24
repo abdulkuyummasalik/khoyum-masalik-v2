@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import SectionHeader from "./SectionHeader";
 import CardGlare from "./CardGlare";
 import ElectricBorder from "./ElectricBorder";
-import { posts } from "./Blog";
+import { posts } from "../datas/blog";
 
 const BlogDetailPage = () => {
   const { slug } = useParams();
@@ -168,4 +168,3 @@ const BlogDetailPage = () => {
 };
 
 export default BlogDetailPage;
-

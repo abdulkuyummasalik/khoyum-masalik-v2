@@ -2,11 +2,10 @@ import { useMemo, useState } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import SectionHeader from "./SectionHeader";
-import ElectricBorder from "./ElectricBorder";
 import CardGlare from "./CardGlare";
-import { allProjects, ProjectCard } from "./Projects";
-
-const pageCategories = ["Semua", "Web App", "Fullstack", "UI/UX", "Tools"];
+import ElectricBorder from "./ElectricBorder";
+import { ProjectCard } from "./Projects";
+import { allProjects, projectCategories } from "../datas/projects";
 
 const ProjectsPage = () => {
   const [active, setActive] = useState("Semua");
@@ -45,7 +44,7 @@ const ProjectsPage = () => {
                   </div>
                 </div>
                 <div className="flex flex-wrap items-center gap-1.5 justify-start md:justify-end">
-                  {pageCategories.map((cat) => {
+                  {projectCategories.map((cat) => {
                     const isActive = active === cat;
                     return (
                       <button
@@ -113,4 +112,3 @@ const ProjectsPage = () => {
 };
 
 export default ProjectsPage;
-
