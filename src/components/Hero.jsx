@@ -74,7 +74,7 @@ const Hero = () => {
             />
           </div>
           <ElectricBorder
-            color="#7df9ff"
+            color="#3b82f6"
             speed={1}
             chaos={0.12}
             style={{

@@ -151,8 +151,7 @@ const Navbar = () => {
         {/* ── Right side ── */}
         <div className="flex items-center gap-2 flex-shrink-0">
           {/* Dark toggle */}
-          <ElectricBorder color="#7df9ff" speed={1} chaos={0.1} style={{ borderRadius: 10, display: "inline-block" }}>
-            <button
+          <button
               onClick={() => setDark(!dark)}
               aria-label="Toggle dark mode"
               className="flex items-center justify-center transition-all duration-200"
@@ -176,7 +175,6 @@ const Navbar = () => {
                 <Sun className="w-[15px] h-[15px] text-amber-300" />
               )}
             </button>
-          </ElectricBorder>
 
           {/* Contact */}
           <ElectricBorder color="#3b82f6" speed={1} chaos={0.1} style={{ borderRadius: 10, display: "inline-block" }}>
@@ -210,8 +208,7 @@ const Navbar = () => {
           </ElectricBorder>
 
           {/* Hamburger */}
-          <ElectricBorder color="#7df9ff" speed={1} chaos={0.1} style={{ borderRadius: 10, display: "inline-block" }}>
-            <button
+          <button
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle menu"
               aria-expanded={mobileOpen}
@@ -236,7 +233,6 @@ const Navbar = () => {
                 <Menu className="w-[15px] h-[15px] text-white/75" />
               )}
             </button>
-          </ElectricBorder>
         </div>
         </nav>
 

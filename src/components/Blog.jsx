@@ -246,7 +246,6 @@ const Blog = () => {
           <div className="mt-4 flex flex-wrap items-center justify-between gap-3 relative z-10">
             {/* Arrow Buttons */}
             <div className="flex items-center gap-2">
-              <ElectricBorder color="#3b82f6" speed={1} chaos={0.12} style={{ borderRadius: 9999, display: "inline-block" }}>
                 <button
                   onClick={handlePrev}
                   className="inline-flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-b from-white/10 to-white/5 border border-white/10 hover:bg-white/15 transition-colors"
@@ -254,8 +253,6 @@ const Blog = () => {
                 >
                   <ArrowLeft className="w-4 h-4" />
                 </button>
-              </ElectricBorder>
-              <ElectricBorder color="#10b981" speed={1} chaos={0.12} style={{ borderRadius: 9999, display: "inline-block" }}>
                 <button
                   onClick={handleNext}
                   className="inline-flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-b from-white/10 to-white/5 border border-white/10 hover:bg-white/15 transition-colors"
@@ -263,7 +260,6 @@ const Blog = () => {
                 >
                   <ArrowRight className="w-4 h-4" />
                 </button>
-              </ElectricBorder>
 
               {/* Dot Indicators */}
               <div className="flex items-center gap-1.5 ml-2">
@@ -288,7 +284,7 @@ const Blog = () => {
 
             {/* See All Button */}
             <ElectricBorder
-              color="#7df9ff"
+              color="#3b82f6"
               speed={1}
               chaos={0.12}
               style={{ borderRadius: 9999, display: "inline-block" }}
