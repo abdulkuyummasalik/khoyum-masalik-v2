@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Moon, Sun, Menu, X } from "lucide-react";
+import ElectricBorder from "./ElectricBorder";
 
 const NAV_ITEMS = [
   { label: "Services", href: "#services" },
@@ -150,86 +151,92 @@ const Navbar = () => {
         {/* ── Right side ── */}
         <div className="flex items-center gap-2 flex-shrink-0">
           {/* Dark toggle */}
-          <button
-            onClick={() => setDark(!dark)}
-            aria-label="Toggle dark mode"
-            className="flex items-center justify-center transition-all duration-200"
-            style={{
-              width: 36,
-              height: 36,
-              borderRadius: "10px",
-              background: "rgba(255,255,255,0.05)",
-              border: "1px solid rgba(255,255,255,0.09)",
-            }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.background = "rgba(255,255,255,0.10)")
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.background = "rgba(255,255,255,0.05)")
-            }
-          >
-            {dark ? (
-              <Moon className="w-[15px] h-[15px] text-white/60" />
-            ) : (
-              <Sun className="w-[15px] h-[15px] text-amber-300" />
-            )}
-          </button>
+          <ElectricBorder color="#7df9ff" speed={1} chaos={0.1} style={{ borderRadius: 10, display: "inline-block" }}>
+            <button
+              onClick={() => setDark(!dark)}
+              aria-label="Toggle dark mode"
+              className="flex items-center justify-center transition-all duration-200"
+              style={{
+                width: 36,
+                height: 36,
+                borderRadius: "10px",
+                background: "rgba(255,255,255,0.05)",
+                border: "1px solid rgba(255,255,255,0.09)",
+              }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.background = "rgba(255,255,255,0.10)")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.background = "rgba(255,255,255,0.05)")
+              }
+            >
+              {dark ? (
+                <Moon className="w-[15px] h-[15px] text-white/60" />
+              ) : (
+                <Sun className="w-[15px] h-[15px] text-amber-300" />
+              )}
+            </button>
+          </ElectricBorder>
 
           {/* Contact */}
-          <a
-            href={CONTACT_HREF}
-            onClick={(e) => handleClick(e, CONTACT_HREF)}
-            className="hidden sm:inline-flex items-center px-5 py-2 text-xs font-bold text-white tracking-widest uppercase transition-all duration-200"
-            style={{
-              borderRadius: "10px",
-              background: "linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%)",
-              boxShadow:
-                "0 0 18px rgba(59,130,246,0.35), inset 0 1px 0 rgba(255,255,255,0.15)",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background =
-                "linear-gradient(135deg, #2563eb 0%, #60a5fa 100%)";
-              e.currentTarget.style.boxShadow =
-                "0 0 28px rgba(59,130,246,0.55), inset 0 1px 0 rgba(255,255,255,0.2)";
-              e.currentTarget.style.transform = "translateY(-1px)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background =
-                "linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%)";
-              e.currentTarget.style.boxShadow =
-                "0 0 18px rgba(59,130,246,0.35), inset 0 1px 0 rgba(255,255,255,0.15)";
-              e.currentTarget.style.transform = "translateY(0)";
-            }}
-          >
-            Contact
-          </a>
+          <ElectricBorder color="#3b82f6" speed={1} chaos={0.1} style={{ borderRadius: 10, display: "inline-block" }}>
+            <a
+              href={CONTACT_HREF}
+              onClick={(e) => handleClick(e, CONTACT_HREF)}
+              className="hidden sm:inline-flex items-center px-5 py-2 text-xs font-bold text-white tracking-widest uppercase transition-all duration-200"
+              style={{
+                borderRadius: "10px",
+                background: "linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%)",
+                boxShadow:
+                  "0 0 18px rgba(59,130,246,0.35), inset 0 1px 0 rgba(255,255,255,0.15)",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background =
+                  "linear-gradient(135deg, #2563eb 0%, #60a5fa 100%)";
+                e.currentTarget.style.boxShadow =
+                  "0 0 28px rgba(59,130,246,0.55), inset 0 1px 0 rgba(255,255,255,0.2)";
+                e.currentTarget.style.transform = "translateY(-1px)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background =
+                  "linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%)";
+                e.currentTarget.style.boxShadow =
+                  "0 0 18px rgba(59,130,246,0.35), inset 0 1px 0 rgba(255,255,255,0.15)";
+                e.currentTarget.style.transform = "translateY(0)";
+              }}
+            >
+              Contact
+            </a>
+          </ElectricBorder>
 
           {/* Hamburger */}
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Toggle menu"
-            aria-expanded={mobileOpen}
-            className="md:hidden flex items-center justify-center transition-all duration-200"
-            style={{
-              width: 36,
-              height: 36,
-              borderRadius: "10px",
-              background: "rgba(255,255,255,0.05)",
-              border: "1px solid rgba(255,255,255,0.09)",
-            }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.background = "rgba(255,255,255,0.10)")
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.background = "rgba(255,255,255,0.05)")
-            }
-          >
-            {mobileOpen ? (
-              <X className="w-[15px] h-[15px] text-white/75" />
-            ) : (
-              <Menu className="w-[15px] h-[15px] text-white/75" />
-            )}
-          </button>
+          <ElectricBorder color="#7df9ff" speed={1} chaos={0.1} style={{ borderRadius: 10, display: "inline-block" }}>
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Toggle menu"
+              aria-expanded={mobileOpen}
+              className="md:hidden flex items-center justify-center transition-all duration-200"
+              style={{
+                width: 36,
+                height: 36,
+                borderRadius: "10px",
+                background: "rgba(255,255,255,0.05)",
+                border: "1px solid rgba(255,255,255,0.09)",
+              }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.background = "rgba(255,255,255,0.10)")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.background = "rgba(255,255,255,0.05)")
+              }
+            >
+              {mobileOpen ? (
+                <X className="w-[15px] h-[15px] text-white/75" />
+              ) : (
+                <Menu className="w-[15px] h-[15px] text-white/75" />
+              )}
+            </button>
+          </ElectricBorder>
         </div>
         </nav>
 

@@ -1,6 +1,6 @@
 import { FiUser, FiStar, FiMessageCircle } from "react-icons/fi";
 import Carousel from "./Carousel";
-import GlareHover from "./GlareHover";
+import CardGlare from "./CardGlare";
 import SectionHeader from "./SectionHeader";
 
 const testimonials = [
@@ -52,19 +52,7 @@ const carouselItems = testimonials.map((t) => ({
 
 // A self-contained testimonial card that fills its parent height
 const TestimonialCard = ({ t }) => (
-  <GlareHover
-    className="rounded-2xl border-white/10 w-full h-full"
-    width="100%"
-    height="100%"
-    background="#0b0b12"
-    borderRadius="16px"
-    borderColor="#1f1f2d"
-    glareColor="#ffffff"
-    glareOpacity={0.18}
-    glareAngle={-20}
-    glareSize={260}
-    transitionDuration={700}
-  >
+  <CardGlare roundedClass="rounded-2xl">
     <div className="flex flex-col justify-between h-full w-full p-4 sm:p-5 rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-sm">
       {/* Top: avatar + name */}
       <div>
@@ -94,15 +82,8 @@ const TestimonialCard = ({ t }) => (
           "{t.quote}"
         </p>
       </div>
-
-      <div className="mt-5">
-        <div className="w-full inline-flex items-center justify-center gap-2 px-4 py-2 rounded-[10px] bg-white/10 border border-white/10">
-          <FiUser className="w-4 h-4 text-white/70" />
-          <span className="text-sm text-white/80">Verified</span>
-        </div>
-      </div>
     </div>
-  </GlareHover>
+  </CardGlare>
 );
 
 const Testimonials = () => {

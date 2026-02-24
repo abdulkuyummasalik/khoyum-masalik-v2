@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { motion as Motion, useScroll, useTransform } from 'motion/react';
 import SectionHeader from './SectionHeader';
 import { Briefcase, GraduationCap, Calendar, ArrowUpRight } from 'lucide-react';
+import CardGlare from './CardGlare';
 
 const timelineData = [
   {
@@ -61,41 +62,43 @@ const TimelineItem = ({ item, index }) => {
     >
       {/* Content Block */}
       <div className="w-full md:w-5/12 pl-12 md:pl-0 md:px-8">
-        <div className={`flex flex-col ${isEven ? 'md:items-start' : 'md:items-end'} gap-2 p-4 rounded-xl border border-white/10 bg-white/[0.03]`}>
-          <div className="flex items-center gap-2 text-cyan-400 mb-1">
-            <Calendar className="w-4 h-4" />
-            <span className="text-sm font-mono tracking-wider">{item.period}</span>
+        <CardGlare className="rounded-xl">
+          <div className={`flex flex-col ${isEven ? 'md:items-start' : 'md:items-end'} gap-2 p-4 rounded-xl border border-white/10 bg-white/[0.03] h-full`}>
+            <div className="flex items-center gap-2 text-cyan-400 mb-1">
+              <Calendar className="w-4 h-4" />
+              <span className="text-sm font-mono tracking-wider">{item.period}</span>
+            </div>
+            
+            <h3 className={`text-2xl font-bold text-white mb-1 flex items-center gap-2 ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+              {item.role}
+              {item.link !== '#' && (
+                <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors">
+                  <ArrowUpRight className="w-4 h-4" />
+                </a>
+              )}
+            </h3>
+            
+            <div className={`flex items-center gap-2 text-gray-400 text-sm mb-3 font-medium ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+              {item.type === 'experience' ? <Briefcase className="w-4 h-4 text-emerald-400" /> : <GraduationCap className="w-4 h-4 text-purple-400" />}
+              {item.company}
+            </div>
+            
+            <p className={`text-gray-400 leading-relaxed text-sm md:text-base max-w-md ${isEven ? 'text-left' : 'md:text-right'}`}>
+              {item.description}
+            </p>
+            
+            <div className={`flex flex-wrap gap-2 mt-4 ${isEven ? 'justify-start' : 'md:justify-end'}`}>
+              {item.skills.map((skill, i) => (
+                <span 
+                  key={i} 
+                  className="px-3 py-1 text-xs rounded-full bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10 hover:border-emerald-500/30 hover:text-emerald-300 transition-all duration-300"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
           </div>
-          
-          <h3 className={`text-2xl font-bold text-white mb-1 flex items-center gap-2 ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-            {item.role}
-            {item.link !== '#' && (
-              <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors">
-                <ArrowUpRight className="w-4 h-4" />
-              </a>
-            )}
-          </h3>
-          
-          <div className={`flex items-center gap-2 text-gray-400 text-sm mb-3 font-medium ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-            {item.type === 'experience' ? <Briefcase className="w-4 h-4 text-emerald-400" /> : <GraduationCap className="w-4 h-4 text-purple-400" />}
-            {item.company}
-          </div>
-          
-          <p className={`text-gray-400 leading-relaxed text-sm md:text-base max-w-md ${isEven ? 'text-left' : 'md:text-right'}`}>
-            {item.description}
-          </p>
-          
-          <div className={`flex flex-wrap gap-2 mt-4 ${isEven ? 'justify-start' : 'md:justify-end'}`}>
-            {item.skills.map((skill, i) => (
-              <span 
-                key={i} 
-                className="px-3 py-1 text-xs rounded-full bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10 hover:border-emerald-500/30 hover:text-emerald-300 transition-all duration-300"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
+        </CardGlare>
       </div>
 
       {/* Center Line Node */}

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import SectionHeader from "./SectionHeader";
 import ElectricBorder from "./ElectricBorder";
+import CardGlare from "./CardGlare";
 
 const projects = [
   {
@@ -101,63 +102,65 @@ const Gallery = () => {
                   onMouseEnter={() => setHighlighted(i)}
                   onMouseLeave={() => setHighlighted(null)}
                 >
-                  {/* Image */}
-                  <div className="aspect-[4/3] relative bg-slate-900 overflow-hidden">
-                    {!loadedMap[i] && (
-                      <div className="absolute inset-0 animate-pulse bg-slate-800/80" />
-                    )}
-                    <img
-                      src={img.src}
-                      alt={img.alt}
-                      loading="lazy"
-                      onLoad={() => markLoaded(i)}
-                      className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
-                    />
+                  <CardGlare roundedClass="rounded-[18px]">
+                    {/* Image */}
+                    <div className="aspect-[4/3] relative bg-slate-900 overflow-hidden">
+                      {!loadedMap[i] && (
+                        <div className="absolute inset-0 animate-pulse bg-slate-800/80" />
+                      )}
+                      <img
+                        src={img.src}
+                        alt={img.alt}
+                        loading="lazy"
+                        onLoad={() => markLoaded(i)}
+                        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                      />
 
-                    {/* Gradient overlay — bottom fade for text */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+                      {/* Gradient overlay — bottom fade for text */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
 
-                    {/* Top-right tags */}
-                    <div className="absolute top-3 right-3 flex flex-wrap justify-end gap-1.5 max-w-[70%]">
-                      {img.tags.map((tag, ti) => (
-                        <span
-                          key={ti}
-                          className="text-[10px] sm:text-xs px-2 py-0.5 rounded-full bg-black/50 border border-white/20 text-white/85 backdrop-blur-sm whitespace-nowrap"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-
-                    {/* Bottom-left project name */}
-                    <div className="absolute bottom-3 left-3 right-3 flex items-end justify-between">
-                      <span className="text-white font-bold text-base sm:text-lg drop-shadow-md">
-                        {img.alt}
-                      </span>
-                      {/* Arrow icon on hover */}
-                      <div className="w-8 h-8 rounded-full bg-white/15 border border-white/20 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
-                        <ArrowUpRight className="w-4 h-4 text-white" />
+                      {/* Top-right tags */}
+                      <div className="absolute top-3 right-3 flex flex-wrap justify-end gap-1.5 max-w-[70%]">
+                        {img.tags.map((tag, ti) => (
+                          <span
+                            key={ti}
+                            className="text-[10px] sm:text-xs px-2 py-0.5 rounded-full bg-black/50 border border-white/20 text-white/85 backdrop-blur-sm whitespace-nowrap"
+                          >
+                            {tag}
+                          </span>
+                        ))}
                       </div>
-                    </div>
 
-                    {/* Active glow overlay */}
-                    <div
-                      className="absolute inset-0 rounded-[18px] transition-opacity duration-500 pointer-events-none"
-                      style={{
-                        opacity: isActive ? 1 : 0,
-                        background:
-                          "radial-gradient(ellipse 60% 40% at 50% 80%, rgba(96,165,250,0.18), transparent 70%)",
-                      }}
-                    />
-                  </div>
+                      {/* Bottom-left project name */}
+                      <div className="absolute bottom-3 left-3 right-3 flex items-end justify-between">
+                        <span className="text-white font-bold text-base sm:text-lg drop-shadow-md">
+                          {img.alt}
+                        </span>
+                        {/* Arrow icon on hover */}
+                        <div className="w-8 h-8 rounded-full bg-white/15 border border-white/20 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
+                          <ArrowUpRight className="w-4 h-4 text-white" />
+                        </div>
+                      </div>
+
+                      {/* Active glow overlay */}
+                      <div
+                        className="absolute inset-0 rounded-[18px] transition-opacity duration-500 pointer-events-none"
+                        style={{
+                          opacity: isActive ? 1 : 0,
+                          background:
+                            "radial-gradient(ellipse 60% 40% at 50% 80%, rgba(96,165,250,0.18), transparent 70%)",
+                        }}
+                      />
+                    </div>
+                  </CardGlare>
                 </div>
               );
             })}
           </div>
 
           {/* View All Button Group — inside main container */}
-          <div className="mt-4 flex items-center justify-center">
-            <div className="inline-flex items-center gap-3 px-3 py-2 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
+          <div className="mt-4 flex items-center justify-end">
+            <div className="inline-flex items-center gap-3 px-3 py-2 rounded-xl">
               <ElectricBorder
                 color="#3b82f6"
                 speed={1}
@@ -169,19 +172,7 @@ const Gallery = () => {
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-sky-600/80 hover:bg-sky-500/90 transition-colors text-sm font-semibold text-white"
                 >
                   View All Projects
-                </a>
-              </ElectricBorder>
-              <ElectricBorder
-                color="#10b981"
-                speed={1}
-                chaos={0.1}
-                style={{ borderRadius: 9999, display: "inline-block" }}
-              >
-                <a
-                  href="#projects"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-emerald-600/80 hover:bg-emerald-500/90 transition-colors border border-emerald-400/30"
-                >
-                  <ArrowUpRight className="w-4 h-4 text-white" />
+                    <ArrowUpRight className="w-4 h-4 text-white" />
                 </a>
               </ElectricBorder>
             </div>

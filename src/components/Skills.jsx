@@ -13,7 +13,7 @@ import {
   SiPostgresql
 } from 'react-icons/si';
 import LogoLoop from './LogoLoop';
-import GlareHover from './GlareHover';
+import CardGlare from './CardGlare';
 import SectionHeader from './SectionHeader';
 
 const Skills = () => {
@@ -102,26 +102,28 @@ const Skills = () => {
       <div className="km-container mt-14">
         <div className="grid gap-4 sm:gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {skillGroups.map((group, idx) => (
-            <div key={idx} className="rounded-2xl border border-white/10 w-full p-6 md:p-7 bg-white/[0.03] backdrop-blur-sm">
-              <div className="flex items-center justify-between">
-                <h3 className="text-xl font-semibold">{group.title}</h3>
-                <div className="flex items-center gap-2 text-2xl">
-                  {group.icons.map((icon, i) => (
-                    <span key={i} className="inline-flex">
-                      {icon}
+            <CardGlare key={idx} roundedClass="rounded-2xl">
+              <div className="rounded-2xl border border-white/10 w-full p-6 md:p-7 bg-white/[0.03] backdrop-blur-sm">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-semibold">{group.title}</h3>
+                  <div className="flex items-center gap-2 text-2xl">
+                    {group.icons.map((icon, i) => (
+                      <span key={i} className="inline-flex">
+                        {icon}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <p className="mt-2 text-neutral-400 text-sm">{group.caption}</p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {group.items.map((it, i) => (
+                    <span key={i} className="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/90">
+                      {it}
                     </span>
                   ))}
                 </div>
               </div>
-              <p className="mt-2 text-neutral-400 text-sm">{group.caption}</p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {group.items.map((it, i) => (
-                  <span key={i} className="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/90">
-                    {it}
-                  </span>
-                ))}
-              </div>
-            </div>
+            </CardGlare>
           ))}
         </div>
       </div>

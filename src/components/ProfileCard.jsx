@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useCallback, useMemo } from "react";
+import ElectricBorder from "./ElectricBorder";
 
 const DEFAULT_INNER_GRADIENT =
   "linear-gradient(145deg, #60496e8c 0%, #71C4FF44 100%)";
@@ -592,19 +593,21 @@ const ProfileCardComponent = ({
                       </div>
                     </div>
                   </div>
-                  <button
-                    className="border border-white/20 rounded-lg px-3 py-2 text-xs font-semibold text-white cursor-pointer backdrop-blur-md transition-all duration-200 ease-out hover:bg-white/10 hover:border-white/40 active:scale-95 flex-shrink-0"
-                    onClick={handleContactClick}
-                    style={{
-                      pointerEvents: "auto",
-                      display: "block",
-                      gridArea: "auto",
-                    }}
-                    type="button"
-                    aria-label={`Contact ${name || "user"}`}
-                  >
-                    {contactText}
-                  </button>
+                  <ElectricBorder color="#7df9ff" speed={1} chaos={0.12} style={{ borderRadius: 10, display: "inline-block" }}>
+                    <button
+                      className="border border-white/20 rounded-lg px-3 py-2 text-xs font-semibold text-white cursor-pointer backdrop-blur-md transition-all duration-200 ease-out hover:bg-white/10 hover:border-white/40 active:scale-95 flex-shrink-0"
+                      onClick={handleContactClick}
+                      style={{
+                        pointerEvents: "auto",
+                        display: "block",
+                        gridArea: "auto",
+                      }}
+                      type="button"
+                      aria-label={`Contact ${name || "user"}`}
+                    >
+                      {contactText}
+                    </button>
+                  </ElectricBorder>
                 </div>
               )}
             </div>

@@ -9,6 +9,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import ElectricBorder from "./ElectricBorder";
+import CardGlare from "./CardGlare";
 import SectionHeader from "./SectionHeader";
  
 
@@ -140,6 +141,7 @@ const ServiceCard = ({ s, index }) => {
         {s.number}
       </div>
 
+      <CardGlare roundedClass="rounded-2xl">
       <div className="relative z-10 p-8 sm:p-10 md:p-12 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-sm">
         {/* Top row: icon box + counter */}
         <div className="flex items-start justify-between mb-7">
@@ -225,6 +227,7 @@ const ServiceCard = ({ s, index }) => {
           </div>
         </div>
       </div>
+      </CardGlare>
       </div>
   );
 };

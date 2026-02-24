@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { motion as Motion, useMotionValue, useTransform } from 'motion/react';
 // replace icons with your own if needed
 import { FiCircle, FiCode, FiFileText, FiLayers, FiLayout } from 'react-icons/fi';
+import CardGlare from './CardGlare';
 
 const DEFAULT_ITEMS = [
   {
@@ -51,9 +52,9 @@ function CarouselItem({ item, index, itemWidth, round, trackItemOffset, x, trans
       key={`${item?.id ?? index}-${index}`}
       className={`relative shrink-0 flex flex-col ${
         round
-          ? 'items-center justify-center text-center bg-[#060010] border-0'
-          : 'items-start justify-between bg-[#0b0b12] border border-[#1f1f2d] rounded-[16px]'
-      } overflow-hidden cursor-grab active:cursor-grabbing`}
+          ? 'items-center justify-center text-center border-0'
+          : 'items-start justify-between rounded-[16px]'
+      } cursor-grab active:cursor-grabbing`}
       style={{
         width: itemWidth,
         height: round ? itemWidth : '100%',
@@ -61,6 +62,14 @@ function CarouselItem({ item, index, itemWidth, round, trackItemOffset, x, trans
         ...(round && { borderRadius: '50%' })
       }}
       transition={transition}>
+      <CardGlare
+        className={`w-full h-full ${
+          round
+            ? 'flex items-center justify-center bg-[#060010]'
+            : 'flex flex-col justify-between bg-[#0b0b12] border border-[#1f1f2d]'
+        }`}
+        roundedClass={round ? 'rounded-full' : 'rounded-[16px]'}
+      >
       {!round && item?.imageUrl ? (
         <div className="relative w-full h-56 md:h-64 lg:h-72 overflow-hidden bg-neutral-800">
           <img
@@ -82,6 +91,7 @@ function CarouselItem({ item, index, itemWidth, round, trackItemOffset, x, trans
         <div className="mb-1 font-black text-lg text-white">{item.title}</div>
         <p className="text-sm text-white">{item.description}</p>
       </div>
+      </CardGlare>
     </Motion.div>
   );
 }

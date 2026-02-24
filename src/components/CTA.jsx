@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { ArrowRight, Mail, MessageCircle } from "lucide-react";
 import ElectricBorder from "./ElectricBorder";
 import SectionHeader from "./SectionHeader";
+import CardGlare from "./CardGlare";
 
 const CTA = () => {
   const wa =
@@ -50,16 +51,21 @@ const CTA = () => {
         {/* ── Banner card ── */}
         <div
           ref={sectionRef}
+          style={{
+            opacity: 0,
+            transform: "translateY(28px)",
+            transition:
+              "opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1)",
+          }}
+        >
+        <CardGlare
           className="relative rounded-[28px] overflow-hidden border border-white/10"
+          roundedClass="rounded-[28px]"
           style={{
             background:
               "linear-gradient(135deg, #061a12 0%, #0a281c 40%, #082016 70%, #061a12 100%)",
             boxShadow:
               "0 0 0 1px rgba(255,255,255,0.06), 0 32px 80px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.06)",
-            opacity: 0,
-            transform: "translateY(28px)",
-            transition:
-              "opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1)",
           }}
         >
           {/* Inner glow — top center */}
@@ -183,6 +189,7 @@ const CTA = () => {
               </a>
             </p>
           </div>
+          </CardGlare>
         </div>
       </div>
     </section>

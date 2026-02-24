@@ -1,6 +1,7 @@
 import { useMemo, useState, useEffect, useRef, useCallback } from "react";
 import { ArrowLeft, ArrowRight, ExternalLink, Github } from "lucide-react";
 import ElectricBorder from "./ElectricBorder";
+import CardGlare from "./CardGlare";
 import SectionHeader from "./SectionHeader";
 
 // ─── Featured Data ────────────────────────────────────────────────────────────
@@ -146,15 +147,17 @@ const FeaturedSlider = () => {
         </div>
 
         {/* CENTER — main hero card */}
-        <div
-          className="relative flex-shrink-0 rounded-[20px] overflow-hidden"
-          style={{
-            width: "clamp(260px, 64vw, 740px)",
-            aspectRatio: "16/10",
-            boxShadow:
-              "0 30px 90px rgba(0,0,0,0.75), 0 0 0 1px rgba(255,255,255,0.08)",
-          }}
-        >
+        <div className="relative flex-shrink-0" style={{ width: "clamp(260px, 64vw, 740px)", aspectRatio: "16/10" }}>
+          <CardGlare className="w-full h-full" roundedClass="rounded-[20px]">
+          <div
+            className="rounded-[20px] overflow-hidden"
+            style={{
+              width: "100%",
+              height: "100%",
+              boxShadow:
+                "0 30px 90px rgba(0,0,0,0.75), 0 0 0 1px rgba(255,255,255,0.08)",
+            }}
+          >
           {/* Animated image */}
           <div key={animKey} className="absolute inset-0 slider-fade-in">
             <img
@@ -205,6 +208,12 @@ const FeaturedSlider = () => {
                   <ExternalLink className="w-3.5 h-3.5" /> Live
                 </a>
               </ElectricBorder>
+              <ElectricBorder
+                color="#3b82f6"
+                speed={1}
+                chaos={0.1}
+                style={{ borderRadius: 9999, display: "inline-block" }}
+              >
               <a
                 href={proj.repoUrl}
                 target="_blank"
@@ -213,8 +222,11 @@ const FeaturedSlider = () => {
               >
                 <Github className="w-3.5 h-3.5" /> Repo
               </a>
+              </ElectricBorder>
             </div>
           </div>
+          </div>
+          </CardGlare>
         </div>
 
         {/* RIGHT — blurred peek */}
@@ -277,6 +289,7 @@ const FeaturedSlider = () => {
 // ─── Project Card ─────────────────────────────────────────────────────────────
 const ProjectCard = ({ p }) => (
     <div className="flex flex-col h-full w-full rounded-2xl overflow-hidden border border-white/10 bg-white/[0.03] backdrop-blur-sm">
+      <CardGlare className="h-full flex flex-col" roundedClass="rounded-2xl">
       <div className="w-full h-44 md:h-48 overflow-hidden flex-shrink-0">
         <img src={p.image} alt={p.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
       </div>
@@ -301,6 +314,7 @@ const ProjectCard = ({ p }) => (
           </ElectricBorder>
         </div>
       </div>
+      </CardGlare>
     </div>
 );
 
@@ -379,15 +393,17 @@ const Projects = () => {
 
         {/* GitHub CTA */}
         <div className="mt-10 text-center">
-          <a
-            href="https://github.com/yourname"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-white/10 text-white/70 hover:text-white hover:bg-white/5 hover:border-white/20 transition-all text-sm"
-          >
-            <Github className="w-4 h-4" />
-            Lihat lebih banyak di GitHub
-          </a>
+          <ElectricBorder color="#7df9ff" speed={1} chaos={0.1} style={{ borderRadius: 12, display: "inline-block" }}>
+            <a
+              href="https://github.com/yourname"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-white/80 hover:text-white bg-white/5 hover:bg-white/10 transition-all text-sm"
+            >
+              <Github className="w-4 h-4" />
+              Lihat lebih banyak di GitHub
+            </a>
+          </ElectricBorder>
         </div>
       </div>
     </section>

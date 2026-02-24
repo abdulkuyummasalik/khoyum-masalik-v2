@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect, useCallback } from "react";
-import GlareHover from "./GlareHover";
+import CardGlare from "./CardGlare";
 import ElectricBorder from "./ElectricBorder";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import SectionHeader from "./SectionHeader";
@@ -206,21 +206,7 @@ const Blog = () => {
           >
             <div className="flex gap-6" style={{ width: "max-content" }}>
               {filtered.map((p) => (
-                <GlareHover
-                  key={p.id}
-                  data-card
-                  className="snap-start flex-shrink-0 rounded-2xl border-white/10"
-                  width="auto"
-                  height="auto"
-                  background="#0b0b12"
-                  borderRadius="18px"
-                  borderColor="#1f1f2d"
-                  glareColor="#ffffff"
-                  glareOpacity={0.18}
-                  glareAngle={-20}
-                  glareSize={260}
-                  transitionDuration={700}
-                >
+                <CardGlare key={p.id} roundedClass="rounded-2xl">
                   <div
                     data-card
                     className="w-[260px] xs:w-[280px] sm:w-[320px] md:w-[360px] rounded-2xl overflow-hidden"
@@ -251,7 +237,7 @@ const Blog = () => {
                       </div>
                     </div>
                   </div>
-                </GlareHover>
+                </CardGlare>
               ))}
             </div>
           </div>
@@ -260,20 +246,24 @@ const Blog = () => {
           <div className="mt-4 flex flex-wrap items-center justify-between gap-3 relative z-10">
             {/* Arrow Buttons */}
             <div className="flex items-center gap-2">
-              <button
-                onClick={handlePrev}
-                className="inline-flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-b from-white/10 to-white/5 border border-white/10 hover:bg-white/15 transition-colors"
-                aria-label="Scroll left"
-              >
-                <ArrowLeft className="w-4 h-4" />
-              </button>
-              <button
-                onClick={handleNext}
-                className="inline-flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-b from-white/10 to-white/5 border border-white/10 hover:bg-white/15 transition-colors"
-                aria-label="Scroll right"
-              >
-                <ArrowRight className="w-4 h-4" />
-              </button>
+              <ElectricBorder color="#3b82f6" speed={1} chaos={0.12} style={{ borderRadius: 9999, display: "inline-block" }}>
+                <button
+                  onClick={handlePrev}
+                  className="inline-flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-b from-white/10 to-white/5 border border-white/10 hover:bg-white/15 transition-colors"
+                  aria-label="Scroll left"
+                >
+                  <ArrowLeft className="w-4 h-4" />
+                </button>
+              </ElectricBorder>
+              <ElectricBorder color="#10b981" speed={1} chaos={0.12} style={{ borderRadius: 9999, display: "inline-block" }}>
+                <button
+                  onClick={handleNext}
+                  className="inline-flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-b from-white/10 to-white/5 border border-white/10 hover:bg-white/15 transition-colors"
+                  aria-label="Scroll right"
+                >
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </ElectricBorder>
 
               {/* Dot Indicators */}
               <div className="flex items-center gap-1.5 ml-2">

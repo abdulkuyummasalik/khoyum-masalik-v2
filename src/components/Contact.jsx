@@ -1,6 +1,7 @@
 import { useForm, ValidationError } from "@formspree/react";
 import ElectricBorder from "./ElectricBorder";
 import SectionHeader from "./SectionHeader";
+import CardGlare from "./CardGlare";
 
 const Contact = () => {
   const [state, handleSubmit] = useForm("xayzqpno");
@@ -35,6 +36,7 @@ const Contact = () => {
         />
       </div>
       <div className="km-container">
+          <CardGlare roundedClass="rounded-2xl">
           <form
             onSubmit={handleSubmit}
             className="w-full rounded-2xl overflow-hidden border border-white/10 bg-white/[0.03] backdrop-blur-sm p-6 md:p-8"
@@ -140,6 +142,7 @@ const Contact = () => {
               </div>
             </div>
           </form>
+          </CardGlare>
       </div>
     </section>
   );

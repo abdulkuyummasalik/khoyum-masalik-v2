@@ -1,5 +1,6 @@
 import ElectricBorder from "./ElectricBorder";
 import SectionHeader from "./SectionHeader";
+import CardGlare from "./CardGlare";
 
 // PDF dari folder public — letakkan file CV-ABDULKUYUMMASALIK.pdf di /public
 const CV_URL = "/CV-ABDULKUYUMMASALIK.pdf";
@@ -15,7 +16,7 @@ const Resume = () => {
         />
       </div>
       <div className="km-container">
-          <div className="w-full rounded-2xl overflow-hidden border border-white/10 bg-white/[0.03] backdrop-blur-sm">
+          <CardGlare className="w-full rounded-2xl overflow-hidden border border-white/10 bg-white/[0.03] backdrop-blur-sm" roundedClass="rounded-2xl">
             <div className="p-4 flex flex-wrap items-center justify-center gap-3 border-b border-white/10">
               <ElectricBorder color="#10b981" speed={1} chaos={0.12} style={{ borderRadius: 12 }}>
                 <a
@@ -55,7 +56,7 @@ const Resume = () => {
                 </div>
               </noscript>
             </div>
-          </div>
+          </CardGlare>
       </div>
     </section>
   );
