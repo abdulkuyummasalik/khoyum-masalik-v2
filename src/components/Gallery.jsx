@@ -1,29 +1,34 @@
 import { useEffect, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import SectionHeader from "./SectionHeader";
+import { Link } from "react-router-dom";
 import ElectricBorder from "./ElectricBorder";
 import CardGlare from "./CardGlare";
 
-const projects = [
+export const galleryProjects = [
   {
     src: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1200&auto=format&fit=crop",
     alt: "BrightNest",
     tags: ["UI/UX Design", "Branding"],
+    slug: "brightnest",
   },
   {
     src: "https://images.unsplash.com/photo-1531297461734-290552feb79f?q=80&w=1200&auto=format&fit=crop",
     alt: "StellarWorks",
     tags: ["Branding & Marketing", "Brand Strategy"],
+    slug: "stellarworks",
   },
   {
     src: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
     alt: "NovaLaunch",
     tags: ["SEO & Growth", "Technical SEO"],
+    slug: "novalaunch",
   },
   {
     src: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1200&auto=format&fit=crop",
     alt: "PixelWave",
     tags: ["Branding & Marketing", "Bid Optimisation"],
+    slug: "pixelwave",
   },
 ];
 
@@ -87,22 +92,23 @@ const Gallery = () => {
 
           {/* 2×2 Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-            {projects.map((img, i) => {
-              const isActive = i === highlighted;
-              return (
-                <div
-                  key={i}
-                  className="group relative overflow-hidden rounded-[18px] cursor-pointer border border-white/10 bg-white/[0.03] backdrop-blur-sm"
-                  style={{
-                    boxShadow: isActive
-                      ? "0 0 24px rgba(96,165,250,0.35)"
-                      : "0 0 0 1px rgba(255,255,255,0.06)",
-                    transition: "box-shadow 0.5s ease",
-                  }}
-                  onMouseEnter={() => setHighlighted(i)}
-                  onMouseLeave={() => setHighlighted(null)}
-                >
-                  <CardGlare roundedClass="rounded-[18px]">
+          {galleryProjects.map((img, i) => {
+            const isActive = i === highlighted;
+            return (
+              <Link
+                key={img.slug}
+                to={`/gallery/${img.slug}`}
+                className="group relative overflow-hidden rounded-[18px] cursor-pointer border border-white/10 bg-white/[0.03] backdrop-blur-sm"
+                style={{
+                  boxShadow: isActive
+                    ? "0 0 24px rgba(96,165,250,0.35)"
+                    : "0 0 0 1px rgba(255,255,255,0.06)",
+                  transition: "box-shadow 0.5s ease",
+                }}
+                onMouseEnter={() => setHighlighted(i)}
+                onMouseLeave={() => setHighlighted(null)}
+              >
+                <CardGlare roundedClass="rounded-[18px]">
                     {/* Image */}
                     <div className="aspect-[4/3] relative bg-slate-900 overflow-hidden">
                       {!loadedMap[i] && (
@@ -153,7 +159,7 @@ const Gallery = () => {
                       />
                     </div>
                   </CardGlare>
-                </div>
+                </Link>
               );
             })}
           </div>
@@ -167,13 +173,13 @@ const Gallery = () => {
                 chaos={0.1}
                 style={{ borderRadius: 9999, display: "inline-block" }}
               >
-                <a
-                  href="#projects"
+                <Link
+                  to="/gallery"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-sky-600/80 hover:bg-sky-500/90 transition-colors text-sm font-semibold text-white"
                 >
-                  Lihat semua proyek
-                    <ArrowUpRight className="w-4 h-4 text-white" />
-                </a>
+                  Lihat semua galeri
+                  <ArrowUpRight className="w-4 h-4 text-white" />
+                </Link>
               </ElectricBorder>
             </div>
           </div>

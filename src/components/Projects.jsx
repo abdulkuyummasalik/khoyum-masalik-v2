@@ -1,11 +1,11 @@
 import { useMemo, useState, useEffect, useRef, useCallback } from "react";
+import { Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight, ExternalLink, Github } from "lucide-react";
 import ElectricBorder from "./ElectricBorder";
 import CardGlare from "./CardGlare";
 import SectionHeader from "./SectionHeader";
 
-// ─── Featured Data ────────────────────────────────────────────────────────────
-const featuredProjects = [
+export const featuredProjects = [
   {
     title: "Sistem Manajemen Apotek",
     description:
@@ -15,6 +15,7 @@ const featuredProjects = [
     tags: ["React", "UI/UX"],
     liveUrl: "#",
     repoUrl: "#",
+    slug: "sistem-manajemen-apotek",
   },
   {
     title: "Perpustakaan Digital",
@@ -25,6 +26,7 @@ const featuredProjects = [
     tags: ["Next.js", "Fullstack"],
     liveUrl: "#",
     repoUrl: "#",
+    slug: "perpustakaan-digital",
   },
   {
     title: "E-Commerce UMKM",
@@ -35,6 +37,7 @@ const featuredProjects = [
     tags: ["Next.js", "Stripe"],
     liveUrl: "#",
     repoUrl: "#",
+    slug: "e-commerce-umkm",
   },
   {
     title: "Task Manager Pro",
@@ -45,6 +48,7 @@ const featuredProjects = [
     tags: ["React", "Supabase"],
     liveUrl: "#",
     repoUrl: "#",
+    slug: "task-manager-pro",
   },
   {
     title: "Landing Page Animatif",
@@ -55,6 +59,7 @@ const featuredProjects = [
     tags: ["Vite", "GSAP"],
     liveUrl: "#",
     repoUrl: "#",
+    slug: "landing-page-animatif",
   },
   {
     title: "UI Components Kit",
@@ -65,13 +70,14 @@ const featuredProjects = [
     tags: ["Storybook", "UI/UX"],
     liveUrl: "#",
     repoUrl: "#",
+    slug: "ui-components-kit",
   },
 ];
 
 // ─── All Projects ─────────────────────────────────────────────────────────────
 const categories = ["Semua", "Web App", "Fullstack", "UI/UX", "Tools"];
 
-const allProjects = [
+export const allProjects = [
   {
     title: "Sistem Inventaris Sekolah",
     description:
@@ -82,6 +88,7 @@ const allProjects = [
     liveUrl: "#",
     repoUrl: "#",
     category: "Fullstack",
+    slug: "sistem-inventaris-sekolah",
   },
   {
     title: "E-Commerce UMKM",
@@ -93,6 +100,7 @@ const allProjects = [
     liveUrl: "#",
     repoUrl: "#",
     category: "Web App",
+    slug: "e-commerce-umkm",
   },
   {
     title: "Portal Siswa",
@@ -104,6 +112,7 @@ const allProjects = [
     liveUrl: "#",
     repoUrl: "#",
     category: "Web App",
+    slug: "portal-siswa",
   },
   {
     title: "UI Components Kit",
@@ -115,6 +124,7 @@ const allProjects = [
     liveUrl: "#",
     repoUrl: "#",
     category: "UI/UX",
+    slug: "ui-components-kit",
   },
   {
     title: "API Perpustakaan",
@@ -126,6 +136,7 @@ const allProjects = [
     liveUrl: "#",
     repoUrl: "#",
     category: "Fullstack",
+    slug: "api-perpustakaan",
   },
   {
     title: "Landing Page Animatif",
@@ -137,6 +148,7 @@ const allProjects = [
     liveUrl: "#",
     repoUrl: "#",
     category: "UI/UX",
+    slug: "landing-page-animatif",
   },
 ];
 
@@ -369,8 +381,7 @@ const FeaturedSlider = () => {
   );
 };
 
-// ─── Project Card ─────────────────────────────────────────────────────────────
-const ProjectCard = ({ p }) => (
+export const ProjectCard = ({ p }) => (
   <div className="flex flex-col h-full w-full rounded-2xl overflow-hidden border border-white/10 bg-white/[0.03] backdrop-blur-sm">
     <CardGlare className="h-full flex flex-col" roundedClass="rounded-2xl">
       <div className="w-full h-44 md:h-48 overflow-hidden flex-shrink-0">
@@ -398,37 +409,52 @@ const ProjectCard = ({ p }) => (
             </span>
           ))}
         </div>
-        <div className="mt-4 grid grid-cols-2 gap-2.5">
+        <div className="mt-4 space-y-2">
           <ElectricBorder
             color="#10b981"
             speed={1}
             chaos={0.12}
-            style={{ borderRadius: 10, display: "block" }}
+            style={{ borderRadius: 9999, display: "block" }}
           >
-            <a
-              className="w-full inline-flex items-center justify-center gap-1.5 rounded-[10px] bg-white/10 hover:bg-white/20 transition-colors px-3 py-2 text-sm text-white"
-              href={p.liveUrl}
-              target="_blank"
-              rel="noreferrer noopener"
+            <Link
+              to={`/projects/${p.slug}`}
+              className="w-full inline-flex items-center justify-center gap-1.5 rounded-full bg-emerald-500/80 hover:bg-emerald-400 transition-colors px-3 py-2 text-sm font-semibold text-white"
             >
-              <ExternalLink className="w-3.5 h-3.5" /> Live
-            </a>
+              Detail Proyek
+            </Link>
           </ElectricBorder>
-          <ElectricBorder
-            color="#3b82f6"
-            speed={1}
-            chaos={0.12}
-            style={{ borderRadius: 10, display: "block" }}
-          >
-            <a
-              className="w-full inline-flex items-center justify-center gap-1.5 rounded-[10px] border border-white/10 hover:bg-white/10 transition-colors px-3 py-2 text-sm text-white"
-              href={p.repoUrl}
-              target="_blank"
-              rel="noreferrer noopener"
+          <div className="grid grid-cols-2 gap-2.5">
+            <ElectricBorder
+              color="#10b981"
+              speed={1}
+              chaos={0.12}
+              style={{ borderRadius: 10, display: "block" }}
             >
-              <Github className="w-3.5 h-3.5" /> Repo
-            </a>
-          </ElectricBorder>
+              <a
+                className="w-full inline-flex items-center justify-center gap-1.5 rounded-[10px] bg-white/10 hover:bg-white/20 transition-colors px-3 py-2 text-sm text-white"
+                href={p.liveUrl}
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <ExternalLink className="w-3.5 h-3.5" /> Live
+              </a>
+            </ElectricBorder>
+            <ElectricBorder
+              color="#3b82f6"
+              speed={1}
+              chaos={0.12}
+              style={{ borderRadius: 10, display: "block" }}
+            >
+              <a
+                className="w-full inline-flex items-center justify-center gap-1.5 rounded-[10px] border border-white/10 hover:bg-white/10 transition-colors px-3 py-2 text-sm text-white"
+                href={p.repoUrl}
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <Github className="w-3.5 h-3.5" /> Repo
+              </a>
+            </ElectricBorder>
+          </div>
         </div>
       </div>
     </CardGlare>
@@ -522,8 +548,20 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* GitHub CTA */}
-        <div className="mt-10 text-center">
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <ElectricBorder
+            color="#3b82f6"
+            speed={1}
+            chaos={0.1}
+            style={{ borderRadius: 12, display: "inline-block" }}
+          >
+            <Link
+              to="/projects"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-white bg-white/10 hover:bg-white/20 transition-all text-sm font-medium"
+            >
+              Lihat semua proyek
+            </Link>
+          </ElectricBorder>
           <ElectricBorder
             color="#3b82f6"
             speed={1}

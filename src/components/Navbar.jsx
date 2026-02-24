@@ -1,18 +1,19 @@
 import { useState, useEffect, useRef } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Moon, Sun, Menu, X } from "lucide-react";
 import ElectricBorder from "./ElectricBorder";
 
 const NAV_ITEMS = [
-  { label: "Layanan", href: "#services" },
-  { label: "Proyek", href: "#projects" },
-  { label: "Pengalaman", href: "#experience" },
-  { label: "Galeri", href: "#gallery" },
-  { label: "Testimoni", href: "#testimonials" },
-  { label: "Blog", href: "#blog" },
+  { label: "Layanan", type: "section", target: "services" },
+  { label: "Proyek", type: "page", path: "/projects" },
+  { label: "Pengalaman", type: "section", target: "experience" },
+  { label: "Galeri", type: "page", path: "/gallery" },
+  { label: "Testimoni", type: "section", target: "testimonials" },
+  { label: "Blog", type: "page", path: "/blog" },
 ];
 
 const LOGO = "https://www.khoyummasalik.my.id/khoyum.jpg";
-const CONTACT_HREF = "#contact";
+const CONTACT_SECTION = "contact";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -20,6 +21,8 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const mobileRef = useRef(null);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   /* ── Scroll spy ── */
   useEffect(() => {
@@ -34,6 +37,10 @@ const Navbar = () => {
     ];
     const handler = () => {
       setScrolled(window.scrollY > 20);
+      if (location.pathname !== "/") {
+        setActive("");
+        return;
+      }
       for (let i = ids.length - 1; i >= 0; i--) {
         const el = document.getElementById(ids[i]);
         if (el && window.scrollY >= el.offsetTop - 140) {
@@ -45,7 +52,7 @@ const Navbar = () => {
     };
     window.addEventListener("scroll", handler, { passive: true });
     return () => window.removeEventListener("scroll", handler);
-  }, []);
+  }, [location.pathname]);
 
   /* ── Close mobile on outside click ── */
   useEffect(() => {
@@ -58,13 +65,40 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handler);
   }, [mobileOpen]);
 
-  /* ── Smooth scroll ── */
-  const handleClick = (e, href) => {
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      setActive(`#${id}`);
+    }
+  };
+
+  const handleSectionNav = (target) => {
+    setMobileOpen(false);
+    if (location.pathname === "/") {
+      scrollToSection(target);
+    } else {
+      navigate("/", { state: { scrollTo: target } });
+    }
+  };
+
+  const handlePageNav = (path) => {
+    setMobileOpen(false);
+    if (location.pathname === path) {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    } else {
+      navigate(path);
+    }
+  };
+
+  const handleLogoClick = (e) => {
     e.preventDefault();
     setMobileOpen(false);
-    const el = document.getElementById(href.replace("#", ""));
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-    setActive(href);
+    if (location.pathname === "/") {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    } else {
+      navigate("/");
+    }
   };
 
   return (
@@ -87,8 +121,8 @@ const Navbar = () => {
       >
         {/* ── Avatar ── */}
         <a
-          href="#home"
-          onClick={(e) => handleClick(e, "#home")}
+          href="/"
+          onClick={handleLogoClick}
           aria-label="Home"
           className="flex-shrink-0 overflow-hidden transition-all duration-200 hover:opacity-80"
           style={{
@@ -110,12 +144,27 @@ const Navbar = () => {
         {/* ── Desktop nav ── */}
         <ul className="hidden md:flex items-center gap-0.5 flex-1 justify-center list-none m-0 p-0">
           {NAV_ITEMS.map((item) => {
-            const isActive = active === item.href;
+            const isPage = item.type === "page";
+            const isSection = item.type === "section";
+            const isActive =
+              isSection && location.pathname === "/" && active === `#${item.target}`;
+
             return (
-              <li key={item.href}>
+              <li key={item.label}>
                 <a
-                  href={item.href}
-                  onClick={(e) => handleClick(e, item.href)}
+                  href={
+                    isPage
+                      ? item.path
+                      : `/#${item.target}`
+                  }
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (isPage) {
+                      handlePageNav(item.path);
+                    } else if (isSection) {
+                      handleSectionNav(item.target);
+                    }
+                  }}
                   className="relative px-4 py-2 text-xs font-semibold tracking-widest uppercase transition-all duration-200 flex items-center gap-1"
                   style={{
                     borderRadius: "10px",
@@ -179,8 +228,11 @@ const Navbar = () => {
           {/* Contact */}
           <ElectricBorder color="#3b82f6" speed={1} chaos={0.1} style={{ borderRadius: 10, display: "inline-block" }}>
             <a
-              href={CONTACT_HREF}
-              onClick={(e) => handleClick(e, CONTACT_HREF)}
+              href="/#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                handleSectionNav(CONTACT_SECTION);
+              }}
               className="hidden sm:inline-flex items-center px-5 py-2 text-xs font-bold text-white tracking-widest uppercase transition-all duration-200"
               style={{
                 borderRadius: "10px",
@@ -259,15 +311,31 @@ const Navbar = () => {
         }}
       >
         <div className="p-2 flex flex-col gap-1">
-          {[...NAV_ITEMS, { label: "Contact", href: CONTACT_HREF }].map(
+          {[...NAV_ITEMS, { label: "Kontak", type: "section", target: CONTACT_SECTION }].map(
             (item) => {
-              const isContact = item.href === CONTACT_HREF;
-              const isActive = active === item.href;
+              const isPage = item.type === "page";
+              const isSection = item.type === "section";
+              const isContact = item.target === CONTACT_SECTION;
+              const isActive =
+                isSection &&
+                location.pathname === "/" &&
+                active === `#${item.target}`;
               return (
                 <a
-                  key={item.href}
-                  href={item.href}
-                  onClick={(e) => handleClick(e, item.href)}
+                  key={item.label}
+                  href={
+                    isPage
+                      ? item.path
+                      : `/#${item.target || ""}`
+                  }
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (isPage) {
+                      handlePageNav(item.path);
+                    } else if (isSection) {
+                      handleSectionNav(item.target);
+                    }
+                  }}
                   className="px-4 py-3 text-xs font-bold tracking-widest uppercase transition-all duration-150"
                   style={{
                     borderRadius: "12px",
