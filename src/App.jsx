@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import {
   Hero,
   About,
@@ -65,9 +65,9 @@ const Home = () => {
       <Gallery />
       <Resume />
       <Testimonials />
-      <CTA />
-      <Contact />
       <Blog />
+      <Contact />
+      <CTA />
       <Footer />
     </main>
   );
@@ -75,22 +75,25 @@ const Home = () => {
 
 const AppContent = () => {
   const location = useLocation();
-  const [hasShownInitial, setHasShownInitial] = useState(false);
+  const [isInitial, setIsInitial] = useState(true);
+  const prevPathRef = useRef(location.pathname);
 
   useEffect(() => {
-    if (!hasShownInitial) {
-      setHasShownInitial(true);
+    // Apabila path berubah dari nilai awal, matikan mode 'initial'
+    if (location.pathname !== prevPathRef.current) {
+      setIsInitial(false);
+      prevPathRef.current = location.pathname;
     }
-  }, [hasShownInitial]);
+  }, [location.pathname]);
 
-  const isInitialLoader = !hasShownInitial && location.pathname === "/";
+  const loaderKey = isInitial ? "initial-loader" : `route-loader-${location.pathname}`;
 
   return (
     <>
       <ScrollToTop />
       <PageLoader
-        key={location.pathname + (isInitialLoader ? "-initial" : "-route")}
-        variant={isInitialLoader ? "initial" : "route"}
+        key={loaderKey}
+        variant={isInitial ? "initial" : "route"}
       />
       <div className="fixed inset-0 z-0 bg-neutral-950">
         <DotGrid
@@ -105,7 +108,14 @@ const AppContent = () => {
           returnDuration={1.5}
         />
       </div>
-      <SplashCursor />
+      <SplashCursor
+        SPLAT_RADIUS={0.1}
+        SPLAT_FORCE={3000}
+        DENSITY_DISSIPATION={5.0}
+        VELOCITY_DISSIPATION={4.0}
+        CURL={0.5}
+        COLOR_UPDATE_SPEED={15}
+      />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route

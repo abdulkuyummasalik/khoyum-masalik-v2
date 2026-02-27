@@ -1,14 +1,10 @@
-import { useMemo, useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight, ExternalLink, Github } from "lucide-react";
 import ElectricBorder from "./ElectricBorder";
 import CardGlare from "./CardGlare";
 import SectionHeader from "./SectionHeader";
-import {
-  featuredProjects,
-  allProjects,
-  projectCategories,
-} from "../datas/projects";
+import { featuredProjects } from "../datas/projects";
 
 // ─── Featured Slider ──────────────────────────────────────────────────────────
 const FeaturedSlider = () => {
@@ -126,7 +122,7 @@ const FeaturedSlider = () => {
           <p className="text-sm sm:text-base text-white/55 leading-relaxed max-w-xl hidden sm:block">
             {proj.description}
           </p>
-          <div className="mt-4 sm:mt-5 flex items-center gap-3">
+          <div className="mt-4 sm:mt-5 flex items-center gap-3 flex-wrap">
             <ElectricBorder
               color="#10b981"
               speed={1}
@@ -140,7 +136,7 @@ const FeaturedSlider = () => {
                 className="inline-flex items-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-emerald-600/80 hover:bg-emerald-500 transition-colors text-sm font-semibold text-white"
               >
                 <ExternalLink className="w-3.5 h-3.5" />
-                <span>Live Demo</span>
+                <span>Kunjungi</span>
               </a>
             </ElectricBorder>
             <ElectricBorder
@@ -156,8 +152,21 @@ const FeaturedSlider = () => {
                 className="inline-flex items-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-white/10 border border-white/15 hover:bg-white/20 transition-colors text-sm text-white"
               >
                 <Github className="w-3.5 h-3.5" />
-                <span>Repo</span>
+                <span>Kode</span>
               </a>
+            </ElectricBorder>
+            <ElectricBorder
+              color="#f43f5e"
+              speed={1}
+              chaos={0.1}
+              style={{ borderRadius: 9999, display: "inline-block", marginLeft: "auto" }}
+            >
+              <Link
+                to="/projects"
+                className="inline-flex items-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-rose-500/80 hover:bg-rose-400 transition-colors text-sm font-semibold text-white ml-auto"
+              >
+                <span>Lihat semua!</span>
+              </Link>
             </ElectricBorder>
           </div>
         </div>
@@ -180,9 +189,9 @@ const FeaturedSlider = () => {
       </div>
 
       {/* ── Thumbnail Strip + Dots ──────────────────────────────────────── */}
-      <div className="mt-4 flex items-center gap-2 sm:gap-3">
+      <div className="mt-4 flex items-center gap-2 sm:gap-3 px-1 pb-1">
         {/* Thumbnails — hidden on very small, shown sm+ */}
-        <div className="hidden sm:flex gap-2 flex-1 overflow-hidden">
+        <div className="hidden sm:flex gap-2 flex-1 overflow-visible">
           {featuredProjects.map((p, i) => (
             <button
               key={i}
@@ -290,7 +299,7 @@ export const ProjectCard = ({ p }) => (
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <ExternalLink className="w-3.5 h-3.5" /> Live
+                <ExternalLink className="w-3.5 h-3.5" /> Kunjungi
               </a>
             </ElectricBorder>
             <ElectricBorder
@@ -305,7 +314,7 @@ export const ProjectCard = ({ p }) => (
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <Github className="w-3.5 h-3.5" /> Repo
+                <Github className="w-3.5 h-3.5" /> Kode
               </a>
             </ElectricBorder>
           </div>
@@ -317,11 +326,6 @@ export const ProjectCard = ({ p }) => (
 
 // ─── Main Export ──────────────────────────────────────────────────────────────
 const Projects = () => {
-  const [active, setActive] = useState("Semua");
-  const filtered = useMemo(() => {
-    if (active === "Semua") return allProjects;
-    return allProjects.filter((p) => p.category === active);
-  }, [active]);
 
   return (
     <section
@@ -329,23 +333,9 @@ const Projects = () => {
       className="w-full py-16 sm:py-20 text-white relative overflow-hidden scroll-mt-28"
       aria-label="Proyek"
     >
-      {/* Bg glow */}
-      <div className="absolute inset-0 pointer-events-none opacity-20">
-        <div
-          className="w-full h-full"
-          style={{
-            background:
-              "radial-gradient(900px 500px at 50% 20%, rgba(52,211,153,0.35), transparent 60%)",
-          }}
-        />
-      </div>
-
       {/* Header */}
       <div className="relative z-10">
         <div className="km-container text-center">
-          <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-white/80 mb-4 sm:mb-5">
-            Proyek Unggulan
-          </div>
           <SectionHeader
             titlePrefix="Proyek yang"
             titleHighlight="saya kerjakan"
@@ -356,83 +346,8 @@ const Projects = () => {
       </div>
 
       {/* ── Featured Slider ────────────────────────────────────────────── */}
-      <div className="km-container relative z-10 mb-20">
+      <div className="km-container relative z-10 mb-12">
         <FeaturedSlider />
-      </div>
-
-      {/* ── All Projects ───────────────────────────────────────────────── */}
-      <div className="km-container relative z-10">
-        <SectionHeader
-          titlePrefix="Daftar"
-          titleHighlight="Proyek"
-          highlightClassName="text-sky-400"
-          description="Eksplorasi semua karya dengan tampilan modern, interaktif, dan responsif."
-        />
-
-        {/* Filter tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
-          {projectCategories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActive(cat)}
-              className="text-sm px-4 py-1.5 rounded-full border transition-all duration-200"
-              style={{
-                background:
-                  active === cat
-                    ? "linear-gradient(135deg,rgba(59,130,246,0.25),rgba(52,211,153,0.2))"
-                    : "transparent",
-                borderColor:
-                  active === cat
-                    ? "rgba(255,255,255,0.25)"
-                    : "rgba(255,255,255,0.1)",
-                color: active === cat ? "#fff" : "rgba(255,255,255,0.6)",
-              }}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {filtered.map((p, i) => (
-            <div key={`${p.title}-${i}`} className="flex">
-              <ProjectCard p={p} />
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <ElectricBorder
-            color="#3b82f6"
-            speed={1}
-            chaos={0.1}
-            style={{ borderRadius: 12, display: "inline-block" }}
-          >
-            <Link
-              to="/projects"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-white bg-white/10 hover:bg-white/20 transition-all text-sm font-medium"
-            >
-              Lihat semua proyek
-            </Link>
-          </ElectricBorder>
-          <ElectricBorder
-            color="#3b82f6"
-            speed={1}
-            chaos={0.1}
-            style={{ borderRadius: 12, display: "inline-block" }}
-          >
-            <a
-              href="https://github.com/yourname"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-white/80 hover:text-white bg-white/5 hover:bg-white/10 transition-all text-sm"
-            >
-              <Github className="w-4 h-4" />
-              Lihat lebih banyak di GitHub
-            </a>
-          </ElectricBorder>
-        </div>
       </div>
     </section>
   );

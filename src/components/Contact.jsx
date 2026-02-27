@@ -10,10 +10,10 @@ const Contact = () => {
     return (
       <section className="w-full py-20 text-white relative overflow-hidden" aria-label="Kontak">
         <div className="km-container text-center">
-        <SectionHeader
+          <SectionHeader
             titlePrefix="Terima"
             titleHighlight="kasih!"
-          highlightClassName="text-sky-400"
+            highlightClassName="text-sky-400"
             description="Pesan Anda sudah terkirim. Saya akan membalas secepatnya."
           />
         </div>
@@ -36,7 +36,7 @@ const Contact = () => {
         />
       </div>
       <div className="km-container">
-          <CardGlare roundedClass="rounded-2xl">
+        <CardGlare roundedClass="rounded-2xl">
           <form
             onSubmit={handleSubmit}
             className="w-full rounded-2xl overflow-hidden border border-white/10 bg-white/[0.03] backdrop-blur-sm p-6 md:p-8"
@@ -142,7 +142,7 @@ const Contact = () => {
               </div>
             </div>
           </form>
-          </CardGlare>
+        </CardGlare>
       </div>
     </section>
   );

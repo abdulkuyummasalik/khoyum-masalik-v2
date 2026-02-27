@@ -21,9 +21,6 @@ const ProjectsPage = () => {
       <main className="relative z-10 pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 text-white">
         <section className="w-full">
           <div className="km-container text-center mb-10 sm:mb-14">
-            <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-white/80 mb-4">
-              Semua Proyek
-            </div>
             <SectionHeader
               titlePrefix="Koleksi"
               titleHighlight="Proyek"

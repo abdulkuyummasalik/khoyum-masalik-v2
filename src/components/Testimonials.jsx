@@ -93,22 +93,8 @@ const Testimonials = () => {
       className="w-full py-16 sm:py-20 text-white relative overflow-hidden scroll-mt-28"
       aria-label="Testimoni"
     >
-      {/* Background glow */}
-        <div className="absolute inset-0 pointer-events-none opacity-20">
-        <div
-          className="w-full h-full"
-          style={{
-            background:
-              "radial-gradient(900px 500px at 50% 50%, rgba(96,165,250,0.18), transparent 60%)",
-          }}
-        />
-      </div>
-
       {/* Header */}
       <div className="km-container text-center relative z-10">
-        <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-white/80 mb-4 sm:mb-5">
-          Testimonials
-        </div>
         <SectionHeader
           titlePrefix="Testimoni"
           description="Suara klien dan rekan kerja mengenai kualitas kerja dan kolaborasi."
@@ -117,20 +103,9 @@ const Testimonials = () => {
 
       {/* Grid */}
       <div className="km-container relative z-10">
-        {/*
-          On mobile: stack vertically (carousel on top, cards below)
-          On lg: side-by-side, equal height via items-stretch
-          The key to equal height: both columns are flex children of a
-          `flex` (or `grid`) container with `items-stretch`.
-          The carousel wrapper uses h-full, and Carousel itself uses h-full.
-        */}
         <div className="flex flex-col lg:flex-row gap-6 items-stretch">
-          {/* LEFT — Carousel (takes 2/3 width on lg) */}
+          {/* LEFT — Carousel */}
           <div className="w-full lg:flex-[2] min-w-0">
-            {/*
-              We need Carousel to match the right column height.
-              Wrap it in a full-height div and let Carousel fill it.
-            */}
             <div className="h-full min-h-[400px] sm:min-h-[460px]">
               <Carousel
                 items={carouselItems}
@@ -143,7 +118,7 @@ const Testimonials = () => {
             </div>
           </div>
 
-          {/* RIGHT — Two stacked cards (takes 1/3 width on lg) */}
+          {/* RIGHT — Two stacked cards */}
           <div className="w-full lg:flex-[1] flex flex-col gap-4 sm:gap-5 min-w-0">
             {testimonials.slice(0, 2).map((t) => (
               <div key={t.id} className="flex-1 min-h-0">

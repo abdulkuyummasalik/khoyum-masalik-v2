@@ -21,7 +21,9 @@ const SectionHeader = ({
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold pb-3 sm:pb-4 text-white font-heading">
         {titlePrefix}
         {titleHighlight ? (
-          <span className={`text-3xl sm:text-4xl md:text-5xl italic ${highlightClassName}`}> {titleHighlight}</span>
+          <span className={`text-3xl sm:text-4xl md:text-5xl font-bold italic ml-2 ${highlightClassName}`}>
+            {titleHighlight}
+          </span>
         ) : null}
       </h2>
       {description ? (

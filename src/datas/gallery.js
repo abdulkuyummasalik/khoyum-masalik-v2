@@ -23,5 +23,11 @@ export const galleryProjects = [
     tags: ["Branding & Marketing", "Bid Optimisation"],
     slug: "pixelwave",
   },
+  {
+    src: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
+    alt: "NovaLaunch",
+    tags: ["SEO & Growth", "Technical SEO"],
+    slug: "novalaunch",
+  },
 ];
 

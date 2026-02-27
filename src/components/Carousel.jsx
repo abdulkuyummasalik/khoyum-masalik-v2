@@ -50,11 +50,10 @@ function CarouselItem({ item, index, itemWidth, round, trackItemOffset, x, trans
   return (
     <Motion.div
       key={`${item?.id ?? index}-${index}`}
-      className={`relative shrink-0 flex flex-col ${
-        round
-          ? 'items-center justify-center text-center border-0'
-          : 'items-start justify-between rounded-[16px]'
-      } cursor-grab active:cursor-grabbing`}
+      className={`relative shrink-0 flex flex-col ${round
+        ? 'items-center justify-center text-center border-0'
+        : 'items-start justify-between rounded-[16px]'
+        } cursor-grab active:cursor-grabbing`}
       style={{
         width: itemWidth,
         height: round ? itemWidth : '100%',
@@ -63,34 +62,33 @@ function CarouselItem({ item, index, itemWidth, round, trackItemOffset, x, trans
       }}
       transition={transition}>
       <CardGlare
-        className={`w-full h-full ${
-          round
-            ? 'flex items-center justify-center bg-[#060010]'
-            : 'flex flex-col justify-between bg-[#0b0b12] border border-[#1f1f2d]'
-        }`}
+        className={`w-full h-full ${round
+          ? 'flex items-center justify-center bg-[#060010]'
+          : 'flex flex-col justify-between border border-[#1f1f2d]'
+          }`}
         roundedClass={round ? 'rounded-full' : 'rounded-[16px]'}
       >
-      {!round && item?.imageUrl ? (
-        <div className="relative w-full h-56 md:h-64 lg:h-72 overflow-hidden bg-neutral-800">
-          <img
-            src={item.imageUrl}
-            alt={item.title ?? 'Carousel image'}
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
-          <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+        {!round && item?.imageUrl ? (
+          <div className="relative w-full h-56 md:h-64 lg:h-72 overflow-hidden bg-neutral-800">
+            <img
+              src={item.imageUrl}
+              alt={item.title ?? 'Carousel image'}
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+          </div>
+        ) : null}
+        <div className={`${round ? 'p-0 m-0' : 'p-5'}`}>
+          <span
+            className="flex h-[28px] w-[28px] items-center justify-center rounded-full bg-[#060010]">
+            {item.icon}
+          </span>
         </div>
-      ) : null}
-      <div className={`${round ? 'p-0 m-0' : 'p-5'}`}>
-        <span
-          className="flex h-[28px] w-[28px] items-center justify-center rounded-full bg-[#060010]">
-          {item.icon}
-        </span>
-      </div>
-      <div className="p-5">
-        <div className="mb-1 font-black text-lg text-white">{item.title}</div>
-        <p className="text-sm text-white">{item.description}</p>
-      </div>
+        <div className="p-5">
+          <div className="mb-1 font-black text-lg text-white">{item.title}</div>
+          <p className="text-sm text-white">{item.description}</p>
+        </div>
       </CardGlare>
     </Motion.div>
   );
@@ -232,11 +230,11 @@ export default function Carousel({
   const dragProps = loop
     ? {}
     : {
-        dragConstraints: {
-          left: -trackItemOffset * Math.max(itemsForRender.length - 1, 0),
-          right: 0
-        }
-      };
+      dragConstraints: {
+        left: -trackItemOffset * Math.max(itemsForRender.length - 1, 0),
+        right: 0
+      }
+    };
 
   const activeIndex =
     items.length === 0 ? 0 : loop ? (effectivePosition - 1 + items.length) % items.length : Math.min(effectivePosition, items.length - 1);
@@ -244,13 +242,13 @@ export default function Carousel({
   return (
     <div
       ref={containerRef}
-      className={`relative overflow-hidden p-4 ${
-        round ? 'rounded-full border border-white' : 'rounded-[24px] border border-[#1f1f2d]'
-      }`}
+      className={`relative overflow-hidden p-4 ${round ? 'rounded-full border border-white' : 'rounded-[24px] border border-[#1f1f2d]'
+        }`}
       style={{
         width: fluid ? '100%' : `${baseWidth}px`,
         ...(round && { height: `${effectiveBaseWidth}px` })
-      }}>
+      }}
+    >
       <Motion.div
         className="flex"
         drag={isAnimating ? false : 'x'}
@@ -259,11 +257,11 @@ export default function Carousel({
           width: itemWidth,
           gap: `${GAP}px`,
           perspective: 1000,
-        perspectiveOrigin: `${effectivePosition * trackItemOffset + itemWidth / 2}px 50%`,
+          perspectiveOrigin: `${effectivePosition * trackItemOffset + itemWidth / 2}px 50%`,
           x
         }}
         onDragEnd={handleDragEnd}
-      animate={{ x: -(effectivePosition * trackItemOffset) }}
+        animate={{ x: -(effectivePosition * trackItemOffset) }}
         transition={effectiveTransition}
         onAnimationStart={handleAnimationStart}
         onAnimationComplete={handleAnimationComplete}>
@@ -279,7 +277,7 @@ export default function Carousel({
             transition={effectiveTransition} />
         ))}
       </Motion.div>
-      <div
+      {/* <div
         className={`flex w-full justify-center ${round ? 'absolute z-20 bottom-12 left-1/2 -translate-x-1/2' : ''}`}>
         <div className="mt-4 flex w-[150px] justify-between px-8">
           {items.map((_, index) => (
@@ -301,7 +299,7 @@ export default function Carousel({
               transition={{ duration: 0.15 }} />
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

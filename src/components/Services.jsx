@@ -11,7 +11,7 @@ import {
 import ElectricBorder from "./ElectricBorder";
 import CardGlare from "./CardGlare";
 import SectionHeader from "./SectionHeader";
- 
+
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 const services = [
@@ -142,93 +142,93 @@ const ServiceCard = ({ s, index }) => {
       </div>
 
       <CardGlare roundedClass="rounded-2xl">
-      <div className="relative z-10 p-8 sm:p-10 md:p-12 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-sm">
-        {/* Top row: icon box + counter */}
-        <div className="flex items-start justify-between mb-7">
-          <div
-            className="w-12 h-12 rounded-2xl flex items-center justify-center border border-white/10 flex-shrink-0"
-            style={{
-              background: `linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03))`,
-              boxShadow: `0 0 20px ${s.accent}`,
-            }}
-          >
-            {s.icon}
-          </div>
-          <span
-            className="text-xs font-mono mt-1.5 px-2.5 py-1 rounded-full border border-white/10"
-            style={{
-              color: "rgba(255,255,255,0.3)",
-              background: "rgba(255,255,255,0.03)",
-              letterSpacing: "0.12em",
-            }}
-          >
-            {s.number} / 06
-          </span>
-        </div>
-
-        {/* Title */}
-        <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight mb-4">
-          {s.title}
-        </h3>
-
-        {/* Chips */}
-        <div className="flex flex-wrap gap-2 mb-7">
-          {s.chips.map((c, ci) => (
-            <span
-              key={ci}
-              className="text-xs px-3 py-1 rounded-full border border-white/10 font-medium"
+        <div className="relative z-10 p-8 sm:p-10 md:p-12 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-sm">
+          {/* Top row: icon box + counter */}
+          <div className="flex items-start justify-between mb-7">
+            <div
+              className="w-12 h-12 rounded-2xl flex items-center justify-center border border-white/10 flex-shrink-0"
               style={{
-                background: s.chipColor,
-                color: "rgba(255,255,255,0.7)",
+                background: `linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03))`,
+                boxShadow: `0 0 20px ${s.accent}`,
               }}
             >
-              {c}
-            </span>
-          ))}
-        </div>
-
-        {/* Divider */}
-        <div
-          className="w-full h-px mb-7"
-          style={{
-            background: `linear-gradient(90deg, ${s.accent}, rgba(255,255,255,0.04) 60%, transparent)`,
-          }}
-        />
-
-        {/* Description + CTA */}
-        <div className="flex flex-col sm:flex-row sm:items-end gap-7">
-          <p className="text-sm sm:text-base text-neutral-300/90 leading-[1.85] flex-1 max-w-2xl">
-            {s.desc}
-          </p>
-          <div className="flex-shrink-0">
-            <ElectricBorder
-              color={s.glow}
-              speed={1}
-              chaos={0.1}
-              style={{ borderRadius: 14, display: "inline-block" }}
+              {s.icon}
+            </div>
+            <span
+              className="text-xs font-mono mt-1.5 px-2.5 py-1 rounded-full border border-white/10"
+              style={{
+                color: "rgba(255,255,255,0.3)",
+                background: "rgba(255,255,255,0.03)",
+                letterSpacing: "0.12em",
+              }}
             >
-              <a
-                href="#contact"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-[14px] text-sm font-semibold text-white transition-all duration-200 whitespace-nowrap group"
-                style={{ background: "rgba(255,255,255,0.07)" }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "rgba(255,255,255,0.15)";
-                  e.currentTarget.style.transform = "translateY(-1px)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "rgba(255,255,255,0.07)";
-                  e.currentTarget.style.transform = "translateY(0)";
+              {s.number} / 06
+            </span>
+          </div>
+
+          {/* Title */}
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight mb-4">
+            {s.title}
+          </h3>
+
+          {/* Chips */}
+          <div className="flex flex-wrap gap-2 mb-7">
+            {s.chips.map((c, ci) => (
+              <span
+                key={ci}
+                className="text-xs px-3 py-1 rounded-full border border-white/10 font-medium"
+                style={{
+                  background: s.chipColor,
+                  color: "rgba(255,255,255,0.7)",
                 }}
               >
-                Kolaborasi
-                <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
-              </a>
-            </ElectricBorder>
+                {c}
+              </span>
+            ))}
+          </div>
+
+          {/* Divider */}
+          <div
+            className="w-full h-px mb-7"
+            style={{
+              background: `linear-gradient(90deg, ${s.accent}, rgba(255,255,255,0.04) 60%, transparent)`,
+            }}
+          />
+
+          {/* Description + CTA */}
+          <div className="flex flex-col sm:flex-row sm:items-end gap-7">
+            <p className="text-sm sm:text-base text-neutral-300/90 leading-[1.85] flex-1 max-w-2xl">
+              {s.desc}
+            </p>
+            <div className="flex-shrink-0">
+              <ElectricBorder
+                color={s.glow}
+                speed={1}
+                chaos={0.1}
+                style={{ borderRadius: 14, display: "inline-block" }}
+              >
+                <a
+                  href="#contact"
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-[14px] text-sm font-semibold text-white transition-all duration-200 whitespace-nowrap group"
+                  style={{ background: "rgba(255,255,255,0.07)" }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = "rgba(255,255,255,0.15)";
+                    e.currentTarget.style.transform = "translateY(-1px)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = "rgba(255,255,255,0.07)";
+                    e.currentTarget.style.transform = "translateY(0)";
+                  }}
+                >
+                  Kolaborasi
+                  <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+                </a>
+              </ElectricBorder>
+            </div>
           </div>
         </div>
-      </div>
       </CardGlare>
-      </div>
+    </div>
   );
 };
 
@@ -240,22 +240,8 @@ const Services = () => {
       className="relative w-full pt-20 pb-40 overflow-visible scroll-mt-28 text-white"
       aria-label="Layanan"
     >
-      {/* Background atmosphere */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div
-          className="w-full h-full opacity-25"
-          style={{
-            background:
-              "radial-gradient(1000px 600px at 50% 0%, rgba(125,249,255,0.18), transparent 55%), radial-gradient(800px 500px at 80% 20%, rgba(168,85,247,0.12), transparent 55%)",
-          }}
-        />
-      </div>
-
       {/* Header */}
       <div className="relative z-10 km-container text-center">
-        <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-white/80 mb-4 sm:mb-5">
-          Layanan
-        </div>
         <SectionHeader
           titlePrefix="Apa yang bisa"
           titleHighlight="saya bantu"

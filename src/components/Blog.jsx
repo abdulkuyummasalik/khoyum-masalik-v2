@@ -110,22 +110,9 @@ const Blog = () => {
         isPausedRef.current = false;
       }}
     >
-      {/* Background glow */}
-      <div className="absolute inset-0 pointer-events-none opacity-30">
-        <div
-          className="w-full h-full"
-          style={{
-            background:
-              "radial-gradient(1200px 600px at 50% 0%, rgba(139,92,246,0.25), transparent 60%), radial-gradient(800px 400px at 60% 10%, rgba(20,184,166,0.18), transparent 60%)",
-          }}
-        />
-      </div>
 
       {/* Header */}
       <div className="km-container text-center relative z-10">
-        <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-white/80 mb-4 sm:mb-5">
-          Blog & Artikel
-        </div>
         <SectionHeader
           titlePrefix="Catatan seputar"
           titleHighlight="desain & pengembangan"
@@ -144,7 +131,7 @@ const Blog = () => {
               background:
                 "repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 24px), repeating-linear-gradient(90deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 24px)",
               maskImage:
-                            "radial-gradient(600px 300px at 50% 0%, black, transparent 70%)",
+                "radial-gradient(600px 300px at 50% 0%, black, transparent 70%)",
             }}
           />
 
@@ -199,20 +186,20 @@ const Blog = () => {
           <div className="mt-4 flex flex-wrap items-center justify-between gap-3 relative z-10">
             {/* Arrow Buttons */}
             <div className="flex items-center gap-2">
-                <button
-                  onClick={handlePrev}
-                  className="inline-flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-b from-white/10 to-white/5 border border-white/10 hover:bg-white/15 transition-colors"
-                  aria-label="Scroll left"
-                >
-                  <ArrowLeft className="w-4 h-4" />
-                </button>
-                <button
-                  onClick={handleNext}
-                  className="inline-flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-b from-white/10 to-white/5 border border-white/10 hover:bg-white/15 transition-colors"
-                  aria-label="Scroll right"
-                >
-                  <ArrowRight className="w-4 h-4" />
-                </button>
+              <button
+                onClick={handlePrev}
+                className="inline-flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-b from-white/10 to-white/5 border border-white/10 hover:bg-white/15 transition-colors"
+                aria-label="Scroll left"
+              >
+                <ArrowLeft className="w-4 h-4" />
+              </button>
+              <button
+                onClick={handleNext}
+                className="inline-flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-b from-white/10 to-white/5 border border-white/10 hover:bg-white/15 transition-colors"
+                aria-label="Scroll right"
+              >
+                <ArrowRight className="w-4 h-4" />
+              </button>
 
               {/* Dot Indicators */}
               <div className="flex items-center gap-1.5 ml-2">
@@ -226,7 +213,7 @@ const Blog = () => {
                       height: "6px",
                       background:
                         currentIndex === i
-                            ? "linear-gradient(90deg, #34d399, #60a5fa)"
+                          ? "linear-gradient(90deg, #34d399, #60a5fa)"
                           : "rgba(255,255,255,0.2)",
                     }}
                     aria-label={`Go to slide ${i + 1}`}
