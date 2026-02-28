@@ -8,57 +8,56 @@ const timelineData = [
   {
     id: 1,
     type: 'experience',
-    role: 'Frontend Developer',
-    company: 'Studio Mandiri Digital',
-    period: '2024 - Sekarang',
-    description: 'Membangun antarmuka web modern dengan React, Tailwind CSS, dan animasi interaktif untuk klien kecil dan komunitas.',
-    skills: ['React', 'Framer Motion', 'Tailwind'],
+    role: 'Freelance Web Developer',
+    company: 'Independen / Klien Beragam',
+    period: '2025 - Sekarang',
+    description: 'Menyediakan jasa pembuatan aplikasi web kustom, maintenance sistem, serta setup hosting untuk berbagai klien sesuai kebutuhan spesifik mereka.',
+    skills: ['React/Vue', 'Go/PHP', 'Fullstack'],
     link: '#'
   },
   {
     id: 2,
-    type: 'education',
-    role: 'Rekayasa Perangkat Lunak',
-    company: 'SMK Digital Nusantara',
-    period: '2022 - Sekarang',
-    description: 'Mempelajari dasar pemrograman, pengembangan web full-stack, basis data, dan manajemen proyek perangkat lunak.',
-    skills: ['HTML/CSS', 'PHP', 'Laravel'],
+    type: 'experience',
+    role: 'Backend Developer Intern',
+    company: 'PT. INOVASI GENERASI INDONESIA - Tangerang',
+    period: '2026',
+    description: 'Terlibat dalam revamp UI/UX serta migrasi sistem backend berskala produksi dari arsitektur Laravel menuju backend berbasis arsitektur Go (Echo).',
+    skills: ['Flutter', 'Go (Echo)', 'PostgreSQL'],
     link: '#'
   },
   {
     id: 3,
     type: 'experience',
-    role: 'Web Developer Intern',
-    company: 'Lab Proyek Sekolah Digital',
-    period: '2023 - 2024',
-    description: 'Berkontribusi dalam tim kecil untuk membangun sistem informasi internal dan portal siswa berbasis web.',
-    skills: ['Vue.js', 'MySQL', 'Git'],
+    role: 'Fullstack Developer Intern',
+    company: 'PT. EXORTY INDONESIA - Bogor',
+    period: '2025',
+    description: 'Bertanggung jawab dalam pengembangan web app secara end-to-end, pembaruan fitur, perbaikan bug, hingga manajemen dan analisis data sistem.',
+    skills: ['React JS', 'FastAPI', 'MySQL'],
     link: '#'
   },
   {
     id: 4,
     type: 'education',
-    role: 'Frontend & UI Engineering',
-    company: 'Bootcamp / Self-Taught',
-    period: '2023 - 2024',
-    description: 'Memperdalam konsep UI/UX, state management, dan performa aplikasi web modern.',
-    skills: ['Figma', 'Redux', 'Performance'],
+    role: 'Pengembangan Perangkat Lunak & Gim (PPLG)',
+    company: 'SMK WIKRAMA BOGOR',
+    period: '2023 - 2026',
+    description: 'Mempelajari dasar-dasar IT, logika pemrograman, serta pengembangan web menggunakan berbagai bahasa seperti HTML, CSS, JavaScript, dan PHP sambil melatih kemampuan problem solving (berpikir kritis).',
+    skills: ['HTML/CSS', 'JavaScript', 'PHP'],
     link: '#'
   }
 ];
 
 const TimelineItem = ({ item, index }) => {
   const isEven = index % 2 === 0;
-  
+
   return (
     <Motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className={`relative flex items-center justify-between md:justify-normal w-full mb-12 md:mb-24 ${
-        isEven ? 'md:flex-row-reverse' : ''
-      }`}
+      className={`relative flex items-center justify-between md:justify-normal w-full mb-12 md:mb-24 ${isEven ? 'md:flex-row-reverse' : ''
+        }`}
     >
       {/* Content Block */}
       <div className="w-full md:w-5/12 pl-12 md:pl-0 md:px-8">
@@ -68,7 +67,7 @@ const TimelineItem = ({ item, index }) => {
               <Calendar className="w-4 h-4" />
               <span className="text-sm font-mono tracking-wider">{item.period}</span>
             </div>
-            
+
             <h3 className={`text-2xl font-bold text-white mb-1 flex items-center gap-2 ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
               {item.role}
               {item.link !== '#' && (
@@ -77,20 +76,20 @@ const TimelineItem = ({ item, index }) => {
                 </a>
               )}
             </h3>
-            
+
             <div className={`flex items-center gap-2 text-gray-400 text-sm mb-3 font-medium ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
               {item.type === 'experience' ? <Briefcase className="w-4 h-4 text-emerald-400" /> : <GraduationCap className="w-4 h-4 text-purple-400" />}
               {item.company}
             </div>
-            
+
             <p className={`text-gray-400 leading-relaxed text-sm md:text-base max-w-md ${isEven ? 'text-left' : 'md:text-right'}`}>
               {item.description}
             </p>
-            
+
             <div className={`flex flex-wrap gap-2 mt-4 ${isEven ? 'justify-start' : 'md:justify-end'}`}>
               {item.skills.map((skill, i) => (
-                <span 
-                  key={i} 
+                <span
+                  key={i}
                   className="px-3 py-1 text-xs rounded-full bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10 hover:border-emerald-500/30 hover:text-emerald-300 transition-all duration-300"
                 >
                   {skill}
@@ -108,7 +107,7 @@ const TimelineItem = ({ item, index }) => {
           <div className={`relative w-4 h-4 rounded-full border-2 bg-[#0a0a0a] ${item.type === 'experience' ? 'border-emerald-500' : 'border-purple-500'}`}></div>
         </div>
       </div>
-      
+
       {/* Spacer for desktop layout balance */}
       <div className="hidden md:block w-5/12" />
     </Motion.div>
@@ -121,7 +120,7 @@ const ExperienceEducation = () => {
     target: containerRef,
     offset: ["start end", "end start"]
   });
-  
+
   const height = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
@@ -139,9 +138,9 @@ const ExperienceEducation = () => {
         <div className="relative">
           {/* Main Vertical Line (Background) */}
           <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-white/10 transform -translate-x-1/2"></div>
-          
+
           {/* Animated Vertical Line (Progress) */}
-          <Motion.div 
+          <Motion.div
             style={{ height }}
             className="absolute left-0 md:left-1/2 top-0 w-px bg-emerald-500 transform -translate-x-1/2 origin-top"
           />

@@ -49,9 +49,8 @@ const StatCard = ({ number = 0, label = "", delay = 0 }) => {
   return (
     <div
       ref={ref}
-      className={`h-full flex flex-col items-start justify-between p-5 sm:p-6 rounded-2xl bg-neutral-900 border border-white/10 hover:border-emerald-400/40 transition-all duration-500 group ${
-        visible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-      }`}
+      className={`h-full flex flex-col items-start justify-between p-5 sm:p-6 rounded-2xl bg-neutral-900 border border-white/10 hover:border-emerald-400/40 transition-all duration-500 group ${visible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+        }`}
       style={{ transitionDelay: `${delay * 100}ms` }}
     >
       <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-400/10 flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-emerald-400/20 transition-colors">
@@ -73,18 +72,23 @@ const StatCard = ({ number = 0, label = "", delay = 0 }) => {
 const techStack = [
   {
     icon: <Globe className="w-4 h-4" />,
-    label: "React & Tailwind",
+    label: "React & Vue",
     color: "#7df9ff",
   },
   {
     icon: <Server className="w-4 h-4" />,
     label: "PHP & Laravel",
-    color: "#34d399",
+    color: "#f87171",
   },
   {
     icon: <Zap className="w-4 h-4" />,
-    label: "FastAPI & REST",
-    color: "#a78bfa",
+    label: "Go & Echo",
+    color: "#38bdf8",
+  },
+  {
+    icon: <Layers className="w-4 h-4" />,
+    label: "PostgreSQL",
+    color: "#34d399",
   },
   {
     icon: <GitBranch className="w-4 h-4" />,
@@ -92,14 +96,9 @@ const techStack = [
     color: "#fb923c",
   },
   {
-    icon: <Layers className="w-4 h-4" />,
-    label: "MySQL & DB",
-    color: "#f472b6",
-  },
-  {
     icon: <Code className="w-4 h-4" />,
     label: "Vercel Deploy",
-    color: "#7df9ff",
+    color: "#a78bfa",
   },
 ];
 
@@ -159,14 +158,10 @@ const About = () => {
           </h3>
         </div>
         <p className="text-neutral-400 text-sm leading-relaxed">
-          Sebagai pelajar rekayasa perangkat lunak, saya senang membangun
-          antarmuka web yang rapi dan mudah digunakan untuk berbagai kebutuhan
-          — dari dashboard internal hingga landing page produk.
+          Saya adalah lulusan SMK Wikrama Bogor tahun 2026, jurusan Pengembangan Perangkat Lunak dan Gim (PPLG). Saat ini, saya aktif bekerja secara freelance sebagai Web Developer / Fullstack.
         </p>
         <p className="mt-3 text-neutral-400 text-sm leading-relaxed">
-          Setiap proyek kecil yang saya kerjakan adalah kesempatan untuk
-          bereksperimen dengan teknologi baru, memperbaiki detail UI, dan
-          belajar memahami masalah pengguna dengan lebih dalam.
+          Memiliki minat mendalam di bidang backend, saya sangat menikmati proses memecahkan bug (problem solving), bereksperimen dengan teknologi baru, dan menaklukkan tantangan untuk menciptakan solusi yang relevan.
         </p>
       </div>
       <div className="mt-6 h-px w-full bg-gradient-to-r from-emerald-400/40 via-cyan-400/20 to-transparent" />
@@ -197,14 +192,13 @@ const About = () => {
             </h3>
           </div>
           <p className="text-neutral-300 text-sm leading-relaxed">
-            Menjadi web developer profesional yang mampu menciptakan solusi
-            teknologi inovatif untuk memajukan digitalisasi Indonesia.
+            Menciptakan produk dan layanan digital yang fungsional, inovatif, dan mampu memberikan dampak positif yang nyata bagi penggunanya.
           </p>
           <ul className="mt-3 space-y-1.5">
             {[
+              "Fokus pada problem solving",
+              "Selalu bereksperimen & adaptif",
               "Konsisten dalam kualitas kode",
-              "Kolaboratif & komunikatif",
-              "Problem-solver yang adaptif",
             ].map((item, i) => (
               <li
                 key={i}
@@ -225,7 +219,7 @@ const About = () => {
           >
             <button
               className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl bg-emerald-400/10 hover:bg-emerald-400/20 text-emerald-300 text-sm font-medium transition-colors"
-              onClick={() => window.open("mailto:khoyum28@gmail.com", "_blank")}
+              onClick={() => window.open("mailto:khoyummasalik@gmail.com", "_blank")}
             >
               <Mail className="w-4 h-4" />
               <span>Mari berkolaborasi</span>
@@ -302,9 +296,9 @@ const About = () => {
           {/* Stats 2×2 */}
           <div className="grid grid-cols-2 gap-4">
             {[
-              { n: 15, l: "Proyek Selesai", d: 2 },
-              { n: 8, l: "Teknologi Dikuasai", d: 3 },
-              { n: 2, l: "Tahun Pengalaman", d: 4 },
+              { n: 5, l: "Proyek Selesai", d: 2 },
+              { n: 10, l: "Teknologi Dikuasai", d: 3 },
+              { n: 3, l: "Tahun Pengalaman", d: 4 },
               { n: 10, l: "Sertifikat", d: 5 },
             ].map(({ n, l, d }) => (
               <CardGlare key={l} roundedClass="rounded-2xl" className="h-full">
@@ -336,10 +330,10 @@ const About = () => {
           {/* Row 2 kanan: stats 2x1 */}
           <div className="grid grid-cols-2 gap-4">
             <CardGlare roundedClass="rounded-2xl" className="h-full">
-              <StatCard number={15} label="Proyek Selesai" delay={2} />
+              <StatCard number={5} label="Proyek Selesai" delay={2} />
             </CardGlare>
             <CardGlare roundedClass="rounded-2xl" className="h-full">
-              <StatCard number={8} label="Teknologi Dikuasai" delay={3} />
+              <StatCard number={10} label="Teknologi Dikuasai" delay={3} />
             </CardGlare>
           </div>
 
@@ -351,7 +345,7 @@ const About = () => {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <CardGlare roundedClass="rounded-2xl" className="h-full">
-              <StatCard number={2} label="Tahun Pengalaman" delay={4} />
+              <StatCard number={3} label="Tahun Pengalaman" delay={4} />
             </CardGlare>
             <CardGlare roundedClass="rounded-2xl" className="h-full">
               <StatCard number={10} label="Sertifikat" delay={5} />
@@ -395,7 +389,7 @@ const About = () => {
             style={{ gridColumn: "6 / 9", gridRow: "4 / 6" }}
           >
             <CardGlare roundedClass="rounded-2xl" className="h-full">
-              <StatCard number={15} label="Proyek Selesai" delay={2} />
+              <StatCard number={5} label="Proyek Selesai" delay={2} />
             </CardGlare>
           </div>
 
@@ -405,7 +399,7 @@ const About = () => {
             style={{ gridColumn: "9 / 13", gridRow: "4 / 6" }}
           >
             <CardGlare roundedClass="rounded-2xl" className="h-full">
-              <StatCard number={8} label="Teknologi Dikuasai" delay={3} />
+              <StatCard number={10} label="Teknologi Dikuasai" delay={3} />
             </CardGlare>
           </div>
 
@@ -425,7 +419,7 @@ const About = () => {
             style={{ gridColumn: "6 / 9", gridRow: "6 / 8" }}
           >
             <CardGlare roundedClass="rounded-2xl" className="h-full">
-              <StatCard number={2} label="Tahun Pengalaman" delay={4} />
+              <StatCard number={3} label="Tahun Pengalaman" delay={4} />
             </CardGlare>
           </div>
 
