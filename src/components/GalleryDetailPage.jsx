@@ -27,12 +27,12 @@ const GalleryDetailPage = () => {
   return (
     <>
       <Navbar />
-      <main className="relative z-10 pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 text-white">
+      <main className="relative z-10 pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 text-foreground">
         <section className="w-full">
           <div className="km-container mb-6 sm:mb-8">
             <button
               onClick={() => navigate(-1)}
-              className="inline-flex items-center gap-2 text-xs sm:text-sm text-white/60 hover:text-white/90 px-0.5 py-1 rounded-full"
+              className="inline-flex items-center gap-2 text-xs sm:text-sm text-foreground/60 hover:text-foreground/90 px-0.5 py-1 rounded-full"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
               <span>Kembali</span>
@@ -57,7 +57,7 @@ const GalleryDetailPage = () => {
             }}
           >
             <CardGlare roundedClass="rounded-[28px]">
-              <div className="rounded-[28px] border border-white/10 bg-white/[0.03] overflow-hidden">
+              <div className="rounded-[28px] border border-foreground/10 bg-foreground/[0.03] overflow-hidden">
                 <div className="relative w-full" style={{ aspectRatio: "16/8" }}>
                   <img
                     src={current.src}
@@ -93,8 +93,8 @@ const GalleryDetailPage = () => {
                 </div>
 
                 <div className="px-5 sm:px-8 md:px-10 py-6 sm:py-8 md:py-10 grid gap-6 md:gap-8 lg:gap-10 grid-cols-1 lg:grid-cols-3">
-                  <div className="space-y-3 text-sm sm:text-base text-white/75 leading-relaxed">
-                    <h2 className="text-sm font-semibold text-white/80 tracking-wide uppercase">
+                  <div className="space-y-3 text-sm sm:text-base text-foreground/75 leading-relaxed">
+                    <h2 className="text-sm font-semibold text-foreground/80 tracking-wide uppercase">
                       Tujuan visual
                     </h2>
                     <p>
@@ -103,8 +103,8 @@ const GalleryDetailPage = () => {
                       judul, tombol aksi, dan navigasi.
                     </p>
                   </div>
-                  <div className="space-y-3 text-sm sm:text-base text-white/75 leading-relaxed">
-                    <h2 className="text-sm font-semibold text-white/80 tracking-wide uppercase">
+                  <div className="space-y-3 text-sm sm:text-base text-foreground/75 leading-relaxed">
+                    <h2 className="text-sm font-semibold text-foreground/80 tracking-wide uppercase">
                       Palet & suasana
                     </h2>
                     <p>
@@ -113,8 +113,8 @@ const GalleryDetailPage = () => {
                       layout yang kaya ilustrasi.
                     </p>
                   </div>
-                  <div className="space-y-3 text-sm sm:text-base text-white/75 leading-relaxed">
-                    <h2 className="text-sm font-semibold text-white/80 tracking-wide uppercase">
+                  <div className="space-y-3 text-sm sm:text-base text-foreground/75 leading-relaxed">
+                    <h2 className="text-sm font-semibold text-foreground/80 tracking-wide uppercase">
                       Potensi penggunaan
                     </h2>
                     <p>
@@ -138,7 +138,7 @@ const GalleryDetailPage = () => {
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
               {others.map((img) => (
                 <CardGlare key={img.slug} roundedClass="rounded-2xl">
-                  <div className="rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden flex flex-col h-full">
+                  <div className="rounded-2xl border border-foreground/10 bg-foreground/[0.03] overflow-hidden flex flex-col h-full">
                     <div className="aspect-[4/3] bg-slate-900 overflow-hidden">
                       <img
                         src={img.src}
@@ -152,7 +152,7 @@ const GalleryDetailPage = () => {
                         <h2 className="text-sm sm:text-base font-semibold">
                           {img.alt}
                         </h2>
-                        <span className="text-[10px] sm:text-xs px-2 py-0.5 rounded-full bg-white/5 border border-white/15 text-white/70">
+                        <span className="text-[10px] sm:text-xs px-2 py-0.5 rounded-full bg-foreground/5 border border-foreground/15 text-foreground/70">
                           Visual
                         </span>
                       </div>
@@ -160,7 +160,7 @@ const GalleryDetailPage = () => {
                         {img.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="text-[10px] sm:text-xs px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-white/80"
+                            className="text-[10px] sm:text-xs px-2 py-0.5 rounded-full bg-foreground/5 border border-foreground/10 text-foreground/80"
                           >
                             {tag}
                           </span>

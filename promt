@@ -1,0 +1,444 @@
+# Tugas: Update Portfolio Personal Khoyum Masalik Menjadi Portfolio Software Engineer Profesional
+
+Anda bertindak sebagai **Senior UI/UX Designer, Frontend Engineer, dan Software Architect**.
+
+Saya memiliki website portfolio personal yang sebelumnya memiliki branding sebagai **Frontend Web Developer**. Tugas Anda adalah melakukan transformasi total menjadi portfolio **Software Engineer profesional** dengan tampilan modern, premium, clean, dan memiliki standar portfolio developer kelas industri.
+
+Gunakan file:
+`PORTFOLIO_KHOYUM_MASALIK_UPDATE.md`
+
+sebagai sumber data utama.
+
+---
+
+# Tujuan Utama
+
+Lakukan redesign dan penyesuaian konten portfolio agar:
+
+1. Positioning utama:
+   - Software Engineer
+   - Fullstack Developer
+   - Problem Solver
+   - Product Builder
+
+2. Jangan lagi terlihat hanya sebagai frontend developer.
+
+3. Tampilkan kemampuan:
+   - Frontend Development
+   - Backend Development
+   - API Development
+   - Database Design
+   - System Development
+   - Deployment
+
+4. Buat personal branding yang cocok untuk:
+   - Rekrutmen perusahaan teknologi
+   - Client freelance
+   - Professional networking
+
+
+---
+
+# Aturan Bahasa
+
+WAJIB:
+
+- Gunakan Bahasa Indonesia seluruhnya.
+- Hindari campuran bahasa Inggris yang tidak diperlukan.
+- Nama teknologi tetap menggunakan nama aslinya.
+- Gunakan gaya bahasa profesional, modern, dan percaya diri.
+- Jangan gunakan kalimat berlebihan atau terlalu marketing.
+
+
+---
+
+# Analisis Sebelum Implementasi
+
+Sebelum melakukan perubahan:
+
+1. Baca seluruh struktur project terlebih dahulu.
+2. Identifikasi:
+   - Framework yang digunakan.
+   - Struktur folder.
+   - Komponen reusable.
+   - Sistem routing.
+   - Data statis.
+   - Asset.
+   - Styling system.
+   - Library UI.
+   - Animasi yang digunakan.
+
+3. Jangan langsung coding.
+
+Buat analisis:
+
+- Bagian yang perlu diubah.
+- File yang terdampak.
+- Komponen yang perlu dibuat ulang.
+- Risiko perubahan.
+
+
+---
+
+# Perubahan Konten
+
+
+## Hero Section
+
+Ubah:
+
+Frontend Web Developer
+
+menjadi:
+
+Software Engineer
+
+
+Hero harus menampilkan:
+
+Nama:
+Khoyum Masalik
+
+Role:
+Software Engineer
+
+
+Deskripsi:
+
+Fokus pada:
+- membangun aplikasi modern
+- frontend dan backend
+- solusi digital scalable
+- problem solving
+
+
+CTA:
+
+Gunakan:
+
+- Hubungi Saya
+- Lihat Portfolio
+
+
+---
+
+# About Section
+
+Ubah menjadi profil Software Engineer.
+
+
+Poin utama:
+
+- Lulusan SMK Wikrama Bogor PPLG 2026.
+- Aktif sebagai Freelance Web Developer.
+- Memiliki pengalaman profesional sebagai Backend Developer dan Fullstack Developer.
+- Berpengalaman membangun aplikasi end-to-end.
+
+
+Jangan membuat profil hanya sebagai UI developer.
+
+
+---
+
+# Statistik
+
+Update menjadi:
+
+
+10+
+Proyek Selesai
+
+
+10+
+Teknologi Dikuasai
+
+
+1+
+Tahun Pengalaman
+
+
+20+
+Sertifikat
+
+
+---
+
+# Skill Section
+
+
+Kelompokkan menjadi:
+
+
+## Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+- React
+- Vue
+- Flutter
+- Tailwind CSS
+- Bootstrap
+
+
+## Backend
+
+- PHP
+- Laravel
+- Node.js
+- Express.js
+- Go
+- Echo
+- Python
+- FastAPI
+
+
+## Database
+
+- MySQL
+- PostgreSQL
+
+
+## Tools
+
+- Git
+- GitHub
+- Postman
+- Swagger
+- Figma
+
+
+## Deployment
+
+- Vercel
+- Netlify
+- cPanel
+
+
+## AI Tools
+
+- Antigravity AI
+- Claude
+
+
+---
+
+# Experience Section
+
+Update pengalaman:
+
+
+## Freelance Web Developer
+
+Periode:
+Januari 2025 - Sekarang
+
+
+Deskripsi:
+
+Membangun aplikasi web custom, melakukan maintenance sistem, membuat backend API, deployment, dan membantu kebutuhan digital client.
+
+
+---
+
+## Backend Developer
+
+PT. INOVASI GENERASI INDONESIA
+
+Periode:
+Januari 2026 - Juni 2026
+
+
+Deskripsi:
+
+Mengembangkan backend aplikasi production, membuat API, mengelola database, serta melakukan migrasi arsitektur backend menggunakan Go.
+
+
+Teknologi:
+
+- Go
+- Echo
+- PostgreSQL
+- Flutter
+
+
+---
+
+## Fullstack Developer
+
+PT. EXORTY INDONESIA
+
+Periode:
+Januari 2025 - Juni 2025
+
+
+Deskripsi:
+
+Mengembangkan aplikasi web secara end-to-end mulai dari frontend, backend, database, hingga maintenance sistem.
+
+
+Teknologi:
+
+- React
+- FastAPI
+- MySQL
+
+
+---
+
+# Service Section
+
+Sesuaikan menjadi:
+
+
+1. Custom Software Development
+
+2. Fullstack Development
+
+3. Backend API Development
+
+4. Maintenance & System Improvement
+
+
+Jangan terlalu fokus pada jasa desain.
+
+
+---
+
+# Project Section
+
+Pertahankan struktur project.
+
+Namun tampilkan informasi:
+
+- Nama aplikasi
+- Masalah yang diselesaikan
+- Solusi yang dibuat
+- Teknologi
+- Role saya
+- Link demo
+- Repository
+
+
+Gunakan gaya case study.
+
+
+---
+
+# Contact Section
+
+Tambahkan:
+
+Email:
+khoyum28@gmail.com
+
+
+Social:
+
+Instagram:
+@khoyum_28
+
+
+GitHub:
+Tambahkan link
+
+
+LinkedIn:
+Tambahkan link
+
+
+Website:
+Tambahkan link
+
+
+---
+
+# Design Requirement
+
+
+Gunakan desain:
+
+- Modern
+- Minimalis
+- Premium
+- Developer oriented
+- Enterprise feeling
+
+
+Prioritas:
+
+- Typography kuat.
+- White space luas.
+- Animasi smooth.
+- Responsive semua device.
+- Performance tinggi.
+
+
+Hindari:
+
+- Desain terlalu ramai.
+- Gradient berlebihan.
+- Efek yang mengganggu.
+- Animasi berat.
+
+
+---
+
+# Technical Requirement
+
+
+Pastikan:
+
+- Semua komponen reusable.
+- Clean code.
+- TypeScript strict jika digunakan.
+- Tidak ada hardcoded berulang.
+- Data dipisahkan dari UI.
+- SEO friendly.
+- Accessibility diperhatikan.
+- Performance optimal.
+
+
+---
+
+# Validasi Setelah Implementasi
+
+
+Setelah selesai:
+
+Lakukan pengecekan:
+
+## Konten
+
+Pastikan:
+
+✓ Semua data sesuai file markdown  
+✓ Tidak ada informasi lama yang salah  
+✓ Tidak ada "Frontend Developer" sebagai branding utama  
+
+
+## UI
+
+Pastikan:
+
+✓ Responsive mobile  
+✓ Layout rapi  
+✓ Tidak ada overflow  
+✓ Animasi berjalan baik  
+
+
+## Code Quality
+
+Pastikan:
+
+✓ Tidak ada error console  
+✓ Tidak ada warning  
+✓ Component structure bersih  
+
+
+Buat laporan akhir:
+
+1. Perubahan yang dilakukan.
+2. File yang diubah.
+3. Improvement yang ditambahkan.
+4. Saran pengembangan berikutnya.

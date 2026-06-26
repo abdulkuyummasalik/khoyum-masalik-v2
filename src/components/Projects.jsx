@@ -245,7 +245,7 @@ const FeaturedSlider = () => {
 };
 
 export const ProjectCard = ({ p }) => (
-  <div className="flex flex-col h-full w-full rounded-2xl overflow-hidden border border-white/10 bg-white/[0.03] backdrop-blur-sm">
+  <div className="flex flex-col h-full w-full rounded-2xl overflow-hidden border border-foreground/10 bg-foreground/[0.03] backdrop-blur-sm">
     <CardGlare className="h-full flex flex-col" roundedClass="rounded-2xl">
       <div className="w-full h-44 md:h-48 overflow-hidden flex-shrink-0">
         <img
@@ -256,17 +256,17 @@ export const ProjectCard = ({ p }) => (
         />
       </div>
       <div className="flex flex-col flex-1 p-4 sm:p-5">
-        <h4 className="text-base sm:text-lg font-semibold text-white leading-snug">
+        <h4 className="text-base sm:text-lg font-semibold text-foreground leading-snug">
           {p.title}
         </h4>
-        <p className="mt-2 text-sm text-neutral-400 leading-relaxed flex-1">
+        <p className="mt-2 text-sm text-muted-foreground leading-relaxed flex-1">
           {p.description}
         </p>
         <div className="mt-3 flex flex-wrap gap-1.5">
           {p.tags.map((t, idx) => (
             <span
               key={idx}
-              className="text-xs px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 text-white/75"
+              className="text-xs px-2.5 py-0.5 rounded-full bg-foreground/5 border border-foreground/10 text-foreground/75"
             >
               {t}
             </span>
@@ -294,7 +294,7 @@ export const ProjectCard = ({ p }) => (
               style={{ borderRadius: 10, display: "block" }}
             >
               <a
-                className="w-full inline-flex items-center justify-center gap-1.5 rounded-[10px] bg-white/10 hover:bg-white/20 transition-colors px-3 py-2 text-sm text-white"
+                className="w-full inline-flex items-center justify-center gap-1.5 rounded-[10px] bg-foreground/10 hover:bg-foreground/20 transition-colors px-3 py-2 text-sm text-foreground"
                 href={p.liveUrl}
                 target="_blank"
                 rel="noreferrer noopener"
@@ -309,7 +309,7 @@ export const ProjectCard = ({ p }) => (
               style={{ borderRadius: 10, display: "block" }}
             >
               <a
-                className="w-full inline-flex items-center justify-center gap-1.5 rounded-[10px] border border-white/10 hover:bg-white/10 transition-colors px-3 py-2 text-sm text-white"
+                className="w-full inline-flex items-center justify-center gap-1.5 rounded-[10px] border border-foreground/10 hover:bg-foreground/10 transition-colors px-3 py-2 text-sm text-foreground"
                 href={p.repoUrl}
                 target="_blank"
                 rel="noreferrer noopener"
@@ -330,7 +330,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="w-full py-16 sm:py-20 text-white relative overflow-hidden scroll-mt-28"
+      className="w-full py-16 sm:py-20 text-foreground relative overflow-hidden scroll-mt-28"
       aria-label="Proyek"
     >
       {/* Header */}

@@ -33,7 +33,7 @@ const CTA = () => {
   return (
     <section
       id="cta"
-      className="text-center py-16 sm:py-24 text-white relative overflow-hidden scroll-mt-28"
+      className="text-center py-16 sm:py-24 text-foreground relative overflow-hidden scroll-mt-28"
       aria-label="Ajak Kolaborasi"
     >
       <div className="km-container relative z-10">
@@ -48,7 +48,7 @@ const CTA = () => {
           }}
         >
           <CardGlare
-            className="relative rounded-[28px] overflow-hidden border border-white/10"
+            className="relative rounded-[28px] overflow-hidden border border-foreground/10"
             roundedClass="rounded-[28px]"
             style={{
               background:
@@ -96,7 +96,7 @@ const CTA = () => {
             {/* ── Content ── */}
             <div className="relative z-10 py-14 sm:py-20 text-center">
               {/* Eyebrow */}
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-white/70 mb-8">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-foreground/5 border border-foreground/10 text-xs text-foreground/70 mb-8">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                 Siap untuk proyek baru
               </div>
@@ -125,7 +125,7 @@ const CTA = () => {
                     href={wa}
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="inline-flex items-center gap-2 px-7 py-3.5 rounded-[12px] text-sm sm:text-base font-semibold text-white transition-all duration-200"
+                    className="inline-flex items-center gap-2 px-7 py-3.5 rounded-[12px] text-sm sm:text-base font-semibold text-foreground transition-all duration-200"
                     style={{ background: "#059669" }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.background = "#10b981";
@@ -150,7 +150,7 @@ const CTA = () => {
                 >
                   <a
                     href="#projects"
-                    className="inline-flex items-center gap-2 px-7 py-3.5 rounded-[12px] text-sm sm:text-base font-semibold text-white/85 transition-all duration-200 border border-white/15 hover:border-white/30 hover:text-white group"
+                    className="inline-flex items-center gap-2 px-7 py-3.5 rounded-[12px] text-sm sm:text-base font-semibold text-foreground/85 transition-all duration-200 border border-foreground/15 hover:border-foreground/30 hover:text-foreground group"
                     style={{ background: "rgba(255,255,255,0.05)" }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.background = "rgba(255,255,255,0.10)";
@@ -168,11 +168,11 @@ const CTA = () => {
               </div>
 
               {/* Footer note */}
-              <p className="mt-8 text-xs text-white/25 tracking-wide">
+              <p className="mt-8 text-xs text-foreground/25 tracking-wide">
                 Atau hubungi langsung melalui{" "}
                 <a
                   href={mail}
-                  className="text-white/40 hover:text-white/70 transition-colors underline underline-offset-2"
+                  className="text-foreground/40 hover:text-foreground/70 transition-colors underline underline-offset-2"
                 >
                   khoyum28@gmail.com
                 </a>

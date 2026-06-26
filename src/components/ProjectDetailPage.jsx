@@ -33,12 +33,12 @@ const ProjectDetailPage = () => {
   return (
     <>
       <Navbar />
-      <main className="relative z-10 pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 text-white">
+      <main className="relative z-10 pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 text-foreground">
         <section className="w-full">
           <div className="km-container mb-6 sm:mb-8">
             <button
               onClick={() => navigate(-1)}
-              className="inline-flex items-center gap-2 text-xs sm:text-sm text-white/60 hover:text-white/90 px-0.5 py-1 rounded-full"
+              className="inline-flex items-center gap-2 text-xs sm:text-sm text-foreground/60 hover:text-foreground/90 px-0.5 py-1 rounded-full"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
               <span>Kembali</span>
@@ -56,7 +56,7 @@ const ProjectDetailPage = () => {
 
           <div className="km-container mb-10">
             <CardGlare roundedClass="rounded-2xl">
-              <div className="rounded-2xl border border-white/10 overflow-hidden bg-white/[0.03] backdrop-blur-sm">
+              <div className="rounded-2xl border border-foreground/10 overflow-hidden bg-foreground/[0.03] backdrop-blur-sm">
                 <div className="relative w-full" style={{ aspectRatio: "16/8" }}>
                   <img
                     src={current.image}
@@ -135,16 +135,16 @@ const ProjectDetailPage = () => {
 
                 <div className="px-5 sm:px-8 md:px-10 py-6 sm:py-8 md:py-10 grid gap-6 md:gap-8 lg:gap-10 grid-cols-1 lg:grid-cols-3">
                   <div className="space-y-3">
-                    <h2 className="text-sm font-semibold text-white/80 tracking-wide uppercase">
+                    <h2 className="text-sm font-semibold text-foreground/80 tracking-wide uppercase">
                       Gambaran umum
                     </h2>
-                    <p className="text-sm sm:text-base text-white/70 leading-relaxed">
+                    <p className="text-sm sm:text-base text-foreground/70 leading-relaxed">
                       Proyek ini dirancang sebagai studi kasus untuk menampilkan
                       bagaimana sebuah antarmuka modern dapat membantu pengguna
                       berinteraksi dengan data secara nyaman, terstruktur, dan
                       efisien di berbagai ukuran layar.
                     </p>
-                    <p className="text-sm sm:text-base text-white/65 leading-relaxed">
+                    <p className="text-sm sm:text-base text-foreground/65 leading-relaxed">
                       Fokus utama berada pada pengalaman pengguna, kecepatan
                       render, serta konsistensi visual antara bagian publik dan
                       dashboard internal.
@@ -152,20 +152,20 @@ const ProjectDetailPage = () => {
                   </div>
 
                   <div className="space-y-3">
-                    <h2 className="text-sm font-semibold text-white/80 tracking-wide uppercase">
+                    <h2 className="text-sm font-semibold text-foreground/80 tracking-wide uppercase">
                       Teknologi
                     </h2>
                     <div className="flex flex-wrap gap-2">
                       {current.tags?.map((tag) => (
                         <span
                           key={tag}
-                          className="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/85"
+                          className="text-xs px-3 py-1 rounded-full bg-foreground/5 border border-foreground/10 text-foreground/85"
                         >
                           {tag}
                         </span>
                       ))}
                     </div>
-                    <p className="text-sm sm:text-base text-white/65 leading-relaxed">
+                    <p className="text-sm sm:text-base text-foreground/65 leading-relaxed">
                       Setiap teknologi dipilih agar mudah dirawat, mendukung
                       pengembangan jangka panjang, dan nyaman untuk kolaborasi
                       dengan developer lain.
@@ -173,10 +173,10 @@ const ProjectDetailPage = () => {
                   </div>
 
                   <div className="space-y-3">
-                    <h2 className="text-sm font-semibold text-white/80 tracking-wide uppercase">
+                    <h2 className="text-sm font-semibold text-foreground/80 tracking-wide uppercase">
                       Peran dan fokus
                     </h2>
-                    <ul className="space-y-1.5 text-sm sm:text-base text-white/70 leading-relaxed">
+                    <ul className="space-y-1.5 text-sm sm:text-base text-foreground/70 leading-relaxed">
                       <li>Perancangan struktur layout dan komponen UI.</li>
                       <li>Implementasi state dan alur interaksi utama.</li>
                       <li>Optimasi performa untuk halaman dengan konten dinamis.</li>

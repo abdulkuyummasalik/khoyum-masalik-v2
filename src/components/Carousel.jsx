@@ -9,31 +9,31 @@ const DEFAULT_ITEMS = [
     title: 'Text Animations',
     description: 'Cool text animations for your projects.',
     id: 1,
-    icon: <FiFileText className="h-[16px] w-[16px] text-white" />
+    icon: <FiFileText className="h-[16px] w-[16px] text-foreground" />
   },
   {
     title: 'Animations',
     description: 'Smooth animations for your projects.',
     id: 2,
-    icon: <FiCircle className="h-[16px] w-[16px] text-white" />
+    icon: <FiCircle className="h-[16px] w-[16px] text-foreground" />
   },
   {
     title: 'Components',
     description: 'Reusable components for your projects.',
     id: 3,
-    icon: <FiLayers className="h-[16px] w-[16px] text-white" />
+    icon: <FiLayers className="h-[16px] w-[16px] text-foreground" />
   },
   {
     title: 'Backgrounds',
     description: 'Beautiful backgrounds and patterns for your projects.',
     id: 4,
-    icon: <FiLayout className="h-[16px] w-[16px] text-white" />
+    icon: <FiLayout className="h-[16px] w-[16px] text-foreground" />
   },
   {
     title: 'Common UI',
     description: 'Common UI components are coming soon!',
     id: 5,
-    icon: <FiCode className="h-[16px] w-[16px] text-white" />
+    icon: <FiCode className="h-[16px] w-[16px] text-foreground" />
   }
 ];
 
@@ -69,7 +69,7 @@ function CarouselItem({ item, index, itemWidth, round, trackItemOffset, x, trans
         roundedClass={round ? 'rounded-full' : 'rounded-[16px]'}
       >
         {!round && item?.imageUrl ? (
-          <div className="relative w-full h-56 md:h-64 lg:h-72 overflow-hidden bg-neutral-800">
+          <div className="relative w-full h-56 md:h-64 lg:h-72 overflow-hidden bg-muted">
             <img
               src={item.imageUrl}
               alt={item.title ?? 'Carousel image'}
@@ -86,8 +86,8 @@ function CarouselItem({ item, index, itemWidth, round, trackItemOffset, x, trans
           </span>
         </div>
         <div className="p-5">
-          <div className="mb-1 font-black text-lg text-white">{item.title}</div>
-          <p className="text-sm text-white">{item.description}</p>
+          <div className="mb-1 font-black text-lg text-foreground">{item.title}</div>
+          <p className="text-sm text-foreground">{item.description}</p>
         </div>
       </CardGlare>
     </Motion.div>
@@ -242,7 +242,7 @@ export default function Carousel({
   return (
     <div
       ref={containerRef}
-      className={`relative overflow-hidden p-4 ${round ? 'rounded-full border border-white' : 'rounded-[24px] border border-[#1f1f2d]'
+      className={`relative overflow-hidden p-4 ${round ? 'rounded-full border border-foreground' : 'rounded-[24px] border border-[#1f1f2d]'
         }`}
       style={{
         width: fluid ? '100%' : `${baseWidth}px`,

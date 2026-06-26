@@ -18,7 +18,7 @@ const SectionHeader = ({
       threshold={0.1}
       className={`km-container ${alignment} mb-10 sm:mb-12 md:mb-14 ${className}`}
     >
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold pb-3 sm:pb-4 text-white font-heading">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold pb-3 sm:pb-4 text-foreground font-heading">
         {titlePrefix}
         {titleHighlight ? (
           <span className={`text-3xl sm:text-4xl md:text-5xl font-bold italic ml-2 ${highlightClassName}`}>
@@ -27,7 +27,7 @@ const SectionHeader = ({
         ) : null}
       </h2>
       {description ? (
-        <p className={`mt-4 sm:mt-5 text-sm sm:text-base text-neutral-300 km-text ${alignment !== "text-center" ? "mx-0" : ""} ${descriptionClassName}`}>
+        <p className={`mt-4 sm:mt-5 text-sm sm:text-base text-foreground/80 km-text ${alignment !== "text-center" ? "mx-0" : ""} ${descriptionClassName}`}>
           {description}
         </p>
       ) : null}

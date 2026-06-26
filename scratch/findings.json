@@ -1,0 +1,2159 @@
+{
+  "About.jsx": [
+    {
+      "line": 52,
+      "content": "className={`h-full flex flex-col items-start justify-between p-5 sm:p-6 rounded-2xl bg-neutral-900 border border-white/10 hover:border-emerald-400/40 transition-all duration-500 group ${visible ? \"translate-y-0 opacity-100\" : \"translate-y-4 opacity-0\"",
+      "matches": [
+        "bg-neutral",
+        "border-white"
+      ]
+    },
+    {
+      "line": 60,
+      "content": "<div className=\"text-3xl sm:text-4xl font-bold text-white tabular-nums\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 63,
+      "content": "<div className=\"mt-1 text-xs sm:text-sm text-neutral-400 font-medium\">",
+      "matches": [
+        "text-neutral"
+      ]
+    },
+    {
+      "line": 148,
+      "content": "className={`h-full rounded-2xl bg-neutral-900 border border-white/10 hover:border-emerald-400/30 transition-all duration-700 p-6 sm:p-8 flex flex-col justify-between ${fadeUp(0)}`}",
+      "matches": [
+        "bg-neutral",
+        "border-white"
+      ]
+    },
+    {
+      "line": 156,
+      "content": "<h3 className=\"text-lg sm:text-xl font-semibold text-white\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 160,
+      "content": "<p className=\"text-neutral-400 text-sm leading-relaxed\">",
+      "matches": [
+        "text-neutral"
+      ]
+    },
+    {
+      "line": 163,
+      "content": "<p className=\"mt-3 text-neutral-400 text-sm leading-relaxed\">",
+      "matches": [
+        "text-neutral"
+      ]
+    },
+    {
+      "line": 177,
+      "content": "\"linear-gradient(135deg, rgba(52,211,153,0.12) 0%, rgba(17,17,17,0.95) 60%, rgba(125,249,255,0.05) 100%)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 190,
+      "content": "<h3 className=\"text-lg sm:text-xl font-semibold text-white\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 194,
+      "content": "<p className=\"text-neutral-300 text-sm leading-relaxed\">",
+      "matches": [
+        "text-neutral"
+      ]
+    },
+    {
+      "line": 205,
+      "content": "className=\"flex items-center gap-2 text-sm text-neutral-400\"",
+      "matches": [
+        "text-neutral"
+      ]
+    },
+    {
+      "line": 236,
+      "content": "className={`h-full rounded-2xl bg-neutral-900 border border-white/10 hover:border-cyan-400/30 transition-all duration-700 p-6 sm:p-8 flex flex-col ${fadeUp(2)}`}",
+      "matches": [
+        "bg-neutral",
+        "border-white"
+      ]
+    },
+    {
+      "line": 243,
+      "content": "<h3 className=\"text-lg sm:text-xl font-semibold text-white\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 251,
+      "content": "className=\"flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-neutral-800 border border-white/5 hover:border-white/20 transition-all group cursor-default\"",
+      "matches": [
+        "bg-neutral",
+        "border-white"
+      ]
+    },
+    {
+      "line": 259,
+      "content": "<span className=\"text-xs sm:text-sm text-neutral-300 font-medium truncate\">",
+      "matches": [
+        "text-neutral"
+      ]
+    }
+  ],
+  "AnimatedList.jsx": [
+    {
+      "line": 146,
+      "content": "<div className={`p-4 rounded-lg ${selectedIndex === index ? 'bg-neutral-700' : 'bg-neutral-800'} border border-white/10 ${itemClassName}`}>",
+      "matches": [
+        "bg-neutral",
+        "border-white"
+      ]
+    },
+    {
+      "line": 147,
+      "content": "<p className=\"text-white m-0\">{item}</p>",
+      "matches": [
+        "text-white"
+      ]
+    }
+  ],
+  "BlogDetailPage.jsx": [
+    {
+      "line": 29,
+      "content": "<main className=\"relative z-10 pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 text-white\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 34,
+      "content": "className=\"inline-flex items-center gap-2 text-xs sm:text-sm text-white/60 hover:text-white/90 px-0.5 py-1 rounded-full\"",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 59,
+      "content": "<article className=\"rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden\">",
+      "matches": [
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 66,
+      "content": "<div className=\"absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent\" />",
+      "matches": [
+        "from-black",
+        "via-black"
+      ]
+    },
+    {
+      "line": 67,
+      "content": "<div className=\"absolute inset-0 bg-gradient-to-r from-black/70 via-transparent to-transparent\" />",
+      "matches": [
+        "from-black"
+      ]
+    },
+    {
+      "line": 71,
+      "content": "<div className=\"flex flex-wrap items-center gap-2 text-[11px] sm:text-xs text-white/70\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 72,
+      "content": "<span className=\"px-2 py-0.5 rounded-full bg-white/10 border border-white/20\">",
+      "matches": [
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 81,
+      "content": "<p className=\"text-sm sm:text-base text-white/70 max-w-2xl\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 88,
+      "content": "className=\"text-[11px] sm:text-xs px-2.5 py-0.5 rounded-full bg-black/50 border border-white/20 text-white/85\"",
+      "matches": [
+        "text-white",
+        "bg-black",
+        "border-white"
+      ]
+    },
+    {
+      "line": 98,
+      "content": "<div className=\"px-5 sm:px-8 md:px-10 py-6 sm:py-8 md:py-10 max-w-3xl space-y-4 text-sm sm:text-base text-white/75 leading-relaxed\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 132,
+      "content": "<article className=\"rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden flex flex-col h-full\">",
+      "matches": [
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 142,
+      "content": "<div className=\"flex items-center justify-between text-[11px] sm:text-xs text-white/60\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 143,
+      "content": "<span className=\"px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-white/75\">",
+      "matches": [
+        "text-white",
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 151,
+      "content": "<p className=\"text-xs sm:text-sm text-white/65 leading-relaxed flex-1\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 154,
+      "content": "<div className=\"text-[11px] sm:text-xs text-white/55\">",
+      "matches": [
+        "text-white"
+      ]
+    }
+  ],
+  "CardGlare.jsx": [
+    {
+      "line": 21,
+      "content": "rgba = `rgba(${r}, ${g}, ${b}, ${glareOpacity})`;",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 26,
+      "content": "rgba = `rgba(${r}, ${g}, ${b}, ${glareOpacity})`;",
+      "matches": [
+        "rgba"
+      ]
+    }
+  ],
+  "Carousel.jsx": [
+    {
+      "line": 12,
+      "content": "icon: <FiFileText className=\"h-[16px] w-[16px] text-white\" />",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 18,
+      "content": "icon: <FiCircle className=\"h-[16px] w-[16px] text-white\" />",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 24,
+      "content": "icon: <FiLayers className=\"h-[16px] w-[16px] text-white\" />",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 30,
+      "content": "icon: <FiLayout className=\"h-[16px] w-[16px] text-white\" />",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 36,
+      "content": "icon: <FiCode className=\"h-[16px] w-[16px] text-white\" />",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 72,
+      "content": "<div className=\"relative w-full h-56 md:h-64 lg:h-72 overflow-hidden bg-neutral-800\">",
+      "matches": [
+        "bg-neutral"
+      ]
+    },
+    {
+      "line": 79,
+      "content": "<div className=\"absolute inset-0 pointer-events-none bg-gradient-to-t from-black/60 via-black/10 to-transparent\" />",
+      "matches": [
+        "from-black",
+        "via-black"
+      ]
+    },
+    {
+      "line": 89,
+      "content": "<div className=\"mb-1 font-black text-lg text-white\">{item.title}</div>",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 90,
+      "content": "<p className=\"text-sm text-white\">{item.description}</p>",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 245,
+      "content": "className={`relative overflow-hidden p-4 ${round ? 'rounded-full border border-white' : 'rounded-[24px] border border-[#1f1f2d]'",
+      "matches": [
+        "border-white"
+      ]
+    },
+    {
+      "line": 289,
+      "content": "? 'bg-white'",
+      "matches": [
+        "bg-white"
+      ]
+    },
+    {
+      "line": 293,
+      "content": ": 'bg-[rgba(51,51,51,0.4)]'",
+      "matches": [
+        "rgba"
+      ]
+    }
+  ],
+  "Contact.jsx": [
+    {
+      "line": 11,
+      "content": "<section className=\"w-full py-20 text-white relative overflow-hidden\" aria-label=\"Kontak\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 27,
+      "content": "className=\"w-full text-center py-20 text-white relative overflow-hidden scroll-mt-28\"",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 42,
+      "content": "className=\"w-full rounded-2xl overflow-hidden border border-white/10 bg-white/[0.03] backdrop-blur-sm p-6 md:p-8\"",
+      "matches": [
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 48,
+      "content": "className=\"block text-sm mb-1 text-white/80\"",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 57,
+      "content": "className=\"w-full rounded-xl bg-white/5 border border-white/10 focus:border-white/20 outline-none px-4 py-3 text-white\"",
+      "matches": [
+        "text-white",
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 64,
+      "content": "className=\"block text-sm mb-1 text-white/80\"",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 73,
+      "content": "className=\"w-full rounded-xl bg-white/5 border border-white/10 focus:border-white/20 outline-none px-4 py-3 text-white\"",
+      "matches": [
+        "text-white",
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 86,
+      "content": "className=\"block text-sm mb-1 text-white/80\"",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 95,
+      "content": "className=\"w-full rounded-xl bg-white/5 border border-white/10 focus:border-white/20 outline-none px-4 py-3 text-white\"",
+      "matches": [
+        "text-white",
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 102,
+      "content": "className=\"block text-sm mb-1 text-white/80\"",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 111,
+      "content": "className=\"w-full rounded-xl bg-white/5 border border-white/10 focus:border-white/20 outline-none px-4 py-3 text-white\"",
+      "matches": [
+        "text-white",
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 121,
+      "content": "<div className=\"text-sm text-white/70\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 129,
+      "content": "className=\"inline-flex items-center justify-center px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 transition-colors border border-white/10 disabled:opacity-60\"",
+      "matches": [
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 137,
+      "content": "className=\"inline-flex items-center justify-center px-6 py-3 rounded-xl border border-white/10 hover:bg-white/10 transition-colors\"",
+      "matches": [
+        "bg-white",
+        "border-white"
+      ]
+    }
+  ],
+  "CTA.jsx": [
+    {
+      "line": 61,
+      "content": "\"0 0 0 1px rgba(255,255,255,0.06), 0 32px 80px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.06)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 69,
+      "content": "\"radial-gradient(ellipse at 50% 0%, rgba(59,130,246,0.2), transparent 70%)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 77,
+      "content": "\"radial-gradient(circle at 0% 100%, rgba(34,211,238,0.1), transparent 60%)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 84,
+      "content": "\"radial-gradient(circle at 100% 100%, rgba(168,85,247,0.1), transparent 60%)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 122,
+      "content": "className=\"inline-flex items-center gap-2 px-8 py-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition-all shadow-lg shadow-emerald-900/20\"",
+      "matches": [
+        "text-white"
+      ]
+    }
+  ],
+  "ElectricBorder.jsx": [
+    {
+      "line": 4,
+      "content": "if (!hex) return `rgba(0,0,0,${alpha})`;",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 16,
+      "content": "return `rgba(${r}, ${g}, ${b}, ${alpha})`;",
+      "matches": [
+        "rgba"
+      ]
+    }
+  ],
+  "ExperienceEducation.jsx": [
+    {
+      "line": 140,
+      "content": "<div className=\"absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-white/10 transform -translate-x-1/2\"></div>",
+      "matches": [
+        "bg-white"
+      ]
+    }
+  ],
+  "Footer.jsx": [
+    {
+      "line": 35,
+      "content": "<footer className=\"w-full text-white relative overflow-hidden border-t border-white/10 min-h-[420px]\">",
+      "matches": [
+        "text-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 41,
+      "content": "<div className=\"absolute inset-0 z-[1] bg-neutral-950/75 pointer-events-none\" aria-hidden />",
+      "matches": [
+        "bg-neutral"
+      ]
+    },
+    {
+      "line": 47,
+      "content": "<p className=\"mt-2 text-white/70\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 55,
+      "content": "className=\"inline-flex items-center justify-center w-10 h-10 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors\"",
+      "matches": [
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 64,
+      "content": "className=\"inline-flex items-center justify-center w-10 h-10 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors\"",
+      "matches": [
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 71,
+      "content": "className=\"inline-flex items-center justify-center w-10 h-10 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors\"",
+      "matches": [
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 81,
+      "content": "<ul className=\"grid grid-cols-2 gap-2 text-white/80\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 84,
+      "content": "<a href={n.href} className=\"hover:text-white transition-colors\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 97,
+      "content": "className=\"w-full inline-flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/20 transition-colors px-5 py-3\"",
+      "matches": [
+        "bg-white"
+      ]
+    },
+    {
+      "line": 106,
+      "content": "className=\"w-full inline-flex items-center justify-center rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors px-5 py-3\"",
+      "matches": [
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 114,
+      "content": "<div className=\"mt-10 pt-6 border-t border-white/10 text-center text-white/60 text-sm\">",
+      "matches": [
+        "text-white",
+        "border-white"
+      ]
+    }
+  ],
+  "Gallery.jsx": [
+    {
+      "line": 113,
+      "content": "\"radial-gradient(900px 600px at 50% 40%, rgba(96,165,250,0.25), transparent 60%)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 167,
+      "content": "? \"0 0 40px rgba(96,165,250,0.4), 0 20px 60px rgba(0,0,0,0.6)\"",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 168,
+      "content": ": \"0 8px 32px rgba(0,0,0,0.5)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 188,
+      "content": "<div className=\"absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent\" />",
+      "matches": [
+        "from-black",
+        "via-black"
+      ]
+    },
+    {
+      "line": 195,
+      "content": "className=\"text-[10px] px-2 py-0.5 rounded-full bg-black/50 border border-white/20 text-white/85 backdrop-blur-sm whitespace-nowrap\"",
+      "matches": [
+        "text-white",
+        "bg-black",
+        "border-white"
+      ]
+    },
+    {
+      "line": 204,
+      "content": "<span className=\"text-white font-bold text-base drop-shadow-md leading-tight max-w-[75%]\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 208,
+      "content": "<div className=\"w-8 h-8 rounded-full bg-white/15 border border-white/20 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300 flex-shrink-0\">",
+      "matches": [
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 209,
+      "content": "<ArrowUpRight className=\"w-4 h-4 text-white\" />",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 220,
+      "content": "\"radial-gradient(ellipse 60% 40% at 50% 90%, rgba(96,165,250,0.2), transparent 70%)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 234,
+      "content": "className=\"absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 backdrop-blur-sm flex items-center justify-center transition-colors\"",
+      "matches": [
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 237,
+      "content": "<ChevronLeft className=\"w-4 h-4 text-white\" />",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 241,
+      "content": "className=\"absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 backdrop-blur-sm flex items-center justify-center transition-colors\"",
+      "matches": [
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 244,
+      "content": "<ChevronRight className=\"w-4 h-4 text-white\" />",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 260,
+      "content": "? \"rgba(96,165,250,0.9)\"",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 261,
+      "content": ": \"rgba(255,255,255,0.25)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 279,
+      "content": "className=\"inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-sky-600/80 hover:bg-sky-500/90 transition-colors text-sm font-semibold text-white\"",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 282,
+      "content": "<ArrowUpRight className=\"w-4 h-4 text-white\" />",
+      "matches": [
+        "text-white"
+      ]
+    }
+  ],
+  "GalleryDetailPage.jsx": [
+    {
+      "line": 30,
+      "content": "<main className=\"relative z-10 pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 text-white\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 35,
+      "content": "className=\"inline-flex items-center gap-2 text-xs sm:text-sm text-white/60 hover:text-white/90 px-0.5 py-1 rounded-full\"",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 60,
+      "content": "<div className=\"rounded-[28px] border border-white/10 bg-white/[0.03] overflow-hidden\">",
+      "matches": [
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 67,
+      "content": "<div className=\"absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent\" />",
+      "matches": [
+        "from-black",
+        "via-black"
+      ]
+    },
+    {
+      "line": 68,
+      "content": "<div className=\"absolute inset-0 bg-gradient-to-r from-black/70 via-transparent to-transparent\" />",
+      "matches": [
+        "from-black"
+      ]
+    },
+    {
+      "line": 71,
+      "content": "<div className=\"flex flex-wrap items-center gap-2 text-[11px] sm:text-xs text-white/70\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 72,
+      "content": "<span className=\"px-2 py-0.5 rounded-full bg-white/10 border border-white/20\">",
+      "matches": [
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 78,
+      "content": "className=\"px-2 py-0.5 rounded-full bg-white/5 border border-white/15\"",
+      "matches": [
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 87,
+      "content": "<p className=\"text-sm sm:text-base text-white/75 max-w-2xl\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 96,
+      "content": "<div className=\"space-y-3 text-sm sm:text-base text-white/75 leading-relaxed\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 97,
+      "content": "<h2 className=\"text-sm font-semibold text-white/80 tracking-wide uppercase\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 106,
+      "content": "<div className=\"space-y-3 text-sm sm:text-base text-white/75 leading-relaxed\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 107,
+      "content": "<h2 className=\"text-sm font-semibold text-white/80 tracking-wide uppercase\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 116,
+      "content": "<div className=\"space-y-3 text-sm sm:text-base text-white/75 leading-relaxed\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 117,
+      "content": "<h2 className=\"text-sm font-semibold text-white/80 tracking-wide uppercase\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 141,
+      "content": "<div className=\"rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden flex flex-col h-full\">",
+      "matches": [
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 155,
+      "content": "<span className=\"text-[10px] sm:text-xs px-2 py-0.5 rounded-full bg-white/5 border border-white/15 text-white/70\">",
+      "matches": [
+        "text-white",
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 163,
+      "content": "className=\"text-[10px] sm:text-xs px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-white/80\"",
+      "matches": [
+        "text-white",
+        "bg-white",
+        "border-white"
+      ]
+    }
+  ],
+  "GalleryPage.jsx": [
+    {
+      "line": 20,
+      "content": "<main className=\"relative z-10 pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 text-white\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 43,
+      "content": "<div className=\"rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden flex flex-col h-full\">",
+      "matches": [
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 57,
+      "content": "<span className=\"text-[10px] sm:text-xs px-2 py-0.5 rounded-full bg-white/5 border border-white/15 text-white/70\">",
+      "matches": [
+        "text-white",
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 65,
+      "content": "className=\"text-[10px] sm:text-xs px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-white/80\"",
+      "matches": [
+        "text-white",
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 87,
+      "content": "className=\"inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-xs sm:text-sm font-medium\"",
+      "matches": [
+        "bg-white"
+      ]
+    }
+  ],
+  "GlareHover.jsx": [
+    {
+      "line": 25,
+      "content": "rgba = `rgba(${r}, ${g}, ${b}, ${glareOpacity})`;",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 30,
+      "content": "rgba = `rgba(${r}, ${g}, ${b}, ${glareOpacity})`;",
+      "matches": [
+        "rgba"
+      ]
+    }
+  ],
+  "Hero.jsx": [
+    {
+      "line": 11,
+      "content": "className=\"relative flex min-h-screen w-full flex-col items-center justify-center text-neutral-100 overflow-hidden scroll-mt-28 pt-24 sm:pt-28 md:pt-32\"",
+      "matches": [
+        "text-neutral"
+      ]
+    },
+    {
+      "line": 22,
+      "content": "className=\"text-white/60 md:text-white/70\"",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 42,
+      "content": "behindGlowColor=\"rgba(125, 190, 255, 0.67)\"",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 78,
+      "content": "className=\"text-sm md:text-xl font-mono text-neutral-400\"",
+      "matches": [
+        "text-neutral"
+      ]
+    },
+    {
+      "line": 95,
+      "content": "className=\"w-full px-6 py-3 bg-transparent text-white rounded-lg transition-colors cursor-pointer hover:bg-white/5\"",
+      "matches": [
+        "text-white",
+        "bg-white"
+      ]
+    }
+  ],
+  "LogoLoop.jsx": [
+    {
+      "line": 383,
+      "content": "'bg-[linear-gradient(to_bottom,var(--logoloop-fadeColor,var(--logoloop-fadeColorAuto))_0%,rgba(0,0,0,0)_100%)]'",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 390,
+      "content": "'bg-[linear-gradient(to_top,var(--logoloop-fadeColor,var(--logoloop-fadeColorAuto))_0%,rgba(0,0,0,0)_100%)]'",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 400,
+      "content": "'bg-[linear-gradient(to_right,var(--logoloop-fadeColor,var(--logoloop-fadeColorAuto))_0%,rgba(0,0,0,0)_100%)]'",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 407,
+      "content": "'bg-[linear-gradient(to_left,var(--logoloop-fadeColor,var(--logoloop-fadeColorAuto))_0%,rgba(0,0,0,0)_100%)]'",
+      "matches": [
+        "rgba"
+      ]
+    }
+  ],
+  "Navbar.jsx": [
+    {
+      "line": 112,
+      "content": "background: scrolled ? \"rgba(8,8,14,0.75)\" : \"rgba(10,10,18,0.55)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 115,
+      "content": "border: \"1px solid rgba(255,255,255,0.08)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 117,
+      "content": "? \"0 8px 40px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.05), inset 0 1px 0 rgba(255,255,255,0.06)\"",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 118,
+      "content": ": \"0 4px 24px rgba(0,0,0,0.3),  0 0 0 1px rgba(255,255,255,0.04), inset 0 1px 0 rgba(255,255,255,0.04)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 132,
+      "content": "border: \"1px solid rgba(255,255,255,0.12)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 133,
+      "content": "boxShadow: \"0 2px 8px rgba(0,0,0,0.4)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 171,
+      "content": "color: isActive ? \"#fff\" : \"rgba(255,255,255,0.5)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 173,
+      "content": "? \"rgba(255,255,255,0.08)\"",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 178,
+      "content": "e.currentTarget.style.color = \"rgba(255,255,255,0.9)\";",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 180,
+      "content": "\"rgba(255,255,255,0.05)\";",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 185,
+      "content": "e.currentTarget.style.color = \"rgba(255,255,255,0.5)\";",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 211,
+      "content": "background: \"rgba(255,255,255,0.05)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 212,
+      "content": "border: \"1px solid rgba(255,255,255,0.09)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 215,
+      "content": "(e.currentTarget.style.background = \"rgba(255,255,255,0.10)\")",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 218,
+      "content": "(e.currentTarget.style.background = \"rgba(255,255,255,0.05)\")",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 222,
+      "content": "<Moon className=\"w-[15px] h-[15px] text-white/60\" />",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 236,
+      "content": "className=\"hidden sm:inline-flex items-center px-5 py-2 text-xs font-bold text-white tracking-widest uppercase transition-all duration-200\"",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 241,
+      "content": "\"0 0 18px rgba(59,130,246,0.35), inset 0 1px 0 rgba(255,255,255,0.15)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 247,
+      "content": "\"0 0 28px rgba(59,130,246,0.55), inset 0 1px 0 rgba(255,255,255,0.2)\";",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 254,
+      "content": "\"0 0 18px rgba(59,130,246,0.35), inset 0 1px 0 rgba(255,255,255,0.15)\";",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 272,
+      "content": "background: \"rgba(255,255,255,0.05)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 273,
+      "content": "border: \"1px solid rgba(255,255,255,0.09)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 276,
+      "content": "(e.currentTarget.style.background = \"rgba(255,255,255,0.10)\")",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 279,
+      "content": "(e.currentTarget.style.background = \"rgba(255,255,255,0.05)\")",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 283,
+      "content": "<X className=\"w-[15px] h-[15px] text-white/75\" />",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 285,
+      "content": "<Menu className=\"w-[15px] h-[15px] text-white/75\" />",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 298,
+      "content": "background: \"rgba(8,8,14,0.82)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 301,
+      "content": "border: \"1px solid rgba(255,255,255,0.08)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 303,
+      "content": "\"0 16px 48px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.05)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 346,
+      "content": ": \"rgba(255,255,255,0.6)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 350,
+      "content": "? \"rgba(255,255,255,0.08)\"",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 353,
+      "content": "? \"0 0 16px rgba(59,130,246,0.3)\"",
+      "matches": [
+        "rgba"
+      ]
+    }
+  ],
+  "PageLoader.jsx": [
+    {
+      "line": 20,
+      "content": "className=\"w-8 h-8 rounded-full border-2 border-white/20 border-t-emerald-400\"",
+      "matches": [
+        "border-white"
+      ]
+    },
+    {
+      "line": 73,
+      "content": "className=\"fixed inset-0 z-[2000] flex items-center justify-center bg-neutral-950 text-white\"",
+      "matches": [
+        "text-white",
+        "bg-neutral"
+      ]
+    },
+    {
+      "line": 87,
+      "content": "\"radial-gradient(900px 600px at 10% 0%, rgba(56,189,248,0.18), transparent 60%), radial-gradient(900px 600px at 90% 100%, rgba(129,140,248,0.20), transparent 60%)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 94,
+      "content": "\"repeating-linear-gradient(0deg, rgba(148,163,184,0.08) 0px, rgba(148,163,184,0.08) 1px, transparent 1px, transparent 26px), repeating-linear-gradient(90deg, rgba(148,163,184,0.06) 0px, rgba(148,163,184,0.06) 1px, transparent 1px, transparent 26px)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 103,
+      "content": "<div className=\"relative rounded-[28px] border border-white/10 bg-white/[0.04] backdrop-blur-2xl px-6 py-6 sm:px-8 sm:py-8 shadow-[0_24px_80px_rgba(0,0,0,0.7)]\">",
+      "matches": [
+        "bg-white",
+        "rgba",
+        "border-white"
+      ]
+    },
+    {
+      "line": 108,
+      "content": "\"radial-gradient(600px 300px at 0% 0%, rgba(45,212,191,0.18), transparent 60%), radial-gradient(500px 260px at 100% 100%, rgba(59,130,246,0.25), transparent 60%)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 119,
+      "content": "<div className=\"relative w-12 h-12 sm:w-14 sm:h-14 rounded-2xl overflow-hidden border border-white/25 bg-neutral-900/80\">",
+      "matches": [
+        "bg-neutral",
+        "border-white"
+      ]
+    },
+    {
+      "line": 129,
+      "content": "<p className=\"text-[10px] sm:text-xs tracking-[0.25em] uppercase text-white/50\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 135,
+      "content": "<p className=\"text-xs sm:text-sm text-white/65\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 142,
+      "content": "<div className=\"mb-2 flex items-center justify-between text-[10px] sm:text-xs text-white/55\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 146,
+      "content": "<div className=\"relative h-1.5 rounded-full bg-white/10 overflow-hidden\">",
+      "matches": [
+        "bg-white"
+      ]
+    },
+    {
+      "line": 151,
+      "content": "\"linear-gradient(90deg, rgba(45,212,191,1), rgba(59,130,246,1), rgba(129,140,248,1))\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 158,
+      "content": "<div className=\"relative flex items-center justify-between text-[10px] sm:text-xs text-white/45\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 176,
+      "content": "<div className=\"flex items-center gap-3 text-[11px] sm:text-xs text-white/60\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 187,
+      "content": "<div className=\"rounded-full border border-white/10 bg-white/[0.05] backdrop-blur-xl px-4 py-2.5 sm:py-3 flex items-center justify-between gap-3 shadow-[0_12px_40px_rgba(0,0,0,0.6)]\">",
+      "matches": [
+        "bg-white",
+        "rgba",
+        "border-white"
+      ]
+    },
+    {
+      "line": 190,
+      "content": "<span className=\"text-[11px] sm:text-xs text-white/70\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 194,
+      "content": "<div className=\"relative w-16 sm:w-20 h-1.5 rounded-full bg-white/10 overflow-hidden\">",
+      "matches": [
+        "bg-white"
+      ]
+    },
+    {
+      "line": 199,
+      "content": "\"linear-gradient(90deg, rgba(45,212,191,1), rgba(59,130,246,1))\",",
+      "matches": [
+        "rgba"
+      ]
+    }
+  ],
+  "ProfileCard.jsx": [
+    {
+      "line": 332,
+      "content": "\"--behind-glow-color\": behindGlowColor ?? \"rgba(125, 190, 255, 0.67)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 473,
+      "content": "\"rgba(0, 0, 0, 0.5) calc((var(--pointer-from-left) * 10px) - 5px) calc((var(--pointer-from-top) * 10px) - 5px) 20px -5px\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 476,
+      "content": "background: \"rgba(20, 20, 25, 0.95)\", // Darker, cleaner background",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 498,
+      "content": "backgroundColor: \"rgba(0, 0, 0, 0.9)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 548,
+      "content": "className=\"absolute z-[2] flex items-center justify-between backdrop-blur-xl border border-white/20 shadow-lg pointer-events-auto\"",
+      "matches": [
+        "border-white"
+      ]
+    },
+    {
+      "line": 555,
+      "content": "background: \"rgba(30, 30, 40, 0.6)\", // Darker glass",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 562,
+      "content": "className=\"rounded-full overflow-hidden border border-white/20 flex-shrink-0 shadow-sm\"",
+      "matches": [
+        "border-white"
+      ]
+    },
+    {
+      "line": 587,
+      "content": "<div className=\"text-sm font-bold text-white leading-none truncate w-full pr-2\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 598,
+      "content": "className=\"border border-white/20 rounded-lg px-3 py-2 text-xs font-semibold text-white cursor-pointer backdrop-blur-md transition-all duration-200 ease-out hover:bg-white/10 hover:border-white/40 active:scale-95 flex-shrink-0\"",
+      "matches": [
+        "text-white",
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 637,
+      "content": "filter: \"drop-shadow(0 2px 4px rgba(0,0,0,0.3))\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 646,
+      "content": "color: \"rgba(255, 255, 255, 0.8)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 647,
+      "content": "textShadow: \"0 1px 2px rgba(0,0,0,0.5)\",",
+      "matches": [
+        "rgba"
+      ]
+    }
+  ],
+  "ProjectDetailPage.jsx": [
+    {
+      "line": 66,
+      "content": "<div className=\"absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent\" />",
+      "matches": [
+        "from-black",
+        "via-black"
+      ]
+    },
+    {
+      "line": 67,
+      "content": "<div className=\"absolute inset-0 bg-gradient-to-r from-black/70 via-transparent to-transparent\" />",
+      "matches": [
+        "from-black"
+      ]
+    },
+    {
+      "line": 71,
+      "content": "<div className=\"inline-flex items-center gap-2 text-[11px] sm:text-xs text-white/70\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 72,
+      "content": "<span className=\"px-2 py-0.5 rounded-full bg-white/10 border border-white/20\">",
+      "matches": [
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 76,
+      "content": "<span className=\"px-2 py-0.5 rounded-full bg-white/5 border border-white/10\">",
+      "matches": [
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 81,
+      "content": "<h1 className=\"font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight text-white\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 84,
+      "content": "<p className=\"text-sm sm:text-base text-white/70 max-w-2xl\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 91,
+      "content": "className=\"text-[11px] sm:text-xs px-2.5 py-1 rounded-full bg-black/50 border border-white/15 text-white/85 backdrop-blur-sm\"",
+      "matches": [
+        "text-white",
+        "bg-black",
+        "border-white"
+      ]
+    },
+    {
+      "line": 110,
+      "content": "className=\"inline-flex items-center justify-center gap-1.5 px-4 sm:px-6 py-2.5 rounded-full bg-emerald-500/90 hover:bg-emerald-400 transition-colors text-xs sm:text-sm font-semibold text-white\"",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 126,
+      "content": "className=\"inline-flex items-center justify-center gap-1.5 px-4 sm:px-6 py-2.5 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 transition-colors text-xs sm:text-sm text-white\"",
+      "matches": [
+        "text-white",
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 138,
+      "content": "<h2 className=\"text-sm font-semibold text-white/80 tracking-wide uppercase\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 141,
+      "content": "<p className=\"text-sm sm:text-base text-white/70 leading-relaxed\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 147,
+      "content": "<p className=\"text-sm sm:text-base text-white/65 leading-relaxed\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 155,
+      "content": "<h2 className=\"text-sm font-semibold text-white/80 tracking-wide uppercase\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 162,
+      "content": "className=\"text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/85\"",
+      "matches": [
+        "text-white",
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 168,
+      "content": "<p className=\"text-sm sm:text-base text-white/65 leading-relaxed\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 176,
+      "content": "<h2 className=\"text-sm font-semibold text-white/80 tracking-wide uppercase\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 179,
+      "content": "<ul className=\"space-y-1.5 text-sm sm:text-base text-white/70 leading-relaxed\">",
+      "matches": [
+        "text-white"
+      ]
+    }
+  ],
+  "Projects.jsx": [
+    {
+      "line": 77,
+      "content": "\"0 40px 100px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.07)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 91,
+      "content": "<div className=\"absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent\" />",
+      "matches": [
+        "from-black",
+        "via-black"
+      ]
+    },
+    {
+      "line": 92,
+      "content": "<div className=\"absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent\" />",
+      "matches": [
+        "from-black"
+      ]
+    },
+    {
+      "line": 96,
+      "content": "<span className=\"text-xs font-mono text-white/40 tracking-widest\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 107,
+      "content": "className=\"text-xs px-2.5 py-1 rounded-full bg-black/50 border border-white/15 text-white/90 backdrop-blur-sm font-medium\"",
+      "matches": [
+        "text-white",
+        "bg-black",
+        "border-white"
+      ]
+    },
+    {
+      "line": 119,
+      "content": "<h3 className=\"text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight mb-2\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 122,
+      "content": "<p className=\"text-sm sm:text-base text-white/55 leading-relaxed max-w-xl hidden sm:block\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 136,
+      "content": "className=\"inline-flex items-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-emerald-600/80 hover:bg-emerald-500 transition-colors text-sm font-semibold text-white\"",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 152,
+      "content": "className=\"inline-flex items-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-white/10 border border-white/15 hover:bg-white/20 transition-colors text-sm text-white\"",
+      "matches": [
+        "text-white",
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 166,
+      "content": "className=\"inline-flex items-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-rose-500/80 hover:bg-rose-400 transition-colors text-sm font-semibold text-white ml-auto\"",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 177,
+      "content": "className=\"absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-black/50 hover:bg-black/80 border border-white/10 hover:border-white/30 backdrop-blur-sm flex items-center justify-center transition-all active:scale-90\"",
+      "matches": [
+        "bg-black",
+        "border-white"
+      ]
+    },
+    {
+      "line": 180,
+      "content": "<ArrowLeft className=\"w-4 h-4 text-white\" />",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 184,
+      "content": "className=\"absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-black/50 hover:bg-black/80 border border-white/10 hover:border-white/30 backdrop-blur-sm flex items-center justify-center transition-all active:scale-90\"",
+      "matches": [
+        "bg-black",
+        "border-white"
+      ]
+    },
+    {
+      "line": 187,
+      "content": "<ArrowRight className=\"w-4 h-4 text-white\" />",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 217,
+      "content": "<div className=\"absolute inset-0 bg-black/40\" />",
+      "matches": [
+        "bg-black"
+      ]
+    },
+    {
+      "line": 236,
+      "content": ": \"rgba(255,255,255,0.2)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 248,
+      "content": "<div className=\"flex flex-col h-full w-full rounded-2xl overflow-hidden border border-white/10 bg-white/[0.03] backdrop-blur-sm\">",
+      "matches": [
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 259,
+      "content": "<h4 className=\"text-base sm:text-lg font-semibold text-white leading-snug\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 262,
+      "content": "<p className=\"mt-2 text-sm text-neutral-400 leading-relaxed flex-1\">",
+      "matches": [
+        "text-neutral"
+      ]
+    },
+    {
+      "line": 269,
+      "content": "className=\"text-xs px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 text-white/75\"",
+      "matches": [
+        "text-white",
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 284,
+      "content": "className=\"w-full inline-flex items-center justify-center gap-1.5 rounded-full bg-emerald-500/80 hover:bg-emerald-400 transition-colors px-3 py-2 text-sm font-semibold text-white\"",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 297,
+      "content": "className=\"w-full inline-flex items-center justify-center gap-1.5 rounded-[10px] bg-white/10 hover:bg-white/20 transition-colors px-3 py-2 text-sm text-white\"",
+      "matches": [
+        "text-white",
+        "bg-white"
+      ]
+    },
+    {
+      "line": 312,
+      "content": "className=\"w-full inline-flex items-center justify-center gap-1.5 rounded-[10px] border border-white/10 hover:bg-white/10 transition-colors px-3 py-2 text-sm text-white\"",
+      "matches": [
+        "text-white",
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 333,
+      "content": "className=\"w-full py-16 sm:py-20 text-white relative overflow-hidden scroll-mt-28\"",
+      "matches": [
+        "text-white"
+      ]
+    }
+  ],
+  "ProjectsPage.jsx": [
+    {
+      "line": 21,
+      "content": "<main className=\"relative z-10 pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 text-white\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 34,
+      "content": "<div className=\"rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-sm px-3.5 sm:px-5 py-3.5 sm:py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3\">",
+      "matches": [
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 35,
+      "content": "<div className=\"text-xs sm:text-sm text-white/70 text-left\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 36,
+      "content": "<div className=\"font-medium text-white/90 mb-0.5\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 53,
+      "content": "? \"linear-gradient(135deg,rgba(16,185,129,0.24),rgba(56,189,248,0.22))\"",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 54,
+      "content": ": \"rgba(15,23,42,0.7)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 56,
+      "content": "? \"rgba(255,255,255,0.32)\"",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 57,
+      "content": ": \"rgba(148,163,184,0.4)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 58,
+      "content": "color: isActive ? \"#fff\" : \"rgba(226,232,240,0.86)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 77,
+      "content": "<div className=\"mt-10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-white/60\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 80,
+      "content": "<span className=\"text-white font-medium\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 84,
+      "content": "<span className=\"text-white font-medium\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 97,
+      "content": "className=\"inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-xs sm:text-sm font-medium\"",
+      "matches": [
+        "bg-white"
+      ]
+    }
+  ],
+  "Resume.jsx": [
+    {
+      "line": 20,
+      "content": "className=\"w-full py-20 text-white relative overflow-hidden scroll-mt-28\"",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 33,
+      "content": "className=\"w-full rounded-2xl overflow-hidden border border-white/10 bg-neutral-900/40 backdrop-blur-sm\"",
+      "matches": [
+        "bg-neutral",
+        "border-white"
+      ]
+    },
+    {
+      "line": 37,
+      "content": "<div className=\"px-5 py-4 flex items-center justify-between border-b border-white/8 bg-neutral-950/60\">",
+      "matches": [
+        "bg-neutral",
+        "border-white"
+      ]
+    },
+    {
+      "line": 44,
+      "content": "<p className=\"text-sm font-medium text-white leading-none\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 47,
+      "content": "<p className=\"text-xs text-neutral-500 mt-0.5\">",
+      "matches": [
+        "text-neutral"
+      ]
+    },
+    {
+      "line": 97,
+      "content": "<div className=\"absolute inset-0 flex flex-col items-center justify-center gap-3 bg-neutral-950/60 z-10\">",
+      "matches": [
+        "bg-neutral"
+      ]
+    },
+    {
+      "line": 102,
+      "content": "<p className=\"text-xs text-neutral-500 tracking-wide\">",
+      "matches": [
+        "text-neutral"
+      ]
+    }
+  ],
+  "Services.jsx": [
+    {
+      "line": 25,
+      "content": "accent: \"rgba(59,130,246,0.22)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 27,
+      "content": "chipColor: \"rgba(59,130,246,0.15)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 36,
+      "content": "accent: \"rgba(252,211,77,0.15)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 38,
+      "content": "chipColor: \"rgba(252,211,77,0.10)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 47,
+      "content": "accent: \"rgba(56,189,248,0.18)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 49,
+      "content": "chipColor: \"rgba(56,189,248,0.12)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 58,
+      "content": "accent: \"rgba(34,211,238,0.18)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 60,
+      "content": "chipColor: \"rgba(34,211,238,0.12)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 75,
+      "content": "className=\"relative w-full rounded-[28px] overflow-hidden border border-white/[0.08]\"",
+      "matches": [
+        "border-white"
+      ]
+    },
+    {
+      "line": 83,
+      "content": "0 4px 6px rgba(0,0,0,0.3),",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 84,
+      "content": "0 20px 60px rgba(0,0,0,0.55),",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 85,
+      "content": "0 0 0 1px rgba(255,255,255,0.05),",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 86,
+      "content": "inset 0 1px 0 rgba(255,255,255,0.06)",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 112,
+      "content": "WebkitTextStroke: `1.5px rgba(255,255,255,0.055)`,",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 123,
+      "content": "<div className=\"relative z-10 p-8 sm:p-10 md:p-12 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-sm\">",
+      "matches": [
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 127,
+      "content": "className=\"w-12 h-12 rounded-2xl flex items-center justify-center border border-white/10 flex-shrink-0\"",
+      "matches": [
+        "border-white"
+      ]
+    },
+    {
+      "line": 129,
+      "content": "background: `linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03))`,",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 136,
+      "content": "className=\"text-xs font-mono mt-1.5 px-2.5 py-1 rounded-full border border-white/10\"",
+      "matches": [
+        "border-white"
+      ]
+    },
+    {
+      "line": 138,
+      "content": "color: \"rgba(255,255,255,0.3)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 139,
+      "content": "background: \"rgba(255,255,255,0.03)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 148,
+      "content": "<h3 className=\"text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight mb-4\">",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 157,
+      "content": "className=\"text-xs px-3 py-1 rounded-full border border-white/10 font-medium\"",
+      "matches": [
+        "border-white"
+      ]
+    },
+    {
+      "line": 160,
+      "content": "color: \"rgba(255,255,255,0.7)\",",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 172,
+      "content": "background: `linear-gradient(90deg, ${s.accent}, rgba(255,255,255,0.04) 60%, transparent)`,",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 178,
+      "content": "<p className=\"text-sm sm:text-base text-neutral-300/90 leading-[1.85] flex-1 max-w-2xl\">",
+      "matches": [
+        "text-neutral"
+      ]
+    },
+    {
+      "line": 190,
+      "content": "className=\"inline-flex items-center gap-2 px-5 py-3 rounded-[14px] text-sm font-semibold text-white transition-all duration-200 whitespace-nowrap group\"",
+      "matches": [
+        "text-white"
+      ]
+    },
+    {
+      "line": 191,
+      "content": "style={{ background: \"rgba(255,255,255,0.07)\" }}",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 193,
+      "content": "e.currentTarget.style.background = \"rgba(255,255,255,0.15)\";",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 197,
+      "content": "e.currentTarget.style.background = \"rgba(255,255,255,0.07)\";",
+      "matches": [
+        "rgba"
+      ]
+    },
+    {
+      "line": 218,
+      "content": "className=\"relative w-full pt-20 pb-40 overflow-visible scroll-mt-28 text-white\"",
+      "matches": [
+        "text-white"
+      ]
+    }
+  ],
+  "Skills.jsx": [
+    {
+      "line": 126,
+      "content": "<div className=\"rounded-2xl border border-white/10 w-full p-6 md:p-7 bg-white/[0.03] backdrop-blur-sm\">",
+      "matches": [
+        "bg-white",
+        "border-white"
+      ]
+    },
+    {
+      "line": 137,
+      "content": "<p className=\"mt-2 text-neutral-400 text-sm\">{group.caption}</p>",
+      "matches": [
+        "text-neutral"
+      ]
+    },
+    {
+      "line": 140,
+      "content": "<span key={i} className=\"text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/90\">",
+      "matches": [
+        "text-white",
+        "bg-white",
+        "border-white"
+      ]
+    }
+  ],
+  "Testimonials.jsx": [
+    {
+      "line": 49,
+      "content": "icon: <FiMessageCircle className=\"h-[16px] w-[16px] text-white\" />,",
+      "matches": [
+        "text-white"
+      ]
+    }
+  ]
+}

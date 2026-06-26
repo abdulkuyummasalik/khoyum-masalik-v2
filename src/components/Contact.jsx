@@ -8,7 +8,7 @@ const Contact = () => {
 
   if (state.succeeded) {
     return (
-      <section className="w-full py-20 text-white relative overflow-hidden" aria-label="Kontak">
+      <section className="w-full py-20 text-foreground relative overflow-hidden" aria-label="Kontak">
         <div className="km-container text-center">
           <SectionHeader
             titlePrefix="Terima"
@@ -24,7 +24,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="w-full text-center py-20 text-white relative overflow-hidden scroll-mt-28"
+      className="w-full text-center py-20 text-foreground relative overflow-hidden scroll-mt-28"
       aria-label="Kontak"
     >
       <div className="km-container text-center">
@@ -39,13 +39,13 @@ const Contact = () => {
         <CardGlare roundedClass="rounded-2xl">
           <form
             onSubmit={handleSubmit}
-            className="w-full rounded-2xl overflow-hidden border border-white/10 bg-white/[0.03] backdrop-blur-sm p-6 md:p-8"
+            className="w-full rounded-2xl overflow-hidden border border-foreground/10 bg-foreground/[0.03] backdrop-blur-sm p-6 md:p-8"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm mb-1 text-white/80"
+                  className="block text-sm mb-1 text-foreground/80"
                 >
                   Nama
                 </label>
@@ -54,14 +54,14 @@ const Contact = () => {
                   type="text"
                   name="name"
                   required
-                  className="w-full rounded-xl bg-white/5 border border-white/10 focus:border-white/20 outline-none px-4 py-3 text-white"
+                  className="w-full rounded-xl bg-foreground/5 border border-foreground/10 focus:border-foreground/20 outline-none px-4 py-3 text-foreground"
                   placeholder="Nama lengkap"
                 />
               </div>
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm mb-1 text-white/80"
+                  className="block text-sm mb-1 text-foreground/80"
                 >
                   Email
                 </label>
@@ -70,7 +70,7 @@ const Contact = () => {
                   type="email"
                   name="email"
                   required
-                  className="w-full rounded-xl bg-white/5 border border-white/10 focus:border-white/20 outline-none px-4 py-3 text-white"
+                  className="w-full rounded-xl bg-foreground/5 border border-foreground/10 focus:border-foreground/20 outline-none px-4 py-3 text-foreground"
                   placeholder="email@domain.com"
                 />
                 <ValidationError
@@ -83,7 +83,7 @@ const Contact = () => {
             <div className="mt-4">
               <label
                 htmlFor="subject"
-                className="block text-sm mb-1 text-white/80"
+                className="block text-sm mb-1 text-foreground/80"
               >
                 Subjek
               </label>
@@ -92,14 +92,14 @@ const Contact = () => {
                 type="text"
                 name="subject"
                 required
-                className="w-full rounded-xl bg-white/5 border border-white/10 focus:border-white/20 outline-none px-4 py-3 text-white"
+                className="w-full rounded-xl bg-foreground/5 border border-foreground/10 focus:border-foreground/20 outline-none px-4 py-3 text-foreground"
                 placeholder="Judul pesan"
               />
             </div>
             <div className="mt-4">
               <label
                 htmlFor="message"
-                className="block text-sm mb-1 text-white/80"
+                className="block text-sm mb-1 text-foreground/80"
               >
                 Pesan
               </label>
@@ -108,7 +108,7 @@ const Contact = () => {
                 name="message"
                 rows="6"
                 required
-                className="w-full rounded-xl bg-white/5 border border-white/10 focus:border-white/20 outline-none px-4 py-3 text-white"
+                className="w-full rounded-xl bg-foreground/5 border border-foreground/10 focus:border-foreground/20 outline-none px-4 py-3 text-foreground"
                 placeholder="Ceritakan kebutuhan atau pertanyaan Anda"
               />
               <ValidationError
@@ -118,7 +118,7 @@ const Contact = () => {
               />
             </div>
             <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
-              <div className="text-sm text-white/70">
+              <div className="text-sm text-foreground/70">
                 Balasan akan dikirim ke email yang Anda masukkan.
               </div>
               <div className="flex gap-3">
@@ -126,7 +126,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={state.submitting}
-                    className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 transition-colors border border-white/10 disabled:opacity-60"
+                    className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-foreground/10 hover:bg-foreground/20 transition-colors border border-foreground/10 disabled:opacity-60"
                   >
                     {state.submitting ? "Mengirim..." : "Kirim Pesan"}
                   </button>
@@ -134,7 +134,7 @@ const Contact = () => {
                 <ElectricBorder color="#10b981" speed={1} chaos={0.1} style={{ borderRadius: 12 }}>
                   <a
                     href="mailto:khoyum28@gmail.com?subject=Kontak%20Portfolio&body=Halo%2C%20saya%20ingin%20berdiskusi%20tentang%20proyek."
-                    className="inline-flex items-center justify-center px-6 py-3 rounded-xl border border-white/10 hover:bg-white/10 transition-colors"
+                    className="inline-flex items-center justify-center px-6 py-3 rounded-xl border border-foreground/10 hover:bg-foreground/10 transition-colors"
                   >
                     Email
                   </a>

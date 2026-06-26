@@ -17,7 +17,7 @@ const Resume = () => {
   return (
     <section
       id="resume"
-      className="w-full py-20 text-white relative overflow-hidden scroll-mt-28"
+      className="w-full py-20 text-foreground relative overflow-hidden scroll-mt-28"
       aria-label="Resume"
     >
       <div className="km-container text-center">
@@ -30,41 +30,41 @@ const Resume = () => {
 
       <div className="km-container mt-10">
         <CardGlare
-          className="w-full rounded-2xl overflow-hidden border border-white/10 bg-neutral-900/40 backdrop-blur-sm"
+          className="w-full rounded-2xl overflow-hidden border border-foreground/10 bg-card/40 backdrop-blur-sm"
           roundedClass="rounded-2xl"
         >
           {/* ── Top bar ─────────────────────────────────────────────────── */}
-          <div className="px-5 py-4 flex items-center justify-between border-b border-white/8 bg-neutral-950/60">
+          <div className="px-4 sm:px-5 py-3 sm:py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0 border-b border-foreground/8 bg-background/60">
             {/* Label kiri */}
-            <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-emerald-400/10 flex items-center justify-center">
+            <div className="flex items-center gap-2.5 max-w-full">
+              <div className="w-8 h-8 rounded-lg bg-emerald-400/10 flex-shrink-0 flex items-center justify-center">
                 <FileText className="w-4 h-4 text-emerald-400" />
               </div>
-              <div>
-                <p className="text-sm font-medium text-white leading-none">
-                  CV-Frontend-Developer.pdf
+              <div className="min-w-0">
+                <p className="text-sm font-medium text-foreground leading-none truncate">
+                  CV-Software-Engineer.pdf
                 </p>
-                <p className="text-xs text-neutral-500 mt-0.5">
+                <p className="text-xs text-muted-foreground mt-1">
                   Google Drive · PDF
                 </p>
               </div>
             </div>
 
             {/* Tombol kanan */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 w-full sm:w-auto">
               <ElectricBorder
                 color="#10b981"
                 speed={1}
                 chaos={0.09}
-                style={{ borderRadius: 10 }}
+                style={{ borderRadius: 10, flex: "1 1 auto" }}
               >
                 <a
                   href={OPEN_URL}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-[10px] bg-emerald-400/10 hover:bg-emerald-400/20 text-emerald-300 text-xs font-medium transition-colors"
+                  className="flex items-center justify-center w-full gap-1.5 px-3.5 py-2 rounded-[10px] bg-emerald-400/10 hover:bg-emerald-400/20 text-emerald-300 text-xs font-medium transition-colors"
                 >
-                  <ExternalLink className="w-3.5 h-3.5" />
+                  <ExternalLink className="w-3.5 h-3.5 flex-shrink-0" />
                   Buka
                 </a>
               </ElectricBorder>
@@ -73,14 +73,14 @@ const Resume = () => {
                 color="#3b82f6"
                 speed={1}
                 chaos={0.09}
-                style={{ borderRadius: 10 }}
+                style={{ borderRadius: 10, flex: "1 1 auto" }}
               >
                 <a
                   href={DOWNLOAD_URL}
                   download
-                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-[10px] bg-blue-400/10 hover:bg-blue-400/20 text-blue-300 text-xs font-medium transition-colors"
+                  className="flex items-center justify-center w-full gap-1.5 px-3.5 py-2 rounded-[10px] bg-blue-400/10 hover:bg-blue-400/20 text-blue-300 text-xs font-medium transition-colors"
                 >
-                  <Download className="w-3.5 h-3.5" />
+                  <Download className="w-3.5 h-3.5 flex-shrink-0" />
                   Unduh
                 </a>
               </ElectricBorder>
@@ -94,12 +94,12 @@ const Resume = () => {
           >
             {/* Loading spinner */}
             {!loaded && (
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-neutral-950/60 z-10">
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-background/60 z-10">
                 <div className="relative w-10 h-10">
                   <div className="absolute inset-0 rounded-full border-2 border-emerald-400/20" />
                   <div className="absolute inset-0 rounded-full border-2 border-transparent border-t-emerald-400 animate-spin" />
                 </div>
-                <p className="text-xs text-neutral-500 tracking-wide">
+                <p className="text-xs text-muted-foreground tracking-wide">
                   Memuat dokumen…
                 </p>
               </div>

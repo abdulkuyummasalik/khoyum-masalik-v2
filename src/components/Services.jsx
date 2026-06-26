@@ -13,53 +13,7 @@ import CardGlare from "./CardGlare";
 import SectionHeader from "./SectionHeader";
 
 
-// ─── Data ─────────────────────────────────────────────────────────────────────
-const services = [
-  {
-    icon: <Code2 className="w-5 h-5 text-blue-300" />,
-    title: "Custom Web Development",
-    number: "01",
-    desc: "Saya membangun website custom dari konsep awal hingga siap rilis (live). Baik itu landing page, company profile, atau aplikasi sistem berbasis web, saya merancangnya agar fungsional, cepat, responsif, dan siap mendukung pertumbuhan bisnis Anda.",
-    chips: ["Fullstack", "Responsive", "Custom Web"],
-    bg: "linear-gradient(135deg, #050d1c 0%, #091628 55%, #050d1c 100%)",
-    accent: "rgba(59,130,246,0.22)",
-    glow: "#3b82f6",
-    chipColor: "rgba(59,130,246,0.15)",
-  },
-  {
-    icon: <RefreshCw className="w-5 h-5 text-amber-300" />,
-    title: "Maintenance & Pembaruan Sistem",
-    number: "02",
-    desc: "Produk digital membutuhkan perawatan berkelanjutan agar performanya tidak menurun. Saya siap melanjutkan pengembangan proyek Anda yang sudah berjalan, menambahkan fitur baru, memperbaiki bug, maupun menjaga agar kode dan sistem tetap mutakhir.",
-    chips: ["Update", "Bug Fixing", "Refactoring"],
-    bg: "linear-gradient(135deg, #120f04 0%, #1a1508 55%, #120f04 100%)",
-    accent: "rgba(252,211,77,0.15)",
-    glow: "#fcd34d",
-    chipColor: "rgba(252,211,77,0.10)",
-  },
-  {
-    icon: <Rocket className="w-5 h-5 text-sky-400" />,
-    title: "Jasa Hosting & Domain",
-    number: "03",
-    desc: "Tidak perlu pusing dengan urusan teknis untuk meluncurkan website. Saya menangani seluruh proses deployment, mulai dari konfigurasi server, pemilihan layanan hosting yang optimal, hingga proses menghubungkan dan pengaturan domain kustom.",
-    chips: ["Deployment", "SSL Setup", "Server Config"],
-    bg: "linear-gradient(135deg, #040e1e 0%, #081525 55%, #040e1e 100%)",
-    accent: "rgba(56,189,248,0.18)",
-    glow: "#38bdf8",
-    chipColor: "rgba(56,189,248,0.12)",
-  },
-  {
-    icon: <Layout className="w-5 h-5 text-cyan-300" />,
-    title: "Desain UI/UX",
-    number: "04",
-    desc: "Desain yang memukau bukan sekadar tentang estetika, tapi juga kemudahan pemakaian. Saya memetakan pengalaman (user journey) dan merancang desain antarmuka interaktif menggunakan Figma yang mudah dinavigasi dan langsung sesuai dengan standar web modern.",
-    chips: ["Figma Design", "Prototyping", "A11y"],
-    bg: "linear-gradient(135deg, #050e1d 0%, #091722 55%, #050e1d 100%)",
-    accent: "rgba(34,211,238,0.18)",
-    glow: "#22d3ee",
-    chipColor: "rgba(34,211,238,0.12)",
-  }
-];
+import { services } from "../datas/services";
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 const STICKY_TOP_BASE = 88; // px below viewport top where first card pins
@@ -175,7 +129,7 @@ const ServiceCard = ({ s, index }) => {
 
           {/* Description + CTA */}
           <div className="flex flex-col sm:flex-row sm:items-end gap-7">
-            <p className="text-sm sm:text-base text-neutral-300/90 leading-[1.85] flex-1 max-w-2xl">
+            <p className="text-sm sm:text-base text-white/80 leading-[1.85] flex-1 max-w-2xl">
               {s.desc}
             </p>
             <div className="flex-shrink-0">
@@ -215,7 +169,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="relative w-full pt-20 pb-40 overflow-visible scroll-mt-28 text-white"
+      className="relative w-full pt-20 pb-40 overflow-visible scroll-mt-28 text-foreground"
       aria-label="Layanan"
     >
       {/* Header */}

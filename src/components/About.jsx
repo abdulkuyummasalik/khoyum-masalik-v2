@@ -1,19 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
 import {
   Mail,
-  Code,
   Trophy,
   ChevronRight,
-  Layers,
-  GitBranch,
-  Globe,
-  Server,
-  Zap,
   Star,
+  Zap,
+  Code
 } from "lucide-react";
 import ElectricBorder from "./ElectricBorder";
 import SectionHeader from "./SectionHeader";
 import CardGlare from "./CardGlare";
+import { techStack } from "../datas/about";
 
 // ─── Stat Card ────────────────────────────────────────────────────────────────
 const StatCard = ({ number = 0, label = "", delay = 0 }) => {
@@ -49,7 +46,7 @@ const StatCard = ({ number = 0, label = "", delay = 0 }) => {
   return (
     <div
       ref={ref}
-      className={`h-full flex flex-col items-start justify-between p-5 sm:p-6 rounded-2xl bg-neutral-900 border border-white/10 hover:border-emerald-400/40 transition-all duration-500 group ${visible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+      className={`h-full flex flex-col items-start justify-between p-5 sm:p-6 rounded-2xl bg-card border border-white/10 hover:border-emerald-400/40 transition-all duration-500 group ${visible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
         }`}
       style={{ transitionDelay: `${delay * 100}ms` }}
     >
@@ -57,10 +54,10 @@ const StatCard = ({ number = 0, label = "", delay = 0 }) => {
         <Star className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400" />
       </div>
       <div>
-        <div className="text-3xl sm:text-4xl font-bold text-white tabular-nums">
+        <div className="text-3xl sm:text-4xl font-bold text-foreground tabular-nums">
           {count}+
         </div>
-        <div className="mt-1 text-xs sm:text-sm text-neutral-400 font-medium">
+        <div className="mt-1 text-xs sm:text-sm text-muted-foreground font-medium">
           {label}
         </div>
       </div>
@@ -68,39 +65,6 @@ const StatCard = ({ number = 0, label = "", delay = 0 }) => {
   );
 };
 
-// ─── Tech Stack Data ──────────────────────────────────────────────────────────
-const techStack = [
-  {
-    icon: <Globe className="w-4 h-4" />,
-    label: "React & Vue",
-    color: "#7df9ff",
-  },
-  {
-    icon: <Server className="w-4 h-4" />,
-    label: "PHP & Laravel",
-    color: "#f87171",
-  },
-  {
-    icon: <Zap className="w-4 h-4" />,
-    label: "Go & Echo",
-    color: "#38bdf8",
-  },
-  {
-    icon: <Layers className="w-4 h-4" />,
-    label: "PostgreSQL",
-    color: "#34d399",
-  },
-  {
-    icon: <GitBranch className="w-4 h-4" />,
-    label: "Git & GitHub",
-    color: "#fb923c",
-  },
-  {
-    icon: <Code className="w-4 h-4" />,
-    label: "Vercel Deploy",
-    color: "#a78bfa",
-  },
-];
 
 // ─── About Section ────────────────────────────────────────────────────────────
 /*
@@ -145,7 +109,7 @@ const About = () => {
 
   const AboutContent = () => (
     <div
-      className={`h-full rounded-2xl bg-neutral-900 border border-white/10 hover:border-emerald-400/30 transition-all duration-700 p-6 sm:p-8 flex flex-col justify-between ${fadeUp(0)}`}
+      className={`h-full rounded-2xl bg-card border border-white/10 hover:border-emerald-400/30 transition-all duration-700 p-6 sm:p-8 flex flex-col justify-between ${fadeUp(0)}`}
       style={{ transitionDelay: "0ms" }}
     >
       <div>
@@ -153,15 +117,15 @@ const About = () => {
           <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-400/10 flex items-center justify-center flex-shrink-0">
             <Trophy className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400" />
           </div>
-          <h3 className="text-lg sm:text-xl font-semibold text-white">
+          <h3 className="text-lg sm:text-xl font-semibold text-foreground">
             Perjalanan Saya
           </h3>
         </div>
-        <p className="text-neutral-400 text-sm leading-relaxed">
-          Saya adalah lulusan SMK Wikrama Bogor tahun 2026, jurusan Pengembangan Perangkat Lunak dan Gim (PPLG). Saat ini, saya aktif bekerja secara freelance sebagai Web Developer / Fullstack.
+        <p className="text-muted-foreground text-sm leading-relaxed">
+          Saya adalah lulusan SMK Wikrama Bogor tahun 2026 dari jurusan Pengembangan Perangkat Lunak dan Gim (PPLG).
         </p>
-        <p className="mt-3 text-neutral-400 text-sm leading-relaxed">
-          Memiliki minat mendalam di bidang backend, saya sangat menikmati proses memecahkan bug (problem solving), bereksperimen dengan teknologi baru, dan menaklukkan tantangan untuk menciptakan solusi yang relevan.
+        <p className="mt-3 text-muted-foreground text-sm leading-relaxed">
+          Saat ini saya aktif sebagai Freelance Web Developer dengan fokus membangun aplikasi web, sistem informasi, dan solusi digital. Saya berpengalaman membangun aplikasi end-to-end baik di sisi frontend maupun backend.
         </p>
       </div>
       <div className="mt-6 h-px w-full bg-gradient-to-r from-emerald-400/40 via-cyan-400/20 to-transparent" />
@@ -187,22 +151,23 @@ const About = () => {
             <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-400/15 flex items-center justify-center flex-shrink-0">
               <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-300" />
             </div>
-            <h3 className="text-lg sm:text-xl font-semibold text-white">
+            <h3 className="text-lg sm:text-xl font-semibold text-foreground">
               Visi & Misi
             </h3>
           </div>
-          <p className="text-neutral-300 text-sm leading-relaxed">
+          <p className="text-foreground/80 text-sm leading-relaxed">
             Menciptakan produk dan layanan digital yang fungsional, inovatif, dan mampu memberikan dampak positif yang nyata bagi penggunanya.
           </p>
           <ul className="mt-3 space-y-1.5">
             {[
-              "Fokus pada problem solving",
-              "Selalu bereksperimen & adaptif",
-              "Konsisten dalam kualitas kode",
+              "Problem solving dalam pengembangan software",
+              "Membangun sistem yang scalable",
+              "Mengikuti perkembangan teknologi modern",
+              "Menjaga kualitas dan maintainability kode",
             ].map((item, i) => (
               <li
                 key={i}
-                className="flex items-center gap-2 text-sm text-neutral-400"
+                className="flex items-center gap-2 text-sm text-muted-foreground"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0" />
                 {item}
@@ -233,14 +198,14 @@ const About = () => {
 
   const TechContent = () => (
     <div
-      className={`h-full rounded-2xl bg-neutral-900 border border-white/10 hover:border-cyan-400/30 transition-all duration-700 p-6 sm:p-8 flex flex-col ${fadeUp(2)}`}
+      className={`h-full rounded-2xl bg-card border border-white/10 hover:border-cyan-400/30 transition-all duration-700 p-6 sm:p-8 flex flex-col ${fadeUp(2)}`}
       style={{ transitionDelay: "200ms" }}
     >
       <div className="flex items-center gap-3 mb-5 sm:mb-6">
         <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-cyan-400/10 flex items-center justify-center flex-shrink-0">
           <Code className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-400" />
         </div>
-        <h3 className="text-lg sm:text-xl font-semibold text-white">
+        <h3 className="text-lg sm:text-xl font-semibold text-foreground">
           Tech Stack
         </h3>
       </div>
@@ -248,7 +213,7 @@ const About = () => {
         {techStack.map((tech, i) => (
           <div
             key={i}
-            className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-neutral-800 border border-white/5 hover:border-white/20 transition-all group cursor-default"
+            className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-muted border border-white/5 hover:border-white/20 transition-all group cursor-default"
           >
             <span
               style={{ color: tech.color }}
@@ -256,7 +221,7 @@ const About = () => {
             >
               {tech.icon}
             </span>
-            <span className="text-xs sm:text-sm text-neutral-300 font-medium truncate">
+            <span className="text-xs sm:text-sm text-foreground/80 font-medium truncate">
               {tech.label}
             </span>
           </div>
@@ -330,7 +295,7 @@ const About = () => {
           {/* Row 2 kanan: stats 2x1 */}
           <div className="grid grid-cols-2 gap-4">
             <CardGlare roundedClass="rounded-2xl" className="h-full">
-              <StatCard number={5} label="Proyek Selesai" delay={2} />
+              <StatCard number={10} label="Proyek Selesai" delay={2} />
             </CardGlare>
             <CardGlare roundedClass="rounded-2xl" className="h-full">
               <StatCard number={10} label="Teknologi Dikuasai" delay={3} />
@@ -345,10 +310,10 @@ const About = () => {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <CardGlare roundedClass="rounded-2xl" className="h-full">
-              <StatCard number={3} label="Tahun Pengalaman" delay={4} />
+              <StatCard number={1} label="Tahun Pengalaman" delay={300} />
             </CardGlare>
             <CardGlare roundedClass="rounded-2xl" className="h-full">
-              <StatCard number={10} label="Sertifikat" delay={5} />
+              <StatCard number={20} label="Sertifikat" delay={400} />
             </CardGlare>
           </div>
         </div>

@@ -1,22 +1,15 @@
 import { useState, useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Moon, Sun, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import ElectricBorder from "./ElectricBorder";
 
-const NAV_ITEMS = [
-  { label: "Tentang Saya", type: "section", target: "about" },
-  { label: "Layanan", type: "section", target: "services" },
-  { label: "Proyek", type: "page", path: "/projects" },
-  { label: "Galeri", type: "page", path: "/gallery" },
-  { label: "Blog", type: "page", path: "/blog" },
-];
+import { NAV_ITEMS } from "../datas/nav";
 
-const LOGO = "https://www.khoyummasalik.my.id/khoyum.jpg";
+const LOGO = "https://www.abdulkuyummasalik.my.id/khoyum.jpg";
 const CONTACT_SECTION = "contact";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
-  const [dark, setDark] = useState(true);
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const mobileRef = useRef(null);
@@ -197,31 +190,6 @@ const Navbar = () => {
 
           {/* ── Right side ── */}
           <div className="flex items-center gap-2 flex-shrink-0">
-            {/* Dark toggle */}
-            <button
-              onClick={() => setDark(!dark)}
-              aria-label="Toggle dark mode"
-              className="flex items-center justify-center transition-all duration-200"
-              style={{
-                width: 36,
-                height: 36,
-                borderRadius: "10px",
-                background: "rgba(255,255,255,0.05)",
-                border: "1px solid rgba(255,255,255,0.09)",
-              }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.background = "rgba(255,255,255,0.10)")
-              }
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.background = "rgba(255,255,255,0.05)")
-              }
-            >
-              {dark ? (
-                <Moon className="w-[15px] h-[15px] text-white/60" />
-              ) : (
-                <Sun className="w-[15px] h-[15px] text-amber-300" />
-              )}
-            </button>
 
             {/* Contact */}
             <ElectricBorder color="#3b82f6" speed={1} chaos={0.1} style={{ borderRadius: 10, display: "inline-block" }}>
@@ -231,7 +199,7 @@ const Navbar = () => {
                   e.preventDefault();
                   handleSectionNav(CONTACT_SECTION);
                 }}
-                className="hidden sm:inline-flex items-center px-5 py-2 text-xs font-bold text-white tracking-widest uppercase transition-all duration-200"
+                className="hidden sm:inline-flex items-center px-5 py-2 text-xs font-bold text-foreground tracking-widest uppercase transition-all duration-200"
                 style={{
                   borderRadius: "10px",
                   background: "linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%)",
@@ -278,9 +246,9 @@ const Navbar = () => {
               }
             >
               {mobileOpen ? (
-                <X className="w-[15px] h-[15px] text-white/75" />
+                <X className="w-[15px] h-[15px] text-foreground/75" />
               ) : (
-                <Menu className="w-[15px] h-[15px] text-white/75" />
+                <Menu className="w-[15px] h-[15px] text-foreground/75" />
               )}
             </button>
           </div>

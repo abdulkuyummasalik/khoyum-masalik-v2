@@ -26,12 +26,12 @@ const BlogDetailPage = () => {
   return (
     <>
       <Navbar />
-      <main className="relative z-10 pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 text-white">
+      <main className="relative z-10 pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 text-foreground">
         <section className="w-full">
           <div className="km-container mb-6 sm:mb-8">
             <button
               onClick={() => navigate(-1)}
-              className="inline-flex items-center gap-2 text-xs sm:text-sm text-white/60 hover:text-white/90 px-0.5 py-1 rounded-full"
+              className="inline-flex items-center gap-2 text-xs sm:text-sm text-foreground/60 hover:text-foreground/90 px-0.5 py-1 rounded-full"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
               <span>Kembali</span>
@@ -56,7 +56,7 @@ const BlogDetailPage = () => {
             }}
           >
             <CardGlare roundedClass="rounded-2xl">
-              <article className="rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden">
+              <article className="rounded-2xl border border-foreground/10 bg-foreground/[0.03] overflow-hidden">
                 <div className="relative w-full" style={{ aspectRatio: "16/7" }}>
                   <img
                     src={current.image}
@@ -95,7 +95,7 @@ const BlogDetailPage = () => {
                   </div>
                 </div>
 
-                <div className="px-5 sm:px-8 md:px-10 py-6 sm:py-8 md:py-10 max-w-3xl space-y-4 text-sm sm:text-base text-white/75 leading-relaxed">
+                <div className="px-5 sm:px-8 md:px-10 py-6 sm:py-8 md:py-10 max-w-3xl space-y-4 text-sm sm:text-base text-foreground/75 leading-relaxed">
                   <p>
                     Artikel ini ditulis sebagai rangkuman praktik yang sering digunakan
                     ketika membangun antarmuka modern. Fokus utamanya adalah membuat
@@ -129,7 +129,7 @@ const BlogDetailPage = () => {
             <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
               {others.map((p) => (
                 <CardGlare key={p.id} roundedClass="rounded-2xl">
-                  <article className="rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden flex flex-col h-full">
+                  <article className="rounded-2xl border border-foreground/10 bg-foreground/[0.03] overflow-hidden flex flex-col h-full">
                     <div className="w-full h-40 sm:h-44 overflow-hidden">
                       <img
                         src={p.image}
@@ -139,8 +139,8 @@ const BlogDetailPage = () => {
                       />
                     </div>
                     <div className="p-4 sm:p-5 flex flex-col gap-3 flex-1">
-                      <div className="flex items-center justify-between text-[11px] sm:text-xs text-white/60">
-                        <span className="px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-white/75">
+                      <div className="flex items-center justify-between text-[11px] sm:text-xs text-foreground/60">
+                        <span className="px-2 py-0.5 rounded-full bg-foreground/5 border border-foreground/10 text-foreground/75">
                           {p.tags?.[0] || "Artikel"}
                         </span>
                         <span>{p.readTime}</span>
@@ -148,10 +148,10 @@ const BlogDetailPage = () => {
                       <h2 className="text-sm sm:text-base font-semibold leading-snug">
                         {p.title}
                       </h2>
-                      <p className="text-xs sm:text-sm text-white/65 leading-relaxed flex-1">
+                      <p className="text-xs sm:text-sm text-foreground/65 leading-relaxed flex-1">
                         {p.excerpt}
                       </p>
-                      <div className="text-[11px] sm:text-xs text-white/55">
+                      <div className="text-[11px] sm:text-xs text-foreground/55">
                         {p.date}
                       </div>
                     </div>

@@ -17,7 +17,7 @@ const GalleryPage = () => {
   return (
     <>
       <Navbar />
-      <main className="relative z-10 pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 text-white">
+      <main className="relative z-10 pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 text-foreground">
         <section className="w-full">
           <div className="km-container text-center mb-10 sm:mb-14">
             <SectionHeader
@@ -40,7 +40,7 @@ const GalleryPage = () => {
               {galleryProjects.map((img, i) => (
                 <Link key={img.slug} to={`/gallery/${img.slug}`}>
                   <CardGlare roundedClass="rounded-2xl">
-                    <div className="rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden flex flex-col h-full">
+                    <div className="rounded-2xl border border-foreground/10 bg-foreground/[0.03] overflow-hidden flex flex-col h-full">
                       <div className="aspect-[4/3] bg-slate-900 overflow-hidden">
                         <img
                           src={img.src}
@@ -54,7 +54,7 @@ const GalleryPage = () => {
                           <h2 className="text-sm sm:text-base font-semibold">
                             {img.alt}
                           </h2>
-                          <span className="text-[10px] sm:text-xs px-2 py-0.5 rounded-full bg-white/5 border border-white/15 text-white/70">
+                          <span className="text-[10px] sm:text-xs px-2 py-0.5 rounded-full bg-foreground/5 border border-foreground/15 text-foreground/70">
                             Visual
                           </span>
                         </div>
@@ -62,7 +62,7 @@ const GalleryPage = () => {
                           {img.tags.map((tag) => (
                             <span
                               key={tag}
-                              className="text-[10px] sm:text-xs px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-white/80"
+                              className="text-[10px] sm:text-xs px-2 py-0.5 rounded-full bg-foreground/5 border border-foreground/10 text-foreground/80"
                             >
                               {tag}
                             </span>
@@ -82,12 +82,13 @@ const GalleryPage = () => {
                 chaos={0.12}
                 style={{ borderRadius: 9999, display: "inline-block" }}
               >
-                <a
-                  href="/#gallery"
-                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-xs sm:text-sm font-medium"
+                <Link
+                  to="/"
+                  state={{ scrollTo: "gallery" }}
+                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-foreground/10 hover:bg-foreground/20 transition-colors text-xs sm:text-sm font-medium"
                 >
                   Kembali ke bagian galeri di beranda
-                </a>
+                </Link>
               </ElectricBorder>
             </div>
           </div>

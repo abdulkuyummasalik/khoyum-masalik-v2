@@ -8,18 +8,18 @@ const Hero = () => {
   return (
     <div
       id="home"
-      className="relative flex min-h-screen w-full flex-col items-center justify-center text-neutral-100 overflow-hidden scroll-mt-28 pt-24 sm:pt-28 md:pt-32"
+      className="relative flex min-h-screen w-full flex-col items-center justify-center text-foreground overflow-hidden scroll-mt-28 pt-24 sm:pt-28 md:pt-32"
     >
       {/* ── Background marquee ─────────────────────────────────────────── */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-15 dark:opacity-25 select-none z-0 overflow-hidden">
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-25 select-none z-0 overflow-hidden">
         <div className="w-full max-w-5xl mx-auto px-4 md:px-6 scale-[1.3] md:scale-[1.8] transition-transform duration-700">
           <CurvedLoop
-            marqueeText="Khoyum ✦ Masalik ✦ Web ✦ Developer ✦"
+            marqueeText="Khoyum ✦ Masalik ✦ Software ✦ Engineer ✦"
             speed={3}
             curveAmount={40}
             direction="left"
             interactive={false}
-            className="text-white/60 md:text-white/70"
+            className="text-foreground/60 md:text-foreground/70"
           />
         </div>
       </div>
@@ -30,11 +30,11 @@ const Hero = () => {
         <div className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] transition-all duration-300 flex items-center justify-center z-20">
           <ProfileCard
             name="Khoyum Masalik"
-            title="Frontend Web Developer"
+            title="Software Engineer"
             handle="khoyum_28"
             status="Online"
             contactText="Hubungi Saya"
-            avatarUrl="https://www.khoyummasalik.my.id/khoyum.jpg"
+            avatarUrl="https://www.abdulkuyummasalik.my.id/khoyum.jpg"
             showUserInfo
             enableTilt={true}
             enableMobileTilt={true}
@@ -51,13 +51,13 @@ const Hero = () => {
           {/* ── Headline — cepat, sekali ketik, tidak loop ── */}
           <div className="min-h-[120px] sm:min-h-[160px] flex flex-col justify-center">
             <TextType
-              text="Saya seorang Frontend Web Developer yang membangun website cepat, rapi, dan mudah digunakan."
+              text="Saya seorang Software Engineer yang berfokus membangun aplikasi web modern, scalable, dan berkualitas tinggi."
               typingSpeed={18} // ← jauh lebih cepat dari 40
               showCursor={false} // ← cursor disembunyikan supaya tidak ganggu
               loop={false} // ← ketik sekali saja
               initialDelay={200} // ← sedikit delay awal supaya tidak langsung pop
               className="text-xl md:text-4xl font-bold font-heading"
-              // variableSpeed DIHAPUS — ini penyebab utama keterlambatan
+            // variableSpeed DIHAPUS — ini penyebab utama keterlambatan
             />
           </div>
 
@@ -75,8 +75,8 @@ const Hero = () => {
               showCursor
               cursorCharacter="_"
               loop
-              className="text-sm md:text-xl font-mono text-neutral-400"
-              // variableSpeed DIHAPUS
+              className="text-sm md:text-xl font-mono text-muted-foreground"
+            // variableSpeed DIHAPUS
             />
           </div>
 
@@ -92,7 +92,7 @@ const Hero = () => {
             }}
           >
             <button
-              className="w-full px-6 py-3 bg-transparent text-white rounded-lg transition-colors cursor-pointer hover:bg-white/5"
+              className="w-full px-6 py-3 bg-transparent text-foreground rounded-lg transition-colors cursor-pointer hover:bg-foreground/5"
               onClick={() => window.open("mailto:khoyum28@gmail.com", "_blank")}
             >
               <Mail className="inline-block mr-2" />

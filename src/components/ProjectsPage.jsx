@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import SectionHeader from "./SectionHeader";
@@ -18,7 +19,7 @@ const ProjectsPage = () => {
   return (
     <>
       <Navbar />
-      <main className="relative z-10 pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 text-white">
+      <main className="relative z-10 pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 text-foreground">
         <section className="w-full">
           <div className="km-container text-center mb-10 sm:mb-14">
             <SectionHeader
@@ -31,9 +32,9 @@ const ProjectsPage = () => {
 
           <div className="km-container mb-6 sm:mb-8">
             <CardGlare roundedClass="rounded-2xl">
-              <div className="rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-sm px-3.5 sm:px-5 py-3.5 sm:py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-                <div className="text-xs sm:text-sm text-white/70 text-left">
-                  <div className="font-medium text-white/90 mb-0.5">
+              <div className="rounded-2xl border border-foreground/10 bg-foreground/[0.03] backdrop-blur-sm px-3.5 sm:px-5 py-3.5 sm:py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+                <div className="text-xs sm:text-sm text-foreground/70 text-left">
+                  <div className="font-medium text-foreground/90 mb-0.5">
                     Filter berdasarkan jenis proyek
                   </div>
                   <div>
@@ -74,14 +75,14 @@ const ProjectsPage = () => {
               ))}
             </div>
 
-            <div className="mt-10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-white/60">
+            <div className="mt-10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-foreground/60">
               <div>
                 Menampilkan{" "}
-                <span className="text-white font-medium">
+                <span className="text-foreground font-medium">
                   {filtered.length}
                 </span>{" "}
                 dari{" "}
-                <span className="text-white font-medium">
+                <span className="text-foreground font-medium">
                   {allProjects.length}
                 </span>{" "}
                 proyek.
@@ -92,12 +93,13 @@ const ProjectsPage = () => {
                 chaos={0.12}
                 style={{ borderRadius: 9999, display: "inline-block" }}
               >
-                <a
-                  href="#projects"
-                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-xs sm:text-sm font-medium"
+                <Link
+                  to="/"
+                  state={{ scrollTo: "projects" }}
+                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-foreground/10 hover:bg-foreground/20 transition-colors text-xs sm:text-sm font-medium"
                 >
                   Kembali ke bagian proyek di beranda
-                </a>
+                </Link>
               </ElectricBorder>
             </div>
           </div>

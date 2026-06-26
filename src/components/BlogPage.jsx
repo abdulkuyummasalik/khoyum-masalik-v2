@@ -17,7 +17,7 @@ const BlogPage = () => {
   return (
     <>
       <Navbar />
-      <main className="relative z-10 pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 text-white">
+      <main className="relative z-10 pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 text-foreground">
         <section className="w-full">
           <div className="km-container text-center mb-10 sm:mb-14">
             <SectionHeader
@@ -40,7 +40,7 @@ const BlogPage = () => {
               {posts.map((p) => (
                 <Link key={p.id} to={`/blog/${p.slug}`}>
                   <CardGlare roundedClass="rounded-2xl">
-                    <article className="rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden flex flex-col h-full">
+                    <article className="rounded-2xl border border-foreground/10 bg-foreground/[0.03] overflow-hidden flex flex-col h-full">
                       <div className="w-full h-44 sm:h-52 md:h-56 overflow-hidden">
                         <img
                           src={p.image}
@@ -50,8 +50,8 @@ const BlogPage = () => {
                         />
                       </div>
                       <div className="p-4 sm:p-5 flex flex-col gap-3 flex-1">
-                        <div className="flex items-center justify-between text-[11px] sm:text-xs text-white/60">
-                          <span className="px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-white/75">
+                        <div className="flex items-center justify-between text-[11px] sm:text-xs text-foreground/60">
+                          <span className="px-2 py-0.5 rounded-full bg-foreground/5 border border-foreground/10 text-foreground/75">
                             {p.tags?.[0] || "Artikel"}
                           </span>
                           <span>{p.readTime}</span>
@@ -59,16 +59,16 @@ const BlogPage = () => {
                         <h2 className="text-base sm:text-lg font-semibold leading-snug">
                           {p.title}
                         </h2>
-                        <p className="text-xs sm:text-sm text-white/65 leading-relaxed flex-1">
+                        <p className="text-xs sm:text-sm text-foreground/65 leading-relaxed flex-1">
                           {p.excerpt}
                         </p>
-                        <div className="flex items-center justify-between text-[11px] sm:text-xs text-white/55">
+                        <div className="flex items-center justify-between text-[11px] sm:text-xs text-foreground/55">
                           <span>{p.date}</span>
                           <span className="flex flex-wrap gap-1">
                             {p.tags?.slice(0, 2).map((tag) => (
                               <span
                                 key={tag}
-                                className="px-2 py-0.5 rounded-full bg-white/5 border border-white/10"
+                                className="px-2 py-0.5 rounded-full bg-foreground/5 border border-foreground/10"
                               >
                                 {tag}
                               </span>
@@ -89,12 +89,13 @@ const BlogPage = () => {
                 chaos={0.12}
                 style={{ borderRadius: 9999, display: "inline-block" }}
               >
-                <a
-                  href="/#blog"
-                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-xs sm:text-sm font-medium"
+                <Link
+                  to="/"
+                  state={{ scrollTo: "blog" }}
+                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-foreground/10 hover:bg-foreground/20 transition-colors text-xs sm:text-sm font-medium"
                 >
                   Kembali ke bagian blog di beranda
-                </a>
+                </Link>
               </ElectricBorder>
             </div>
           </div>
